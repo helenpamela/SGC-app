@@ -195,7 +195,7 @@ focusDiv.innerHTML = "";
 data.focus.forEach(item => {
   focusDiv.innerHTML += `
     <div class="card">
-      ${item.image ? `<img src="${item.image}" style="width:200px;">` : ""},   
+      ${item.image ? `<img src="${item.image}" style="width:200px;">` : ""}   
       <button class="button" onclick="loadDoc('${item.link}')">
         📄 ${item.label}
       </button>
@@ -216,6 +216,20 @@ document.getElementById("affirmation").innerHTML = `
   `${data.month} - ${data.title} (Updated: ${data.lastUpdated})
   `;
 */
+
+const practiceDiv = document.getElementById("practice");
+
+if (data.practice) {
+  practiceDiv.innerHTML = `
+    <div class="card">
+      <h3>${data.practice.label}</h3>
+      <iframe 
+        src="https://www.youtube.com/embed/z9d2XApwqZY" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  `;
+}
 
 const topicsDiv = document.getElementById("topics");
   topicsDiv.innerHTML = "";
@@ -239,6 +253,7 @@ const othersDiv = document.getElementById("others");
 
 const lumSection = document.getElementById("luminarySection");
 const lumDiv = document.getElementById("luminaries");
+lumDiv.innerHTML = "";
 if (data.luminaries && data.luminaries.length > 0) {
   lumSection.style.display = "block";
 
