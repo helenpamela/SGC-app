@@ -1,8 +1,13 @@
 {
   "month": "March",
   "title": "Cliff Notes & Happiness",
-  "lastUpdated": "March 25,2026",
+  "lastUpdated": "March 27,2026",
 
+   "quote": {
+    "text": "For every minute you are angry you lose sixty seconds of happiness.",
+    "author": "Ralph Waldo Emerson"
+  },
+ 
   "focus": [
     {
       "label": "Year of the Fire Horse",  
@@ -11,15 +16,17 @@
     }
  ],
 
+ "practice": {
+      "label": "Meditation",  
+      "video": "https://www.youtube.com/watch?v=z9d2XApwqZY&t=547s"
+    },
+
+ 
   "affirmation": {
     "label": "Affirmation",
     "image": "affirmation-images/202603-affirmation.png"
   },
   
-  "quote": {
-    "text": "For every minute you are angry you lose sixty seconds of happiness.",
-    "author": "Ralph Waldo Emerson"
-  },
 
   "topics": [
     {
@@ -39,19 +46,21 @@
       "link": "https://drive.google.com/file/d/1L6Oxhw95iH9rnbwiNR41489Y2SKlLB-l/preview"
     }
   ],
+
   "luminaries": [
    {
-    "name": "No Luminaries this month",
-    "image": "logo/sgc-big-logo.png"
+    "name": "Lee Holden",
+    "image": "luminary-images/lee-holden.jpeg"
    }
   ],
+  
   "other": [
     {
-    "label": "Other Handouts - Prayer for Spring Equinox",
+    "label": "Prayer for Spring Equinox",
     "link": "https://drive.google.com/file/d/1SuH0bEKTPwSG4Ijr8Zgqbr4yNvkkE9qW/preview"
      },
     {
-    "label": "Other Handouts - Return to Flow",
+    "label": "Return to Flow",
     "link": "https://drive.google.com/file/d/1bSiJW7JUBCeRqq1sebAmFJCF3MavJGgS/preview"
      }
   ]
