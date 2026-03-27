@@ -95,7 +95,27 @@
     function shuffle() {
       showInspiration();
     }
-  </script>
+ 
 
+
+
+function showInspiration() {
+  const quote = getRandomItem(data.quotes);
+  const reflection = getRandomItem(data.reflections);
+
+  document.getElementById("quote").innerHTML = `
+    <p>${quote.text}</p>
+    <small>— ${quote.author}</small>
+  `;
+
+  document.getElementById("reflection").innerHTML = `
+    <p>${reflection}</p>
+  `;
+}
+
+function shuffle() {
+  showInspiration();
+}
+ </script>
 </body>
 </html>
