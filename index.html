@@ -206,7 +206,7 @@ let data = {};
 
 
 // fetch('data.json')  temporary fix for caching issue. Add ?v=5 to force reload
-fetch('data.json?v=8')
+fetch('data.json?v=9')
   .then(response => response.json())
   .then(json => {
     data = json;
@@ -221,18 +221,22 @@ function render() {
   
 
 const focusDiv = document.getElementById("focus");
-focusDiv.innerHTML += `
-  <div class="card">
-    ${item.image ? `<img src="${item.image}">` : ""}   
+focusDiv.innerHTML = "";
 
-    ${item.link ? `
-      <button class="button" onclick="loadDoc('${item.link}')">
-        📄 ${item.label}
-      </button>
-    ` : `<p>${item.label}</p>`}
+data.focus.forEach(item => {
+  focusDiv.innerHTML += `
+    <div class="card">
+      ${item.image ? `<img src="${item.image}">` : ""}   
 
-  </div>
-`;
+      ${item.link ? `
+        <button class="button" onclick="loadDoc('${item.link}')">
+          📄 ${item.label}
+        </button>
+      ` : `<p>${item.label}</p>`}
+
+    </div>
+  `;
+});
 
 document.getElementById("affirmation").innerHTML = `
   <img src="${data.affirmation.image}" style="width:220px;">
