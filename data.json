@@ -1,0 +1,60 @@
+{
+  "month": "March",
+  "title": "Cliff Notes & Happiness",
+  "lastUpdated": "March 25,2026",
+
+  "focus": [
+    {
+      "label": "Year of the Fire Horse",  
+      "image": "https://drive.google.com/thumbnail?id=17cCX37QApqO1AjLpLpbmr8wi2NXMDMYU",
+      "link": "https://drive.google.com/file/d/1L9AwCPtqx0xvUyJtdB2IjkLmgbZGTMI4/preview"
+    }
+ ],
+
+  "affirmation": {
+    "label": "Affirmation",
+    "image": "https://drive.google.com/uc?export=view&id=10EBeClvrsYEVszH4RZPzC0omRXGDIBPI"
+    
+  },
+
+  "quote": {
+    "text": "For every minute you are angry you lose sixty seconds of happiness.",
+    "author": "Ralph Waldo Emerson"
+  },
+
+  "topics": [
+    {
+      "label": "Happiness Handout - 10 Things to Say Yes To",
+      "link": "https://drive.google.com/file/d/1rryhoM6vKHPWoWKeWjxFEe_i-yn1RfAa/preview"
+    },
+    {
+      "label": "Happiness Handout - AI Overview",
+      "link": "https://drive.google.com/file/d/1e_l2ixESOT3CJYDM7XuAm744z10mbATs/preview"
+    },
+    {
+      "label": "Happiness Handout - Article 8 Ways",
+      "link": "https://drive.google.com/file/d/1CGF8kmAa7aNEhiEIT0IY3HVdiE0-BrTY/preview"
+    },
+    {
+      "label": "Happiness Handout - Article 12 Habits",
+      "link": "https://drive.google.com/file/d/1L6Oxhw95iH9rnbwiNR41489Y2SKlLB-l/preview"
+    }
+  ],
+  "luminaries": [
+   {
+    "name": "No Luminaries this month",
+    "image": "https://drive.google.com/uc?export=view&id=1kQfF4qLkBfqmYBWXC9wEiYzgjDmxl_ty"
+   }
+  ],
+  "other": [
+    {
+    "label": "Other Handouts - Prayer for Spring Equinox",
+    "link": "https://drive.google.com/file/d/1SuH0bEKTPwSG4Ijr8Zgqbr4yNvkkE9qW/preview"
+     },
+    {
+    "label": "Other Handouts - Return to Flow",
+    "link": "https://drive.google.com/file/d/1bSiJW7JUBCeRqq1sebAmFJCF3MavJGgS/preview"
+     }
+  ]
+ 
+}
