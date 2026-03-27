@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Daily Inspiration</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      background: #f6f3f9;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      margin: 30px auto;
+      background: #ffffff;
+      padding: 30px 25px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      text-align: center;
+      color: #5c4b7d;
+    }
+
+    .card {
+      padding: 15px;
+      border-radius: 12px;
+      background: #ffffff;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 14px;
+      background: #e6d9f5;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #d6c6f0;
+      box-shadow: 0 0 10px rgba(180,150,255,0.4);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Daily Inspiration</h1>
+
+    <div id="quote" class="card"></div>
+    <div id="reflection" class="card"></div>
+
+    <button class="button" onclick="shuffle()">🔄 Shuffle the Cards</button>
+
+  </div>
+
+  <script>
+    let data = {};
+
+    fetch('inspiration.json?v=1')
+      .then(response => response.json())
+      .then(json => {
+        data = json;
+        showInspiration();
+      });
+
+    function getRandomItem(array) {
+      return array[Math.floor(Math.random() * array.length)];
+    }
+
+    function showInspiration() {
+      const quote = getRandomItem(data.quotes);
+      const reflection = getRandomItem(data.reflections);
+
+      document.getElementById("quote").innerHTML = `
+        <p>${quote.text}</p>
+        <small>— ${quote.author}</small>
+      `;
+
+      document.getElementById("reflection").innerHTML = `
+        <p>${reflection}</p>
+      `;
+    }
+
+    function shuffle() {
+      showInspiration();
+    }
+  </script>
+
+</body>
+</html>
