@@ -7,18 +7,6 @@
   <style>
 
 
-  /*  
-    body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  margin: 20px;
-  max-width: 650px;
-  background: #f6f3f9;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  background: #f6f3f9;
-}
-  */
   body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   margin: 0;
@@ -84,7 +72,7 @@ h2 {
 
 #quote {
   background: linear-gradient(135deg, #f3ecfb, #ffffff);
-  border-left: 4px solid #cbb6e9;
+  border-left: none;
   padding: 18px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -92,25 +80,25 @@ h2 {
   text-align: center;
 }
 
+
 #quote::before {
   content: "❝";
-  font-size: 26px;
+  font-size: 18px;
   color: #cbb6e9;
-  display: block;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 
 #quote p {
   font-style: italic;
-  font-size: 17px;
-  color: #4a3f6b;
+  font-size: 14px;   /* 👈 smaller */
+  color: #5a4f7a;
+  margin: 5px 0;
 }
 
 #quote small {
-  color: #7a6f9a;
-  display: block;
-  margin-top: 5px;
+  font-size: 12px;   /* 👈 smaller author */
+  color: #8a7fb0;
 }
 
 
@@ -142,7 +130,7 @@ iframe {
   <div class="container">
   <h1 id="title"></h1>
 
-  <h2>Quote</h2>
+ // <h2>Quote</h2>
   <div id="quote" class="card"></div>
 
   <h2>Monthly Focus</h2>
