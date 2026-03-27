@@ -3,9 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Monthly Theme</title>
+ 
   <style>
-
 
   body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -25,6 +24,7 @@
 }
 
 /* Title */
+<h1>Daily Inspiration</h1>
 h1 {
   text-align: center;
   color: #5c4b7d;
@@ -80,6 +80,7 @@ h2 {
   transition: all 0.2s ease;
   font-size: 14px;
 }
+
 .button:hover {
   background: #d6c6f0;
   transform: translateY(-1px);
@@ -385,6 +386,9 @@ if (data.luminaries && data.luminaries.length > 0) {
   lumSection.style.display = "none";
 }
 
+ <button onclick="window.location.href='inspiration.html'">
+  🌿 Daily Inspiration
+</button>
   
 }
 
