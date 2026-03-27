@@ -48,6 +48,14 @@
       background: #d6c6f0;
       box-shadow: 0 0 10px rgba(180,150,255,0.4);
     }
+
+    #quote p {
+      font-style: italic;
+    }
+
+    #reflection {
+      background: #f9f6fc;
+    }
   </style>
 </head>
 
@@ -61,13 +69,16 @@
     <div id="reflection" class="card"></div>
 
     <button class="button" onclick="shuffle()">🔄 Shuffle the Cards</button>
+    <button class="button" onclick="window.location.href='index.html'">
+      🏡 Return Home
+    </button>
 
   </div>
 
   <script>
     let data = {};
 
-    fetch('inspiration.json?v=2')
+    fetch('inspiration.json?v=3')
       .then(response => response.json())
       .then(json => {
         data = json;
