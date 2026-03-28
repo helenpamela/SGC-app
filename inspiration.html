@@ -78,8 +78,11 @@
 
     <h1>Daily Inspiration</h1>
 
-    <div id="quote" class="card"></div>
-    <div id="reflection" class="card"></div>
+    <div id="quote" class="card fade show"></div>
+    <div id="reflection" class="card fade show"></div>
+
+
+    <div id="affirmation" class="card"></div>
 
     <button class="button" onclick="shuffle()">🔄 Shuffle the Cards</button>
     <button class="button" onclick="window.location.href='index.html'">
@@ -113,6 +116,8 @@
       setTimeout(() => {
         const quote = getRandomItem(data.quotes);
         const reflection = getRandomItem(data.reflections);
+        const affirmationDiv = document.getElementById("affirmation");
+        const affirmation = getRandomItem(data.affirmations || []);
 
         quoteDiv.innerHTML = `
           <p>${quote.text}</p>
@@ -123,10 +128,14 @@
           <p>${reflection}</p>
         `;
 
+        affirmationDiv.innerHTML = affirmation?.image
+          ? `<img src="${affirmation.image}" style="max-width:250px;">`
+          : "";
+
          // fade in
         quoteDiv.classList.add("fade", "show");
         reflectionDiv.classList.add("fade", "show");
-      }, 200);
+      }, 400);
     }
 
     function shuffle() {
