@@ -150,12 +150,20 @@
        Updated: ${data.lastUpdated}
        </span>`;
 
-    fetch('events.json?v=' + Date.now())
-      .then(response => response.json())
-      .then(json => {
-        data = json;
-        showEvent();
-      });
+fetch('events.json?v=' + Date.now())
+  .then(response => response.json())
+  .then(json => {
+    data = json;
+
+    // ✅ NOW data exists
+    document.getElementById("title").innerHTML =
+      `${data.title}<br>
+       <span style="font-size: 0.6em; color: #888;">
+         Updated: ${data.lastUpdated}
+       </span>`;
+
+    showEvent();
+  });
 
     function showEvent() {
       const eventDiv = document.getElementById("event");
