@@ -86,7 +86,7 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       transition: all 0.25s ease;
     }
-    
+
     .event-card em {
       color: #5c4b7d;
     }
@@ -95,11 +95,34 @@
       transform: scale(1.05);
       box-shadow: 0 8px 20px rgba(180, 150, 255, 0.25);
     }
-  
+
     strong {
       color: #5c4b7d;
     }
-    
+
+    .birthday {
+      border: 1px solid #e6d9f5;
+      box-shadow: 0 0 12px rgba(200, 170, 255, 0.35);
+      animation: gentleGlow 3s ease-in-out infinite;
+    }
+
+    .birthday:hover {
+      box-shadow: 0 0 18px rgba(200, 170, 255, 0.6);
+    }
+
+    @keyframes gentleGlow {
+      0% {
+        box-shadow: 0 0 10px rgba(200, 170, 255, 0.25);
+      }
+
+      50% {
+        box-shadow: 0 0 16px rgba(200, 170, 255, 0.45);
+      }
+
+      100% {
+        box-shadow: 0 0 10px rgba(200, 170, 255, 0.25);
+      }
+    }
   </style>
 </head>
 
@@ -110,6 +133,7 @@
     <img src="logo/sgc-big-logo.png">
 
     <h1>Upcoming Events</h1>
+    <h1 id="title"></h1>
 
     <div id="event" class="card"></div>
 
@@ -119,6 +143,12 @@
 
   <script>
     let data = {};
+
+    document.getElementById("title").innerHTML =
+      `${data.title}<br>
+       <span style="font-size: 0.6em; color: #888;">
+       Updated: ${data.lastUpdated}
+       </span>`;
 
     fetch('events.json?v=' + Date.now())
       .then(response => response.json())
@@ -134,9 +164,8 @@
       data.event.forEach(item => {
 
         if (item.status === "active") {
-
           eventDiv.innerHTML += `
-            <div class="event-card">
+            <div class="event-card ${isBirthday ? "birthday" : ""}">
               <div class="event-row">
                 ${item.image ? `<img src="${item.image}">` : ""}
                 <div>
@@ -144,12 +173,12 @@
                   ${item.datetime ? "🕒 " + item.datetime + "<br>" : ""}
                   ${item.location ? "📍 " + item.location + "<br>" : ""}
                   <em>
-                    ${item.note.includes("birthday") ? "🎂 " : ""}
+                    ${isBirthday ? "🎂 " : ""}
                     ${item.note}
                   </em>
-               </div>
-             </div>
-           </div>
+                </div>
+              </div>
+            </div>
          `;
         }
 
