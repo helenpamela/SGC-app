@@ -128,6 +128,16 @@ h2 {
   cursor: pointer;
 }
 
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+}
+
+.close:hover {
+  color: #a88cd6;
+}
+
 /* Modal iframe */
 #modalViewer {
   width: 100%;
@@ -281,6 +291,13 @@ iframe {
  
 </div>
 
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe id="modalViewer"></iframe>
+  </div>
+</div>
+
 <script>
 let data = {};
 
@@ -420,12 +437,7 @@ modal.onclick = function(event) {
   
 </script>
 
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <iframe id="modalViewer"></iframe>
-  </div>
-</div>
+
 
 </body>
 </html>
