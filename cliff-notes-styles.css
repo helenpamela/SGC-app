@@ -1,0 +1,16 @@
+
+
+   .top-nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 15px 25px;
+    }
+
+    .top-nav button {
+        border-radius: 12px;
+        padding: 8px 16px;
+        background-color: #d6cdea;
+        border: none;
+        cursor: pointer;
+    }

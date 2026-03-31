@@ -6,7 +6,10 @@
 <head>
   <title>Daily Practices</title>
 
+  <link rel="stylesheet" href="cliff-notes-styles.css">
+
   <style>
+
     body {
       font-family: 'Segoe UI', Tahoma, sans-serif;
       background: #f6f3f9;
@@ -126,10 +129,11 @@
 </head>
 
 <body>
-  <a href="cliff-notes.html" class="home-button">📘 Cliff Notes</a>
-  <a href="index.html" class="home-button">🏡 Home</a>
+
+  <div id="header-placeholder"></div>
 
   <div class="container">
+
     <img src="cliff-notes-images/daily-practices.png">
     <h1>Daily Practices</h1>
     <div class="subtitle">What is my heart calling me to do right now? ✨</div>
@@ -137,16 +141,18 @@
       <li><a href="#" onclick="openModal(0)">🌬️ Breathing Exercises</a></li>
       <li><a href="#" onclick="openModal(1)">💛 Centering</a></li>
       <li><a href="#" onclick="openModal(2)">🙏 Journaling </a></li>
-    </ul>
-
-    <button class="home-button" onclick="window.location.href='index.html'">🏡 Home </button>
-    <button class="home-button" onclick="window.location.href='cliff-notes.html'">📘 Cliff Notes </button>
-    
+    </ul>  
 
   </div>
 
   <script>
 
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+    
     const dailyPracticeDocs = [
       "https://drive.google.com/file/d/1gNbTVmWm-XRMVwBQc1w6mlWWKD-qt1TS/preview",   // cn-dp-1-breathing.pdf
       "https://drive.google.com/file/d/1RC_VvT7glEbPhnzwFbcBmRuNJQqZZu4O/preview",   // cn-dp-2-centering.pdf,
@@ -184,9 +190,6 @@
     function closeModal() {
       document.getElementById("modal").style.display = "none";
     }
-
-
-
 
 
   </script>

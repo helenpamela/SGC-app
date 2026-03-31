@@ -6,6 +6,8 @@
 <head>
   <title>Sacred Pages</title>
 
+  <link rel="stylesheet" href="cliff-notes-styles.css">
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -126,8 +128,8 @@
 </head>
 
 <body>
-  <a href="cliff-notes.html" class="home-button">📘 Cliff Notes</a>
-  <a href="index.html" class="home-button">🏡 Home</a>
+
+  <div id="header-placeholder"></div>
 
   <div class="container">
     <img src="cliff-notes-images/sacred-pages.jpg">
@@ -147,6 +149,12 @@
 
   <script>
 
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+    
     const sacredPagesDocs = [
       "https://drive.google.com/file/d/1fAJAWRilx16NENSVN2uCTj0MYkZyiLOT/preview",   // 01 Mission Statement.pdf
       "https://drive.google.com/file/d/1oae8kN9SHpDlyhQt2ha2hDL26bOjdHXH/preview",   // 02 SGC_Intentions.pdf,

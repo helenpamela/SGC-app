@@ -6,6 +6,8 @@
 <head>
   <title>First Aid</title>
 
+  <link rel="stylesheet" href="cliff-notes-styles.css">
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -134,8 +136,8 @@
 </head>
 
 <body>
-  <a href="cliff-notes.html" class="home-button">📘 Cliff Notes</a>
-  <a href="index.html" class="home-button">🏡 Home</a>
+ 
+  <div id="header-placeholder"></div>
 
   <div class="container">
     <img src="cliff-notes-images/first-aid.png">
@@ -150,7 +152,14 @@
   </div>
 
   <script>
-
+      
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+    
+    
     const firstAidDocs = [
       "https://drive.google.com/file/d/1TPXrTxqnTJwfAFf20Fm93SIPK1twjUb8/preview",   // cn-fa-1-breathe-ask.pdf
       "https://drive.google.com/file/d/1a-PDgg1IBsWcpygvV6MwycGlHyfbzfVj/preview",   // cn-fa-2-rescue-remedy.pdf,
