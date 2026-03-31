@@ -4,7 +4,7 @@
 
 
 <head>
-  <title>Concepta</title>
+  <title>Concepts</title>
 
   <link rel="stylesheet" href="cliff-notes-styles.css">
 
@@ -133,7 +133,7 @@
 
   <div class="container">
     <img src="cliff-notes-images/concepts.png">
-    <h1>First Aid</h1>
+    <h1>Concepts</h1>
     <div class="subtitle">What am I curious about? ✨</div>
     <ul>   
       <li><a href="#" onclick="openModal(0)">🌬️ Energy</a></li>
@@ -167,7 +167,7 @@
     }
 
     function showPage() {
-      const file = conceptDocs[currentIndex];
+      const file = conceptsDocs[currentIndex];
 
       document.getElementById("modal-body").innerHTML =
         `<iframe src="${file}" width="100%" height="600px"></iframe>`;
