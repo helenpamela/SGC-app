@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+  <title>Sacred Pages</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #f6f3f9;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 60px auto;
+      text-align: center;
+      background: white;
+      padding: 30px 25px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      color: #5c4b7d;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #7a6c9d;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      width: 100%;
+      margin: 12px 0;
+      padding: 16px;
+      /* slightly bigger */
+      background: #e6d9f5;
+      border: none;
+      border-radius: 14px;
+      font-size: 17px;
+      font-weight: 500;
+
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .button:hover {
+      background: #d6c6f0;
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(180, 150, 255, 0.35);
+    }
+
+    .home-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background: #dcd0f0;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #5c4b7d;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background: white;
+      margin: 3% auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 900px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .close {
+      float: right;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .nav-buttons {
+      margin-top: 10px;
+    }
+
+    .nav-buttons button {
+      padding: 10px 16px;
+      margin: 5px;
+      border-radius: 8px;
+      border: none;
+      background: #e6d9f5;
+      cursor: pointer;
+    }
+    
+    img {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+
+    #greeting {
+      color: #7a6c9d;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="cliff-notes.html" class="home-button">📘 Cliff Notes</a>
+  <a href="index.html" class="home-button">🏡 Home</a>
+
+  <div class="container">
+    <img src="cliff-notes-images/sacred-pages.png">
+    <h1>Sacred Pages</h1>
+    <p style="text-align:center; color:#6a5d8f; margin: 10px 0 25px 0;">
+      A collection of pages we return to again and again—
+      reminders of who we are and what matters most.
+    </p>
+    
+    <ul>   
+      <li><a href="#" onclick="openModal(0)">🌿 Mission Statement</a></li>
+      <li><a href="#" onclick="openModal(1)">📖 SGC Intentions</a></li>
+      <li><a href="#" onclick="openModal(2)">🌍 Vision for the New Earth</a></li>
+    </ul>
+
+  </div>
+
+  <script>
+
+    const sacredPagesDocs = [
+      "https://drive.google.com/file/d/1fAJAWRilx16NENSVN2uCTj0MYkZyiLOT/preview",   // 01 Mission Statement.pdf
+      "https://drive.google.com/file/d/1oae8kN9SHpDlyhQt2ha2hDL26bOjdHXH/preview",   // 02 SGC_Intentions.pdf,
+      "https://drive.google.com/file/d/1BD99AZtlO7G2vDRmQteq-ns_hqrRXOQ9/preview"   // 03 VisionForTheNewEarth.pdf"
+    ];
+
+    let currentIndex = 0;
+
+    function openModal(index) {
+      currentIndex = index;
+      showPage();
+      document.getElementById("modal").style.display = "block";
+    }
+
+    function showPage() {
+      const file = sacredPagesDocs[currentIndex];
+
+      document.getElementById("modal-body").innerHTML =
+        `<iframe src="${file}" width="100%" height="600px"></iframe>`;
+    }
+
+    function nextPage() {
+      if (currentIndex < sacredPagesDocs.length - 1) {
+        currentIndex++;
+        showPage();
+      }
+    }
+    function prevPage() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        showPage();
+      }
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+
+
+
+
+  </script>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <div id="modal-body"></div>
+
+      <div class="nav-buttons">
+        <button onclick="prevPage()">⬅️ Previous</button>
+        <button onclick="nextPage()">Next ➡️</button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
