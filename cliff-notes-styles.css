@@ -5,6 +5,13 @@
         justify-content: flex-end;
         gap: 10px;
         padding: 15px 25px;
+
+        background-color: #f4f0fa;   /* 👈 add this */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* 👈 soft depth */
+
+        position: sticky;
+       top: 0;
+       z-index: 1000;
     }
 
     .top-nav button {
@@ -14,3 +21,11 @@
         border: none;
         cursor: pointer;
     }
+
+    .container {
+      margin: 80px auto; /* was 60px */
+    }
+
+
+
+
