@@ -41,3 +41,19 @@ ul {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+li a {
+  display: inline-block;
+  line-height: 1.4;  
+}
+
+
+li {
+  padding: 6px 8px;
+  border-radius: 8px;
+  align-self: start;
+}
+
+li:hover {
+  background-color: #f0e9fb;
+}
