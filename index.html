@@ -165,7 +165,7 @@
 
       <img src="logo/sgc-big-logo.png">
       <h1>Spiritual Growth Club</h1>
-      
+
       <h2 id="greeting"></h2>
       <div class="subtitle">Choose your path for today ✨</div>
 
@@ -196,26 +196,39 @@
   </div>
 
   <script>
-    const ACCESS_WORD = "luminary"; // change this
+    const STUDENT_WORD = "circle";
+    const TEACHER_WORD = "luminary"; // your current one if you like
 
     function checkAccess() {
       const input = document.getElementById("accessInput").value;
 
-      if (input === ACCESS_WORD) {
-        document.getElementById("loginScreen").style.display = "none";
-        document.getElementById("appContent").style.display = "block";
-        localStorage.setItem("accessGranted", "true");
+      if (input === STUDENT_WORD) {
+        localStorage.setItem("role", "student");
+        showApp();
+
+      } else if (input === TEACHER_WORD) {
+        localStorage.setItem("role", "teacher");
+        showApp();
+
       } else {
         document.getElementById("errorMsg").style.display = "block";
       }
     }
 
+
     window.onload = function () {
-      if (localStorage.getItem("accessGranted") === "true") {
-        document.getElementById("loginScreen").style.display = "none";
-        document.getElementById("appContent").style.display = "block";
+      const role = localStorage.getItem("role");
+
+      if (role) {
+        showApp();
       }
     };
+
+
+    function showApp() {
+      document.getElementById("loginScreen").style.display = "none";
+      document.getElementById("appContent").style.display = "block";
+    }
 
     const hour = new Date().getHours();
     let timeGreeting = "";

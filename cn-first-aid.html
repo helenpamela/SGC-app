@@ -136,14 +136,14 @@
 </head>
 
 <body>
- 
+
   <div id="header-placeholder"></div>
 
   <div class="container">
     <img src="cliff-notes-images/first-aid.png">
     <h1>First Aid</h1>
     <div class="subtitle">What do I need right now? ✨</div>
-    <ul>   
+    <ul>
       <li><a href="#" onclick="openModal(0)">🌬️ Deep Breathing / Ask for Help</a></li>
       <li><a href="#" onclick="openModal(1)">💛 Rescue Remedy</a></li>
       <li><a href="#" onclick="openModal(2)">🙏 Go outside in Nature / Silence / Take a nap </a></li>
@@ -152,14 +152,14 @@
   </div>
 
   <script>
-      
+
     fetch('cliff-notes-header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
       });
-    
-    
+
+
     const firstAidDocs = [
       "https://drive.google.com/file/d/1TPXrTxqnTJwfAFf20Fm93SIPK1twjUb8/preview",   // cn-fa-1-breathe-ask.pdf
       "https://drive.google.com/file/d/1a-PDgg1IBsWcpygvV6MwycGlHyfbzfVj/preview",   // cn-fa-2-rescue-remedy.pdf,
@@ -198,9 +198,21 @@
       document.getElementById("modal").style.display = "none";
     }
 
+    function logout() {
+      localStorage.removeItem("role");
 
+      // Only run if elements exist
+      const app = document.getElementById("appContent");
+      const login = document.getElementById("loginScreen");
 
-
+      if (app && login) {
+        app.style.display = "none";
+        login.style.display = "flex";
+      } else {
+        // If on a child page, just go back home
+        window.location.href = "index.html";
+      }
+    }
 
   </script>
 

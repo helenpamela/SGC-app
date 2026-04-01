@@ -20,7 +20,7 @@
       background: #ffffff;
       padding: 30px 25px;
       border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     }
 
     h1 {
@@ -33,7 +33,7 @@
       border-radius: 12px;
       background: #ffffff;
       margin-bottom: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
     .button {
@@ -44,12 +44,12 @@
       border: none;
       border-radius: 10px;
       cursor: pointer;
-  
+
     }
 
     .button:hover {
       background: #d6c6f0;
-      box-shadow: 0 0 10px rgba(180,150,255,0.4);
+      box-shadow: 0 0 10px rgba(180, 150, 255, 0.4);
     }
 
     .home-button {
@@ -66,8 +66,8 @@
     #quote {
       text-align: center;
     }
-    
-    #quote p { 
+
+    #quote p {
       font-style: italic;
       text-align: center;
     }
@@ -95,8 +95,6 @@
     .fade.show {
       opacity: 1;
     }
- 
-
   </style>
 </head>
 
@@ -124,8 +122,8 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
-    });
-    
+      });
+
     let data = {};
 
     fetch('inspiration.json?v=' + Date.now())
@@ -148,7 +146,7 @@
       reflectionDiv.classList.remove("show");
 
       setTimeout(() => {
-        const quote = getRandomItem(data.quotes); 
+        const quote = getRandomItem(data.quotes);
         const affirmationDiv = document.getElementById("affirmation");
         const affirmation = getRandomItem(data.affirmations || []);
         const reflection = getRandomItem(data.reflections);
@@ -167,7 +165,7 @@
           <p>${reflection}</p>
         `;
 
-         // fade in
+        // fade in
         quoteDiv.classList.add("fade", "show");
         reflectionDiv.classList.add("fade", "show");
       }, 400);
@@ -176,9 +174,24 @@
     function shuffle() {
       showInspiration();
     }
- 
 
+    function logout() {
+      localStorage.removeItem("role");
 
- </script>
+      // Only run if elements exist
+      const app = document.getElementById("appContent");
+      const login = document.getElementById("loginScreen");
+
+      if (app && login) {
+        app.style.display = "none";
+        login.style.display = "flex";
+      } else {
+        // If on a child page, just go back home
+        window.location.href = "index.html";
+      }
+    }
+
+  </script>
 </body>
+
 </html>

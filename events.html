@@ -140,7 +140,7 @@
 </head>
 
 <body>
-  
+
   <div id="header-placeholder"></div>
 
   <div class="container">
@@ -157,7 +157,7 @@
 
   <script>
 
-     fetch('home-header.html')
+    fetch('home-header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
@@ -176,15 +176,15 @@
       .then(json => {
         data = json;
 
-    // ✅ NOW data exists
-    document.getElementById("title").innerHTML =
-      `${data.title}<br>
+        // ✅ NOW data exists
+        document.getElementById("title").innerHTML =
+          `${data.title}<br>
        <span style="font-size: 0.6em; color: #888;">
          Updated: ${data.lastUpdated}
        </span>`;
 
-    showEvent();
-  });
+        showEvent();
+      });
 
     function showEvent() {
       const eventDiv = document.getElementById("event");
@@ -193,7 +193,7 @@
       data.event.forEach(item => {
 
         const isBirthday = item.note.toLowerCase().includes("birthday");
-        
+
         if (item.status === "active") {
           eventDiv.innerHTML += `
             <div class="event-card ${isBirthday ? "birthday" : ""}">
@@ -214,6 +214,22 @@
         }
 
       });
+    }
+
+    function logout() {
+      localStorage.removeItem("role");
+
+      // Only run if elements exist
+      const app = document.getElementById("appContent");
+      const login = document.getElementById("loginScreen");
+
+      if (app && login) {
+        app.style.display = "none";
+        login.style.display = "flex";
+      } else {
+        // If on a child page, just go back home
+        window.location.href = "index.html";
+      }
     }
 
   </script>

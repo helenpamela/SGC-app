@@ -128,37 +128,37 @@
 </head>
 
 <body>
- 
+
   <div id="header-placeholder"></div>
 
   <div class="container">
     <img src="cliff-notes-images/resources.png">
     <h1>Resources</h1>
     <div class="subtitle">What resources would be helpful for me? ✨</div>
-    <ul>   
-      <li><a href="#" onclick="openModal(0)">🌷 Sources of Inspiration</a></li> 
-      <li><a href="#" onclick="openModal(1)">🌸 CD's</a></li>                    
-      <li><a href="#" onclick="openModal(2)">💿 DVD's</a></li>                  
-      <li><a href="#" onclick="openModal(3)">📀 Crystals</a></li>                
-      <li><a href="#" onclick="openModal(4)">🌻 Flowers and Plants</a></li>      
-      <li><a href="#" onclick="openModal(5)">😇 Archangels</a></li>              
-      <li><a href="#" onclick="openModal(6)">🪽 Ascended Masters</a></li>        
-      <li><a href="#" onclick="openModal(7)">⚡ Chakras</a></li>                 
-      <li><a href="#" onclick="openModal(8)">🐎 Totem Animals</a></li>           
-      
+    <ul>
+      <li><a href="#" onclick="openModal(0)">🌷 Sources of Inspiration</a></li>
+      <li><a href="#" onclick="openModal(1)">🌸 CD's</a></li>
+      <li><a href="#" onclick="openModal(2)">💿 DVD's</a></li>
+      <li><a href="#" onclick="openModal(3)">📀 Crystals</a></li>
+      <li><a href="#" onclick="openModal(4)">🌻 Flowers and Plants</a></li>
+      <li><a href="#" onclick="openModal(5)">😇 Archangels</a></li>
+      <li><a href="#" onclick="openModal(6)">🪽 Ascended Masters</a></li>
+      <li><a href="#" onclick="openModal(7)">⚡ Chakras</a></li>
+      <li><a href="#" onclick="openModal(8)">🐎 Totem Animals</a></li>
+
     </ul>
 
   </div>
 
   <script>
-      
+
     fetch('cliff-notes-header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
       });
-    
-    
+
+
     const resourcesDocs = [
       "https://drive.google.com/file/d/1skp2xVHi7pJj_s7dkwm5uwSavMeF3ztj/preview",   // R1_SourcesOfInspiration.pdf
       "https://drive.google.com/file/d/1D0h22iHd9mETgBj18w0TcxErTBFNcD_u/preview",   // R2_CDs.pdf
@@ -202,7 +202,21 @@
     function closeModal() {
       document.getElementById("modal").style.display = "none";
     }
+    function logout() {
+      localStorage.removeItem("role");
 
+      // Only run if elements exist
+      const app = document.getElementById("appContent");
+      const login = document.getElementById("loginScreen");
+
+      if (app && login) {
+        app.style.display = "none";
+        login.style.display = "flex";
+      } else {
+        // If on a child page, just go back home
+        window.location.href = "index.html";
+      }
+    }
 
   </script>
 

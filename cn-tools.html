@@ -128,14 +128,14 @@
 </head>
 
 <body>
- 
+
   <div id="header-placeholder"></div>
 
   <div class="container">
     <img src="cliff-notes-images/tools.png">
     <h1>Tools</h1>
     <div class="subtitle">What tool would be helpful for me? ✨</div>
-    <ul>   
+    <ul>
       <li><a href="#" onclick="openModal(0)">🌷 Aromatherapy</a></li>
       <li><a href="#" onclick="openModal(1)">🌸 Flower Essences</a></li>
       <li><a href="#" onclick="openModal(2)">🪻 Flower Essences - Bach</a></li>
@@ -144,14 +144,14 @@
   </div>
 
   <script>
-      
+
     fetch('cliff-notes-header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
       });
-    
-    
+
+
     const toolsDocs = [
       "https://drive.google.com/file/d/1UW45E_s0IgweF1gdAEmXNwmc4oHKgKcs/preview", // T1_Aromatherapy.pdf
       "https://drive.google.com/file/d/1UTkEmHtCkwHDOgVYGCB0D2xxBjXt6NrG/preview",   // T2a_FlowerEssences.pdf,
@@ -190,6 +190,21 @@
       document.getElementById("modal").style.display = "none";
     }
 
+    function logout() {
+      localStorage.removeItem("role");
+
+      // Only run if elements exist
+      const app = document.getElementById("appContent");
+      const login = document.getElementById("loginScreen");
+
+      if (app && login) {
+        app.style.display = "none";
+        login.style.display = "flex";
+      } else {
+        // If on a child page, just go back home
+        window.location.href = "index.html";
+      }
+    }
 
   </script>
 

@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="cliff-notes-styles.css">
 
   <style>
-
     body {
       font-family: 'Segoe UI', Tahoma, sans-serif;
       background: #f6f3f9;
@@ -114,7 +113,7 @@
       background: #e6d9f5;
       cursor: pointer;
     }
-    
+
     img {
       width: 120px;
       margin-bottom: 10px;
@@ -137,11 +136,11 @@
     <img src="cliff-notes-images/daily-practices.png">
     <h1>Daily Practices</h1>
     <div class="subtitle">What is my heart calling me to do right now? ✨</div>
-    <ul>   
+    <ul>
       <li><a href="#" onclick="openModal(0)">🌬️ Breathing Exercises</a></li>
       <li><a href="#" onclick="openModal(1)">💛 Centering</a></li>
       <li><a href="#" onclick="openModal(2)">🙏 Journaling </a></li>
-    </ul>  
+    </ul>
 
   </div>
 
@@ -152,7 +151,7 @@
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
       });
-    
+
     const dailyPracticeDocs = [
       "https://drive.google.com/file/d/1gNbTVmWm-XRMVwBQc1w6mlWWKD-qt1TS/preview",   // cn-dp-1-breathing.pdf
       "https://drive.google.com/file/d/1RC_VvT7glEbPhnzwFbcBmRuNJQqZZu4O/preview",   // cn-dp-2-centering.pdf,
@@ -191,6 +190,21 @@
       document.getElementById("modal").style.display = "none";
     }
 
+    function logout() {
+      localStorage.removeItem("role");
+
+      // Only run if elements exist
+      const app = document.getElementById("appContent");
+      const login = document.getElementById("loginScreen");
+
+      if (app && login) {
+        app.style.display = "none";
+        login.style.display = "flex";
+      } else {
+        // If on a child page, just go back home
+        window.location.href = "index.html";
+      }
+    }
 
   </script>
 

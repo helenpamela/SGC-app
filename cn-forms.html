@@ -128,14 +128,14 @@
 </head>
 
 <body>
- 
+
   <div id="header-placeholder"></div>
 
   <div class="container">
     <img src="cliff-notes-images/forms.png">
     <h1>Forms</h1>
     <div class="subtitle">What form wants to be utilized? ✨</div>
-    <ul>   
+    <ul>
       <li><a href="#" onclick="openModal(0)">🛞 Wheel of Balance</a></li>
       <li><a href="#" onclick="openModal(1)">➕ More or Less</a></li>
       <li><a href="#" onclick="openModal(2)">❓ What Do You Want?</a></li>
@@ -144,14 +144,14 @@
   </div>
 
   <script>
-      
+
     fetch('cliff-notes-header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
       });
-    
-    
+
+
     const formsDocs = [
       "https://drive.google.com/file/d/1QQecWYG05tUW_MNWweGs0RKJ7rV4S0sv/preview",   // F1_WheelOfBalance.pdf
       "https://drive.google.com/file/d/1rvCsbhuS2h-kDeYRhNk_UFDTqeQY041l/preview",   // F2a_MoreOrLess_SWIHA.pdf
@@ -190,6 +190,21 @@
       document.getElementById("modal").style.display = "none";
     }
 
+    function logout() {
+      localStorage.removeItem("role");
+
+      // Only run if elements exist
+      const app = document.getElementById("appContent");
+      const login = document.getElementById("loginScreen");
+
+      if (app && login) {
+        app.style.display = "none";
+        login.style.display = "flex";
+      } else {
+        // If on a child page, just go back home
+        window.location.href = "index.html";
+      }
+    }
 
   </script>
 

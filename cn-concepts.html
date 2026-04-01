@@ -128,14 +128,14 @@
 </head>
 
 <body>
- 
+
   <div id="header-placeholder"></div>
 
   <div class="container">
     <img src="cliff-notes-images/concepts.png">
     <h1>Concepts</h1>
     <div class="subtitle">What am I curious about? ✨</div>
-    <ul>   
+    <ul>
       <li><a href="#" onclick="openModal(0)">🌬️ Energy</a></li>
       <li><a href="#" onclick="openModal(1)">💛 Law of Attraction - Like Attracts Like</a></li>
       <li><a href="#" onclick="openModal(2)">🙏 Abraham's Law of Attraction Synopsis </a></li>
@@ -144,14 +144,14 @@
   </div>
 
   <script>
-      
+
     fetch('cliff-notes-header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
       });
-    
-    
+
+
     const conceptsDocs = [
       "https://drive.google.com/file/d/1khjuwlt_pHP-Z0LO8ct_vCkttM2phhQm/preview", // C1_Energy.pdf
       "https://drive.google.com/file/d/1My1jhHDnib11qvc7cNPpqfsbyPP_Dx-C/preview",   // C2a_LOA_LikeAttractsLike.pdf,
@@ -188,6 +188,22 @@
 
     function closeModal() {
       document.getElementById("modal").style.display = "none";
+    }
+
+    function logout() {
+      localStorage.removeItem("role");
+
+      // Only run if elements exist
+      const app = document.getElementById("appContent");
+      const login = document.getElementById("loginScreen");
+
+      if (app && login) {
+        app.style.display = "none";
+        login.style.display = "flex";
+      } else {
+        // If on a child page, just go back home
+        window.location.href = "index.html";
+      }
     }
 
 

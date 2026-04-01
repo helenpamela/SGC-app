@@ -113,7 +113,7 @@
       background: #e6d9f5;
       cursor: pointer;
     }
-    
+
     img {
       width: 120px;
       margin-bottom: 10px;
@@ -138,8 +138,8 @@
       A collection of pages we return to again and again—
       reminders of who we are and what matters most.
     </p>
-    
-    <ul>   
+
+    <ul>
       <li><a href="#" onclick="openModal(0)">🌿 Mission Statement</a></li>
       <li><a href="#" onclick="openModal(1)">📖 SGC Intentions</a></li>
       <li><a href="#" onclick="openModal(2)">🌍 Vision for the New Earth</a></li>
@@ -154,7 +154,7 @@
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
       });
-    
+
     const sacredPagesDocs = [
       "https://drive.google.com/file/d/1fAJAWRilx16NENSVN2uCTj0MYkZyiLOT/preview",   // 01 Mission Statement.pdf
       "https://drive.google.com/file/d/1oae8kN9SHpDlyhQt2ha2hDL26bOjdHXH/preview",   // 02 SGC_Intentions.pdf,
@@ -194,7 +194,21 @@
     }
 
 
+    function logout() {
+      localStorage.removeItem("role");
 
+      // Only run if elements exist
+      const app = document.getElementById("appContent");
+      const login = document.getElementById("loginScreen");
+
+      if (app && login) {
+        app.style.display = "none";
+        login.style.display = "flex";
+      } else {
+        // If on a child page, just go back home
+        window.location.href = "index.html";
+      }
+    }
 
 
   </script>
