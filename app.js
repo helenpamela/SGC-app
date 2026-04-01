@@ -39,12 +39,34 @@ function applyPermissions() {
   });
 }
 
+
+
+// HOME PAGE → only Logout
+if (currentPage === "index.html" || currentPage === "") {
+  if (homeBtn) homeBtn.style.display = "none";
+}
+
+// CLIFF NOTES MAIN PAGE → hide Cliff Notes button
+if (currentPage === "cliff-notes.html") {
+  if (cliffBtn) cliffBtn.style.display = "none";
+}
+
+// ALL OTHER PAGES → control Cliff Notes visibility
+if (!cliffPages.includes(currentPage)) {
+  if (cliffBtn) cliffBtn.style.display = "none";
+}
+
 window.addEventListener("load", () => {
+  const role = localStorage.getItem("role");
+
+  if (role) {
+    showApp();
+  }
+
   const currentPage = window.location.pathname.split("/").pop();
   const homeBtn = document.querySelector(".nav-home");
   const cliffBtn = document.querySelector(".nav-cliff");
 
-  // Pages where Cliff Notes button SHOULD be visible
   const cliffPages = [
     "cn-sacred-pages.html",
     "cn-first-aid.html",
@@ -60,16 +82,16 @@ window.addEventListener("load", () => {
     if (homeBtn) homeBtn.style.display = "none";
   }
 
-  // CLIFF NOTES MAIN PAGE → hide Cliff Notes button
+  // CLIFF NOTES MAIN PAGE → hide Cliff Notes
   if (currentPage === "cliff-notes.html") {
     if (cliffBtn) cliffBtn.style.display = "none";
   }
 
-  // ALL OTHER PAGES → control Cliff Notes visibility
+  // ALL OTHER PAGES → hide Cliff unless in allowed list
   if (!cliffPages.includes(currentPage)) {
     if (cliffBtn) cliffBtn.style.display = "none";
   }
-});
+})
 
 
 function logout() {
@@ -86,11 +108,5 @@ function logout() {
   }
 }
 
-window.onload = function () {
-  const role = localStorage.getItem("role");
 
-  if (role) {
-    showApp();
-  }
-};
 
