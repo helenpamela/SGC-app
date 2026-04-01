@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
 <html>
-  
+
 <head>
   <title>Spiritual Growth Club</title>
- 
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -19,7 +19,7 @@
       background: white;
       padding: 30px 25px;
       border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     }
 
     h1 {
@@ -47,9 +47,9 @@
     }
 
     .button:hover {
-     background: #d6c6f0;
-     transform: translateY(-3px) scale(1.02);
-     box-shadow: 0 6px 18px rgba(180,150,255,0.35);
+      background: #d6c6f0;
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 6px 18px rgba(180, 150, 255, 0.35);
     }
 
     .home-button {
@@ -73,47 +73,79 @@
       font-size: 16px;
       margin-bottom: 10px;
     }
-
   </style>
 </head>
 
 <body>
-  <a href="index.html" class="home-button">🏡 Home</a>
-  <div class="container">
-    <img src="logo/sgc-big-logo.png">
-    <h1>Spiritual Growth Club</h1>
-    <h2 id="greeting"></h2>
-    <div class="subtitle">Choose your path for today ✨</div>
- 
-    <a href="monthly.html">
-      <button class="button">📅 Monthly Theme</button>
-    </a> 
 
-    <a href="inspiration.html">
-      <button class="button">🌿 Daily Inspiration</button>
-    </a> 
+  <div id="loginScreen">
+    <h2>Welcome 🌟</h2>
+    <p>Please enter the access word:</p>
 
-    <a href="events.html">
-      <button class="button">💜 Upcoming Events</button>
-    </a> 
+    <input type="password" id="accessInput" placeholder="Access word" />
+    <button onclick="checkAccess()">Enter</button>
 
-    <a href="cliff-notes.html">
-      <button class="button">📖 Cliff Notes</button>
-    </a>    
-    
-  
-    
-    <button class="button">
-      🔍 Explore
-    </button>
+    <p id="errorMsg" style="color:red; display:none;">
+      Oops! Try again 😊
+    </p>
+  </div>
 
-    <button class="button">
-      📎 Shared Memories
-    </button>
+  <div id="appContent" style="display:none;">
+    <a href="index.html" class="home-button">🏡 Home</a>
+    <div class="container">
 
+      <img src="logo/sgc-big-logo.png">
+      h1>Spiritual Growth Club</h1>
+      <h2 id="greeting"></h2>
+      <div class="subtitle">Choose your path for today ✨</div>
+
+      <a href="monthly.html">
+        <button class="button">📅 Monthly Theme</button>
+      </a>
+
+      <a href="inspiration.html">
+        <button class="button">🌿 Daily Inspiration</button>
+      </a>
+
+      <a href="events.html">
+        <button class="button">💜 Upcoming Events</button>
+      </a>
+
+      <a href="cliff-notes.html">
+        <button class="button">📖 Cliff Notes</button>
+      </a>
+
+      <button class="button">
+        🔍 Explore
+      </button>
+
+      <button class="button">
+        📎 Shared Memories
+      </button>
+    </div>
   </div>
 
   <script>
+    const ACCESS_WORD = "luminary"; // change this
+
+    function checkAccess() {
+      const input = document.getElementById("accessInput").value;
+
+      if (input === ACCESS_WORD) {
+        document.getElementById("loginScreen").style.display = "none";
+        document.getElementById("appContent").style.display = "block";
+        localStorage.setItem("accessGranted", "true");
+      } else {
+        document.getElementById("errorMsg").style.display = "block";
+      }
+    }
+
+    window.onload = function () {
+      if (localStorage.getItem("accessGranted") === "true") {
+        document.getElementById("loginScreen").style.display = "none";
+        document.getElementById("appContent").style.display = "block";
+      }
+    };
 
     const hour = new Date().getHours();
     let timeGreeting = "";
@@ -128,10 +160,11 @@
 
     document.getElementById("greeting").innerText =
       timeGreeting + " ☀️";
- 
-      
+
+
   </script>
 
 
 </body>
+
 </html>
