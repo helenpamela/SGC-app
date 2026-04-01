@@ -4,6 +4,8 @@
 <head>
   <title>Daily Inspiration</title>
 
+  <link rel="stylesheet" href="home-styles.css">
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -50,6 +52,17 @@
       box-shadow: 0 0 10px rgba(180,150,255,0.4);
     }
 
+    .home-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background: #dcd0f0;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #5c4b7d;
+    }
+
     #quote {
       text-align: center;
     }
@@ -88,6 +101,7 @@
 </head>
 
 <body>
+  <div id="header-placeholder"></div>
 
   <div class="container">
 
@@ -105,6 +119,13 @@
   </div>
 
   <script>
+
+    fetch('home-header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+    });
+    
     let data = {};
 
     fetch('inspiration.json?v=' + Date.now())
