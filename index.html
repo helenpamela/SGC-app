@@ -5,6 +5,8 @@
 <head>
   <title>Spiritual Growth Club</title>
 
+  <link rel="stylesheet" href="home-styles.css">
+
   <style>
     #loginScreen {
       display: flex;
@@ -115,6 +117,7 @@
       box-shadow: 0 6px 18px rgba(180, 150, 255, 0.35);
     }
 
+    /*    We don't need a home button.  We are on the Home Page!
     .home-button {
       display: inline-block;
       margin-bottom: 20px;
@@ -125,6 +128,7 @@
       text-decoration: none;
       color: #5c4b7d;
     }
+    */
 
     img {
       width: 300px;
@@ -157,10 +161,10 @@
     </div>
   </div>
 
-
+   <div id="header-placeholder"></div>
 
   <div id="appContent" style="display:none;">
-    <a href="index.html" class="home-button">🏡 Home</a>
+    
     <div class="container">
 
       <img src="logo/sgc-big-logo.png">
@@ -215,6 +219,11 @@
       }
     }
 
+    fetch('home-header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
 
     window.onload = function () {
       const role = localStorage.getItem("role");
@@ -230,6 +239,7 @@
       document.getElementById("appContent").style.display = "block";
     }
 
+
     const hour = new Date().getHours();
     let timeGreeting = "";
 
@@ -244,6 +254,21 @@
     document.getElementById("greeting").innerText =
       timeGreeting + " ☀️";
 
+    function logout() {
+      localStorage.removeItem("role");
+
+      // Only run if elements exist
+      const app = document.getElementById("appContent");
+      const login = document.getElementById("loginScreen");
+
+      if (app && login) {
+        app.style.display = "none";
+        login.style.display = "flex";
+      } else {
+        // If on a child page, just go back home
+        window.location.href = "index.html";
+      }
+    }
 
   </script>
 
