@@ -56,42 +56,35 @@ if (!cliffPages.includes(currentPage)) {
   if (cliffBtn) cliffBtn.style.display = "none";
 }
 
+
 window.addEventListener("load", () => {
   const role = localStorage.getItem("role");
-
-  if (role) {
-    showApp();
-  }
+  if (role) showApp();
 
   const currentPage = window.location.pathname.split("/").pop();
-  const homeBtn = document.querySelector(".nav-home");
-  const cliffBtn = document.querySelector(".nav-cliff");
 
-  const cliffPages = [
-    "cn-sacred-pages.html",
-    "cn-first-aid.html",
-    "cn-daily-practices.html",
-    "cn-concepts.html",
-    "cn-tools.html",
-    "cn-forms.html",
-    "cn-resources.html"
-  ];
+  const navMap = {
+    "index.html": "nav-home",
+    "monthly-theme.html": "nav-theme",
+    "daily-inspiration.html": "nav-inspire",
+    "events.html": "nav-events",
+    "cliff-notes.html": "nav-cliff",
+    "explore.html": "nav-explore",
+    "memories.html": "nav-memories"
+  };
 
-  // HOME PAGE → only Logout
-  if (currentPage === "index.html" || currentPage === "") {
-    if (homeBtn) homeBtn.style.display = "none";
+  // Highlight main pages
+  if (navMap[currentPage]) {
+    const btn = document.querySelector("." + navMap[currentPage]);
+    if (btn) btn.classList.add("active-nav");
   }
 
-  // CLIFF NOTES MAIN PAGE → hide Cliff Notes
-  if (currentPage === "cliff-notes.html") {
-    if (cliffBtn) cliffBtn.style.display = "none";
+  // Highlight Cliff Notes for ALL subpages
+  if (currentPage.startsWith("cn-")) {
+    const cliffBtn = document.querySelector(".nav-cliff");
+    if (cliffBtn) cliffBtn.classList.add("active-nav");
   }
-
-  // ALL OTHER PAGES → hide Cliff unless in allowed list
-  if (!cliffPages.includes(currentPage)) {
-    if (cliffBtn) cliffBtn.style.display = "none";
-  }
-})
+});
 
 
 function logout() {
