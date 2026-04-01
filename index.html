@@ -6,6 +6,62 @@
   <title>Spiritual Growth Club</title>
 
   <style>
+    #loginScreen {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* vertical center */
+      align-items: center;
+      /* horizontal center */
+      height: 100vh;
+      /* full screen height */
+      text-align: center;
+    }
+
+    #loginScreen input {
+      padding: 8px;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    #loginScreen button {
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    .login-card {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .login-card input {
+      width: 100%;
+      padding: 10px;
+      margin: 12px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .login-card button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #7c6bcf;
+      /* soft purple */
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-card button:hover {
+      background-color: #6a5bb5;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, sans-serif;
       background: #f6f3f9;
@@ -79,16 +135,22 @@
 <body>
 
   <div id="loginScreen">
-    <h2>Welcome 🌟</h2>
-    <p>Please enter the access word:</p>
+    <div class="login-card">
 
-    <input type="password" id="accessInput" placeholder="Access word" />
-    <button onclick="checkAccess()">Enter</button>
+      <h2>Welcome to our sacred circle🌟</h2>
+      <p>Enter the magic word to begin:</p>
 
-    <p id="errorMsg" style="color:red; display:none;">
-      Oops! Try again 😊
-    </p>
+      <input type="password" id="accessInput" placeholder="Access word" />
+      <button onclick="checkAccess()">Enter</button>
+
+      <p id="errorMsg" style="color:red; display:none;">
+        Oops! Try again 😊
+      </p>
+
+    </div>
   </div>
+
+
 
   <div id="appContent" style="display:none;">
     <a href="index.html" class="home-button">🏡 Home</a>
