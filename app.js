@@ -65,8 +65,8 @@ window.addEventListener("load", () => {
 
   const navMap = {
     "index.html": "nav-home",
-    "monthly-theme.html": "nav-theme",
-    "daily-inspiration.html": "nav-inspire",
+    "monthly.html": "nav-theme",
+    "inspiration.html": "nav-inspire",
     "events.html": "nav-events",
     "cliff-notes.html": "nav-cliff",
     "explore.html": "nav-explore",
@@ -84,7 +84,68 @@ window.addEventListener("load", () => {
     const cliffBtn = document.querySelector(".nav-cliff");
     if (cliffBtn) cliffBtn.classList.add("active-nav");
   }
+
+  if (document.getElementById("year")) {
+    populateYears();
+  }
 });
+
+const meetings = [
+  {
+    title: "March 2026",
+    link: "meeting-2026-03.html",
+    topics: ["gratitude", "new beginnings", "intentions"]
+  },
+  {
+    title: "February 2026",
+    link: "meeting-2026-01.html",
+    topics: ["love", "relationships", "connection"]
+  },
+  {
+    title: "March 2026",
+    link: "meeting-2026-01.html",
+    topics: ["growth", "change", "courage"]
+  }
+];
+
+
+function populateYears() {
+  const yearSelect = document.getElementById("year");
+  const currentYear = new Date().getFullYear();
+
+  for (let y = currentYear; y >= 2009; y--) {
+    const option = document.createElement("option");
+    option.value = y;
+    option.textContent = y;
+    yearSelect.appendChild(option);
+  }
+}
+
+function goToMeeting() {
+  const month = document.getElementById("month").value;
+  const year = document.getElementById("year").value;
+
+  const page = `meeting-${year}-${month}.html`;
+
+  window.location.href = page;
+}
+
+function searchMeetings() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const results = document.getElementById("searchResults");
+
+  results.innerHTML = "";
+
+  const filtered = meetings.filter(meeting =>
+    meeting.title.toLowerCase().includes(input) ||
+    meeting.topics.some(topic => topic.includes(input))
+  );
+ filtered.forEach(meeting => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${meeting.link}">${meeting.title}</a>`;
+    results.appendChild(li);
+  });
+}
 
 
 function logout() {
