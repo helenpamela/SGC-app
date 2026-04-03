@@ -43,3 +43,29 @@ Create explore.html:
   <ul id="searchResults"></ul>
 
 </div>
+
+<script src="meetings.js"></script>
+
+<script>
+  const yearSelect = document.getElementById("year");
+
+  const years = [...new Set(Object.values(meetings).map(m => m.year))];
+
+  years.sort((a, b) => b - a);
+
+  years.forEach(year => {
+    const option = document.createElement("option");
+    option.value = year;
+    option.textContent = year;
+    yearSelect.appendChild(option);
+  });
+
+  function goToMeeting() {
+    const month = document.getElementById("month").value;
+    const year = document.getElementById("year").value;
+
+    const id = `${year}${month}`;
+
+    window.location.href = `meetings.html?id=${id}`;
+  }
+</script>
