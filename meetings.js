@@ -413,7 +413,7 @@ const meetings = {
         {
           type: "image",
           label: "White stones with word of the year",
-          src: "topic_images/202601-white-stones.jpg"
+          src: "topic-images/202601-white-stones.jpg"
         },
         {
           type: "pdf",
