@@ -1,6 +1,7 @@
 
 const STUDENT_WORD = "circle";
 const TEACHER_WORD = "luminary";
+const currentPage = window.location.pathname.split("/").pop();
 
 function checkAccess() {
   const input = document.getElementById("accessInput").value;
@@ -90,7 +91,7 @@ window.addEventListener("load", () => {
   }
 });
 
-const meetings = [
+const meetingsList = [
   {
     title: "March 2026",
     link: "meeting-2026-03.html",
@@ -136,7 +137,7 @@ function searchMeetings() {
 
   results.innerHTML = "";
 
-  const filtered = meetings.filter(meeting =>
+  const filtered = meetingsList.filter(meeting =>
     meeting.title.toLowerCase().includes(input) ||
     meeting.topics.some(topic => topic.includes(input))
   );
