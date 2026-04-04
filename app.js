@@ -1,6 +1,6 @@
 
-const STUDENT_WORD = "circle";
-const TEACHER_WORD = "luminary";
+const STUDENT_WORD = "Bubba604";
+const TEACHER_WORD = "smile";
 const currentPage = window.location.pathname.split("/").pop();
 
 function checkAccess() {
