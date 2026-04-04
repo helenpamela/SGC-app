@@ -331,36 +331,36 @@
       <div id="working_agenda"></div>
     </div>
 
-  
 
-   <h2>Set Intention</h2>
-   <div id="intention"></div>
 
-   <h2>Spread Lovingkindness</h2>
-   <div id="lovingkindness"></div>
+    <h2>Set Intention</h2>
+    <div id="intention"></div>
 
-   <h2 id="focus-title">Monthly Focus</h2>
-   <div id="focus"></div>
+    <h2>Spread Lovingkindness</h2>
+    <div id="lovingkindness"></div>
 
-   <h2 id="practice-title">Daily Practice</h2>
-   <div id="practice"></div>
+    <h2 id="focus-title">Monthly Focus</h2>
+    <div id="focus"></div>
 
-   <h2>Affirmation</h2>
-   <div id="affirmation"></div>
+    <h2 id="practice-title">Daily Practice</h2>
+    <div id="practice"></div>
 
-   <h2>Meditation</h2>
-   <div id="meditation"></div>
+    <h2>Affirmation</h2>
+    <div id="affirmation"></div>
 
-   <h2 id="luminary-title">Luminary</h2>
-   <div id="luminary"></div>
+    <h2>Meditation</h2>
+    <div id="meditation"></div>
 
-   <h2 id="topic-title">Topic</h2>
-   <div id="topic"></div>
+    <h2 id="luminary-title">Luminary</h2>
+    <div id="luminary"></div>
 
-   <h2>Other Handouts</h2>
-   <div id="other"></div>
+    <h2 id="topic-title">Topic</h2>
+    <div id="topic"></div>
 
-   <button onclick="window.location.href='index.html'">🏡 Home</button>
+    <h2>Other Handouts</h2>
+    <div id="other"></div>
+
+    <button onclick="window.location.href='index.html'">🏡 Home</button>
 
   </div>
 
@@ -394,6 +394,7 @@
       console.log("Invalid meeting ID:", id);
     } else {
       render();
+      applyPermissions();
     }
 
     function render() {
@@ -424,7 +425,12 @@
       renderItems(data.focus?.items || [], "focus");
       renderItems(data.practice?.items || [], "practice");
       renderItems(data.affirmation || [], "affirmation");
-      renderItems(data.meditation?.items || [], "meditation");
+      renderItems(
+        Array.isArray(data.meditation)
+          ? data.meditation
+          : data.meditation?.items || [],
+        "meditation"
+      );
       renderItems(data.luminary?.items || [], "luminary");
       renderItems(data.topic?.items || [], "topic");
       renderItems(data.other || [], "other");
