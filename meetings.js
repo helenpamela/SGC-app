@@ -40,7 +40,7 @@ const meetings = {
     ],
 
     focus: {
-      title: "None",
+      title: "",
 
       items: [
         {
@@ -51,7 +51,7 @@ const meetings = {
     },
 
     practice: {
-      title: "This month",
+      title: "",
       items: [
         {
           type: "image",
@@ -70,7 +70,7 @@ const meetings = {
     ],
 
     luminary: {
-      title: "This month",
+      title: "",
       items: [
         {
           type: "image",
@@ -152,7 +152,6 @@ const meetings = {
     },
 
     intention: [
-
       {
         type: "pdf",
         label: "Set Intentions 2026",
@@ -386,7 +385,7 @@ const meetings = {
     ],
 
     meditation: {
-      title: "This Month",
+      title: "",
       items: [
         {
           type: "image",
@@ -396,7 +395,7 @@ const meetings = {
     },
 
     luminary: {
-      title: "This Month",
+      title: "",
       items: [
         {
           type: "image",
@@ -476,7 +475,7 @@ const meetings = {
     ],
 
     focus: {
-      title: "This Month",
+      title: "",
       items: [
         {
           type: "image",
@@ -486,7 +485,7 @@ const meetings = {
     },
 
     practice: {
-      title: "This Month",
+      title: "",
       items: [
         {
           type: "image",
@@ -513,7 +512,7 @@ const meetings = {
 
 
     luminary: {
-      title: "This Month",
+      title: "",
       items: [
         {
           type: "image",

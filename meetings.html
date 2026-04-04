@@ -296,10 +296,10 @@
     <h2>Spread Lovingkindness</h2>
     <div id="lovingkindness"></div>
 
-    <h2>Monthly Focus</h2>
+    <h2 id="focus-title">Monthly Focus</h2>
     <div id="focus"></div>
 
-    <h2>Daily Practice</h2>
+    <h2 id="practice-title">Daily Practice</h2>
     <div id="practice"></div>
 
     <h2>Affirmation</h2>
@@ -308,10 +308,10 @@
     <h2>Meditation</h2>
     <div id="meditation"></div>
 
-    <h2>Luminary</h2>
+    <h2 id="luminary-title">Luminary</h2>
     <div id="luminary"></div>
 
-    <h2>Topic</h2>
+    <h2 id="topic-title">Topic</h2>
     <div id="topic"></div>
 
     <h2>Other Handouts</h2>
@@ -353,40 +353,21 @@
       render();
     }
 
-    if (!data) {
-      document.getElementById("title").innerText = "Meeting not found 😢";
-      console.log("Invalid meeting ID:", id);
-    } else {
-      render();
-    }
-
     function render() {
 
       document.getElementById("title").innerHTML =
         `${data.title}<br><span style="font-size: 0.6em; color: #888;"></span>`;
 
-      /*
-      const final_agendaDiv = document.getElementById("final_agenda");
-      final_agendaDiv.innerHTML = "";
-      final_agendaDiv.innerHTML += `
-        <button class="button" onclick="loadDoc('${item.src}')"> </button>
-        `;
-      ;
-      */
+      setTitle("focus-title", "Monthly Focus", data.focus?.title);
+      setTitle("practice-title", "Daily Practice", data.practice?.title);
+      setTitle("topic-title", "Topic", data.topic?.title);
+      setTitle("luminary-title", "Luminary", data.luminary?.title);
 
       /* Working agenda -- Teacher Only */
       const isTeacher = localStorage.getItem("isTeacher");
       if (isTeacher === "true") {
         document.getElementById("teacher-only").style.display = "block";
       }
-      /*
-      const working_agendaDiv = document.getElementById("working_agenda");
-      working_agendaDiv.innerHTML = "";
-      working_agendaDiv.innerHTML += `
-        <button class="button" onclick="loadDoc('${item.src}')"> </button>
-        `;
-      ;
-      */
 
       // Titles, setup, special sections
       document.getElementById("title").innerHTML = data.title;
@@ -408,8 +389,10 @@
     function setTitle(id, main, sub) {
       const el = document.getElementById(id);
 
-      if (sub) {
-        el.innerHTML = `${main} <span class="subtitle"> ${sub}</span>`;
+      if (!el) return;
+
+      if (sub !== undefined && sub !== null) {
+        el.innerHTML = `${main} <span class="subtitle">- ${sub}</span>`;
       } else {
         el.innerHTML = main;
       }
@@ -482,7 +465,7 @@
         console.log("Close button:", closeBtn);
         closeBtn.onclick = function () {
           modal.style.display = "none";
-          document.getElementById("modalViewer").src = "";        
+          document.getElementById("modalViewer").src = "";
         };
       }
 
