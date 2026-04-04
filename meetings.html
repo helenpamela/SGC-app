@@ -346,11 +346,16 @@
     if (!data) {
       document.getElementById("title").innerText = "Meeting not found 😢";
       console.log("Invalid meeting ID:", id);
-      return;
+    } else {
+      render();
     }
 
-
-    render();
+    if (!data) {
+      document.getElementById("title").innerText = "Meeting not found 😢";
+      console.log("Invalid meeting ID:", id);
+    } else {
+      render();
+    }
 
     function render() {
 
@@ -390,8 +395,8 @@
       renderItems(data.lovingkindness || [], "lovingkindness");
       renderItems(data.focus.items || [], "focus");
       renderItems(data.practice.items || [], "practice");
-      renderItems(data.affirmation.items || [], "affirmation");
-      renderItems(data.meditation.items || [], "meditation");
+      renderItems(data.affirmation || [], "affirmation");
+      renderItems(data.meditation || [], "meditation");
       renderItems(data.topic.items || [], "topic");
       renderItems(data.other || [], "other");
 

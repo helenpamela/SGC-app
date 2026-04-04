@@ -8,7 +8,7 @@ const meetings = {
 
     final_agenda: [
       {
-        type: "PDF",
+        type: "pdf",
         label: "Agenda",
         src: "https://drive.google.com/file/d/1lWMwPNM3WqYMmzQS9vaF_wzT6ckCigXu/preview"
       }
@@ -17,7 +17,7 @@ const meetings = {
     teacher_only: {
       working_agenda: [
         {
-          type: "PDF",
+          type: "pdf",
           label: "Working Agenda -- Teacher Only",
           src: "https://drive.google.com/file/d/1lWMwPNM3WqYMmzQS9vaF_wzT6ckCigXu/preview"
         }
@@ -33,7 +33,7 @@ const meetings = {
 
     lovingkindness: [
       {
-        type: "PDF",
+        type: "pdf",
         label: "Spread Lovingkindness Prayer",
         src: "https://drive.google.com/file/d/1Kg3yvdinnPVAocKLKSftmrxeulkQGntc/preview"
       }
@@ -85,27 +85,27 @@ const meetings = {
       title: "Cliff Notes Update and Happiness",
       items: [
         {
-          type: "PDF",
+          type: "pdf",
           label: "Happiness Quotes & Images",
           src: "https://drive.google.com/file/d/1nulupAquRqgdX7LbaRUBDSorD-IW8iJH/preview"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "How to Be Happy: 12 Habits to Add to Your Routine",
           src: "https://drive.google.com/file/d/1L6Oxhw95iH9rnbwiNR41489Y2SKlLB-l/preview"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "Happiness Is a Choice: 8 Ways to Choose It Today",
           src: "https://drive.google.com/file/d/1CGF8kmAa7aNEhiEIT0IY3HVdiE0-BrTY/preview"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "Happiness - AI Overview",
           src: "https://drive.google.com/file/d/1e_l2ixESOT3CJYDM7XuAm744z10mbATs/preview"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "10 THINGS TO SAY YES TO STARTING TODAY",
           src: "https://drive.google.com/file/d/1rryhoM6vKHPWoWKeWjxFEe_i-yn1RfAa/preview"
         }
@@ -115,12 +115,12 @@ const meetings = {
 
     other: [
       {
-        type: "PDF",
+        type: "pdf",
         label: "Prayer for Spring Equinox",
         src: "https://drive.google.com/file/d/1SuH0bEKTPwSG4Ijr8Zgqbr4yNvkkE9qW/preview"
       },
       {
-        type: "PDF",
+        type: "pdf",
         label: "Return to Flow",
         src: "https://drive.google.com/file/d/1bSiJW7JUBCeRqq1sebAmFJCF3MavJGgS/preview"
       }
@@ -135,7 +135,7 @@ const meetings = {
 
     final_agenda: [
       {
-        type: "PDF",
+        type: "pdf",
         label: "Agenda",
         src: "https://drive.google.com/file/d/1flhVRaPdWc88bcZUCMjegSnU0kQuKWzj/preview"
       }
@@ -144,7 +144,7 @@ const meetings = {
     teacher_only: {
       working_agenda: [
         {
-          type: "PDF",
+          type: "pdf",
           label: "Working Agenda -- Teacher only",
           src: "https://drive.google.com/file/d/1oJr-jfNEhDp1zly3Tx29Tz0l2y5TEUW5/preview"
         }
@@ -154,12 +154,12 @@ const meetings = {
     intention: [
 
       {
-        type: "PDF",
+        type: "pdf",
         label: "Set Intentions 2026",
         src: "https://drive.google.com/file/d/1lanoXttLCVeX2NiBuN11VNPbM8Y0O7FE/preview"
       },
       {
-        type: "PDF",
+        type: "pdf",
         label: "Declaration of Intentions",
         src: "https://drive.google.com/file/d/17RdNjuK85xWVvfinwwzOMjOQJeSaKenY/preview"
       }
@@ -167,7 +167,7 @@ const meetings = {
 
     lovingkindness: [
       {
-        type: "PDF",
+        type: "pdf",
         label: "Spread Lovingkindness Prayer",
         src: "https://drive.google.com/file/d/1Kg3yvdinnPVAocKLKSftmrxeulkQGntc/preview"
       }
@@ -192,22 +192,22 @@ const meetings = {
           src: "monthly-focus-images/fire-horse-presents-from-linda.jpg"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "Year of the Fire Horse Images",
           src: "https://drive.google.com/file/d/1fau4Xw4bamnEN4VNfgE5snEMR8yJ4bSr/preview"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "Year of the Horse Fun Facts",
           src: "https://drive.google.com/file/d/1L9AwCPtqx0xvUyJtdB2IjkLmgbZGTMI4/preview"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "Year of the Fire Horse AI Overview",
           src: "https://drive.google.com/file/d/1VRVleAxuZrvel1n3zyKrDX-xFAPbIJ_D/preview"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "What the Year of the Horse Means",
           src: "https://drive.google.com/file/d/1nsjtqJA1CkFM1N28dkmuQELzhVSvU2Ft/preview"
         }
@@ -259,17 +259,17 @@ const meetings = {
       items: [
 
         {
-          type: "PDF",
+          type: "pdf",
           label: "Happiness Calendar Feb 2025",
           src: "https://drive.google.com/file/d/1PoP5DbCci8P7U_7PHEpp9MoQEONviivM/preview"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "Happiness Calendar Jan 2026",
           src: "https://drive.google.com/file/d/17_6_oD2NDZAx15jGlDlQnWFgEeN_rL_9/preview"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "Happiness Calendar Feb 2026",
           src: "https://drive.google.com/file/d/1lv-ykQj4M_frkp-g1It-OOEnMyYG3MM9/preview"
         }
@@ -299,7 +299,7 @@ const meetings = {
 
     final_agenda: [
       {
-        type: "PDF",
+        type: "pdf",
         label: "Agenda",
         src: "https://drive.google.com/file/d/1GKAjUwLUlKmI4J9VyhTeEY-VxRh8VJZX/preview"
       },
@@ -309,7 +309,7 @@ const meetings = {
     teacher_only: {
       working_agenda: [
         {
-          type: "PDF",
+          type: "pdf",
           label: "Working Agenda -- Teacher only",
           src: "https://drive.google.com/file/d/1sYufXdngE0btdutOJWUgNBB5NZ5UOZFP/preview"
         }
@@ -323,7 +323,7 @@ const meetings = {
         src: "other-images/202601-card-intention-focus.jpg"
       },
       {
-        type: "PDF",
+        type: "pdf",
         label: "Intention page from OrinDaben.com",
         src: "https://drive.google.com/file/d/1t-dbZXMlXeL-JiuLY-hE8FyBTIhL4mHI/preview"
       }
@@ -331,7 +331,7 @@ const meetings = {
 
     lovingkindness: [
       {
-        type: "PDF",
+        type: "pdf",
         label: "Spread Lovingkindness Prayer",
         src: "https://drive.google.com/file/d/1Kg3yvdinnPVAocKLKSftmrxeulkQGntc/preview"
       }
@@ -349,7 +349,7 @@ const meetings = {
           src: "crystal-images/202601-malachite-properties.jpg"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "Malachite: Meaning, Mealing Properties & Benefits",
           src: "https://drive.google.com/file/d/1Igunl7Vf_ufX7iBnP4lyYQFK7fWkMcR6/preview"
         }
@@ -365,12 +365,12 @@ const meetings = {
           src: "daily-practice-images/202601-card-how to make a diff.jpg"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "What can we do to make a difference in this time of world chaos?",
           src: "https://drive.google.com/file/d/18oeji7VgO5pDqRSomxOv161NBDlx5-4x/preview"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "25 Ways to Make a Difference",
           src: "https://drive.google.com/file/d/1WdpGP-Hg2hDs9emYNDqQ6mYMCphCDPpL/preview"
         }
@@ -416,7 +416,7 @@ const meetings = {
           src: "topic_images/202601-white-stones.jpg"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "Unity's Whitestone Ceremony",
           src: "https://drive.google.com/file/d/1N3hBtD0nS3k7sYDY0YDtz2uW1l2Rkh8x/preview"
         }
@@ -443,7 +443,7 @@ const meetings = {
 
     final_agenda: [
       {
-        type: "PDF",
+        type: "pdf",
         label: "Agenda",
         src: "https://drive.google.com/file/d/1kvaZLh739rCA-3ZaDNBVF-x2i5XERDjn/preview"
       }
@@ -452,7 +452,7 @@ const meetings = {
     teacher_only: {
       working_agenda: [
         {
-          type: "PDF",
+          type: "pdf",
           label: "Working Agenda",
           src: "https://drive.google.com/file/d/1v6HAL4P05b8eKnA6l3WgWe5pe0eh8U1w/preview"
         }
@@ -469,7 +469,7 @@ const meetings = {
 
     lovingkindness: [
       {
-        type: "PDF",
+        type: "pdf",
         label: "Spread Lovingkindness Prayer",
         src: "https://drive.google.com/file/d/1Kg3yvdinnPVAocKLKSftmrxeulkQGntc/preview"
       }
@@ -528,12 +528,12 @@ const meetings = {
       title: "Christmas & Releasing",
       items: [
         {
-          type: "PDF",
+          type: "pdf",
           label: "Release Form",
           src: "https://drive.google.com/file/d/1I1-h5sQPydza1iros4327avGvEVLuhEI/preview"
         },
         {
-          type: "PDF",
+          type: "pdf",
           label: "Water Release Ritual",
           src: "https://drive.google.com/file/d/1VDXZV_0eXz8GEQbTlhWFKl7sRmYJtC-C/preview"
         }
@@ -547,7 +547,7 @@ const meetings = {
         src: "other-images/202512-from-kenny.jpg"
       },
       {
-        type: "PDF",
+        type: "pdf",
         label: "50 Simple Things to be Grateful For",
         src: "https://drive.google.com/file/d/16ksXaBdMsdQOU-nltPZ42FM2uQfBzYoY/preview"
       }
