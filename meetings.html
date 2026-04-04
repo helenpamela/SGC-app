@@ -328,6 +328,9 @@
     </div>
   </div>
 
+  <script src="app.js"></script>
+  <script src="meetings.js"></script>
+
   <script>
 
     fetch('header.html')
@@ -393,11 +396,11 @@
       renderItems(data.teacher_only?.working_agenda || [], "working_agenda");
       renderItems(data.intention || [], "intention");
       renderItems(data.lovingkindness || [], "lovingkindness");
-      renderItems(data.focus.items || [], "focus");
-      renderItems(data.practice.items || [], "practice");
+      renderItems(data.focus?.items || [], "focus");
+      renderItems(data.practice?.items || [], "practice");
       renderItems(data.affirmation || [], "affirmation");
       renderItems(data.meditation || [], "meditation");
-      renderItems(data.topic.items || [], "topic");
+      renderItems(data.topic?.items || [], "topic");
       renderItems(data.other || [], "other");
 
     }
@@ -472,8 +475,7 @@
 
   </script>
 
-  <script src="app.js"></script>
-  <script src="meetings.js"></script>
+  
 
 </body>
 
