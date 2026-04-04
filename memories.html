@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shared Memories</title>
+  <link rel="stylesheet" href="header-styles.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      background: #f6f3f9;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      text-align: center;
+      color: #5c4b7d;
+    }
+     .subtitle {
+      text-align: center;
+      color: #8a7fb0;
+      margin-bottom: 20px;
+    }
+
+    /* Gallery grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+     .photo-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .photo-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 12px rgba(180,150,255,0.4);
+    }
+
+    .photo-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .photo-card p {
+      text-align: center;
+      font-size: 14px;
+      color: #5c4b7d;
+      margin-top: 8px;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left:0; top:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      position: fixed;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      max-width: 700px;
+      width: 90%;
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .modal img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .modal p {
+      margin-top: 10px;
+      color: #5c4b7d;
+    }
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Navigation buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .nav-buttons button {
+      background: #e6d9f5;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .nav-buttons button:hover {
+      background: #d6c6f0;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="container">
+  <h1>Shared Memories 💜</h1>
+  <p class="subtitle">Moments we've cherished together</p>
+
+  <div id="gallery" class="gallery"></div>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modalImg">
+    <p id="modalCaption"></p>
+
+    <div class="nav-buttons">
+      <button onclick="prevPhoto()">⬅ Previous</button>
+      <button onclick="nextPhoto()">Next ➡</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script src="memories.js"></script>
+
+<script>
+  fetch('header.html')
+    .then(r => r.text())
+    .then(d => document.getElementById('header-placeholder').innerHTML = d);
+
+  let currentIndex = 0;
+
+  function renderGallery() {
+    const gallery = document.getElementById("gallery");
+    gallery.innerHTML = "";
+
+    memories.forEach((item, index) => {
+      gallery.innerHTML += `
+        <div class="photo-card" onclick="openModal(${index})">
+          <img src="${item.src}">
+          ${item.caption ? `<p>${item.caption}</p>` : ""}
+        </div>
+      `;
+    });
+  }
+
+  function openModal(index) {
+    currentIndex = index;
+    showPhoto();
+    document.getElementById("modal").style.display = "block";
+  }
+
+  function showPhoto() {
+    const item = memories[currentIndex];
+    document.getElementById("modalImg").src = item.src;
+    document.getElementById("modalCaption").innerText = item.caption || "";
+  }
+
+  function nextPhoto() {
+    currentIndex = (currentIndex + 1) % memories.length;
+    showPhoto();
+  }
+
+  function prevPhoto() {
+    currentIndex = (currentIndex - 1 + memories.length) % memories.length;
+    showPhoto();
+  }
+
+  document.querySelector(".close").onclick = () => {
+    document.getElementById("modal").style.display = "none";
+  };
+
+  renderGallery();
+</script>
+
+</body>
+</html>
