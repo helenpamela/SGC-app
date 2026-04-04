@@ -188,7 +188,7 @@ const meetings = {
         {
           type: "image",
           label: "Fire Horse Presents from Linda",
-          src: "monthly-focus-images/fire-horse-presents-from-linda.jpg"
+          src: "monthly-focus-images/202602-fire-horse-presents-from-linda.jpg"
         },
         {
           type: "pdf",
