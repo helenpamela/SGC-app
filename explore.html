@@ -202,6 +202,7 @@
 
     window.location.href = `meetings.html?id=${id}`;
   }
+
   function searchMeetings() {
     const input = document.getElementById("searchInput").value.toLowerCase();
     const results = document.getElementById("searchResults");
@@ -227,6 +228,19 @@
         results.appendChild(li);
       }
     });
+
+    localStorage.setItem("searchResults", JSON.stringify(
+      Object.entries(meetings)
+        .filter(([id, meeting]) => {
+          const input = document.getElementById("searchInput").value.toLowerCase();
+
+          return (
+            meeting.title.toLowerCase().includes(input) ||
+            meeting.tags?.some(tag => tag.toLowerCase().includes(input))
+          );
+        })
+        .map(([id]) => id)
+    ));
   }
 
 </script>
