@@ -86,13 +86,15 @@
       background: #e6d9f5;
       cursor: pointer;
     }
-    
+
 
     /* Images */
     img {
       width: 100%;
-      max-height: 300px;      /* 👈 controls the height */
-      object-fit: cover;     /* 👈 keeps it nicely cropped */
+      max-height: 300px;
+      /* 👈 controls the height */
+      object-fit: cover;
+      /* 👈 keeps it nicely cropped */
       border-radius: 10px;
       margin-top: 10px;
     }
@@ -118,9 +120,9 @@
 
     .hero-title {
       position: absolute;
-      top:  50%;  
+      top: 50%;
       left: 50%;
-     
+
       transform: translate(-50%, -50%);
       margin: 0;
       width: auto;
@@ -129,7 +131,7 @@
       font-size: 32px;
       font-weight: 600;
       text-align: center;
-          
+
       background: rgba(255, 235, 130, 0.9);
 
       color: #5c4b7d;
@@ -140,7 +142,16 @@
       line-height: 1.2;
       display: inline-block;
     }
-    
+
+    /* Remove underline from all links */
+    a {
+      text-decoration: none;
+    }
+
+    /* Add underline only on hover */
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
