@@ -125,6 +125,16 @@
       font-size: 16px;
       margin-bottom: 10px;
     }
+
+    /* Remove underline from all links */
+    a {
+      text-decoration: none;
+    }
+
+    /* Add underline only on hover */
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -146,10 +156,10 @@
     </div>
   </div>
 
-   <div id="header-placeholder"></div>
+  <div id="header-placeholder"></div>
 
   <div id="appContent" style="display:none;">
-    
+
     <div class="container">
 
       <img src="logo/sgc-big-logo.png">
@@ -186,7 +196,7 @@
   </div>
 
   <script>
-    
+
 
     fetch('header.html')
       .then(response => response.text())
