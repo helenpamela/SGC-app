@@ -134,7 +134,11 @@
     <img src="cliff-notes-images/tools.png">
     <h1>Tools</h1>
     <div class="subtitle">What tool would be helpful for me? ✨</div>
-    <ul>
+
+    <input type="text" id="searchBox" placeholder="What am I looking for..."
+      style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ddd;">
+
+    <ul id="toolsList">
       <li><a href="#" onclick="openModal(0)">🌷 Aromatherapy</a></li>
       <li><a href="#" onclick="openModal(1)">🌸 Flower Essences</a></li>
       <li><a href="#" onclick="openModal(2)">🪻 Flower Essences - Bach</a></li>
@@ -199,6 +203,23 @@
 
   </script>
 
+  <script id="kx8c2t">
+    const searchBox = document.getElementById("searchBox");
+    const items = document.querySelectorAll("#toolsList li");
+
+    searchBox.addEventListener("keyup", function () {
+      const searchText = searchBox.value.toLowerCase();
+
+      items.forEach(function (item) {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(searchText)) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  </script>
 
   <div id="modal" class="modal">
     <div class="modal-content">

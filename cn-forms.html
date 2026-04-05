@@ -135,7 +135,11 @@
     <img src="cliff-notes-images/forms.png">
     <h1>Forms</h1>
     <div class="subtitle">What form wants to be utilized? ✨</div>
-    <ul>
+
+    <input type="text" id="searchBox" placeholder="What am I looking for..."
+      style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ddd;">
+
+    <ul id="formsList">
       <li><a href="#" onclick="openModal(0)">🛞 Wheel of Balance</a></li>
       <li><a href="#" onclick="openModal(1)">➕ More or Less</a></li>
       <li><a href="#" onclick="openModal(2)">❓ What Do You Want?</a></li>
@@ -198,6 +202,24 @@
       document.getElementById("modal").style.display = "none";
     }
 
+  </script>
+
+  <script id="kx8c2t">
+    const searchBox = document.getElementById("searchBox");
+    const items = document.querySelectorAll("#formsList li");
+
+    searchBox.addEventListener("keyup", function () {
+      const searchText = searchBox.value.toLowerCase();
+
+      items.forEach(function (item) {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(searchText)) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
   </script>
 
   <script src="app.js"></script>

@@ -136,8 +136,13 @@
     <img src="cliff-notes-images/daily-practices.png">
     <h1>Daily Practices</h1>
     <div class="subtitle">What is my heart calling me to do right now? ✨</div>
-    <ul>
-      <li><a href="#" onclick="openModal(0)">🌬️ Breathing Exercises</a></li>  
+    
+    <input type="text" id="searchBox" placeholder="What am I looking for..."
+      style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ddd;">
+
+
+    <ul id="dailyPracticesList">
+      <li><a href="#" onclick="openModal(0)">🌬️ Breathing Exercises</a></li>
       <li><a href="#" onclick="openModal(1)">💛 Centering</a></li>
       <li><a href="#" onclick="openModal(2)">📑 Journaling </a></li>
       <li><a href="#" onclick="openModal(3)">📑 Journaling Quotes </a></li>
@@ -199,6 +204,24 @@
     }
 
 
+  </script>
+
+  <script id="kx8c2t">
+    const searchBox = document.getElementById("searchBox");
+    const items = document.querySelectorAll("#dailhPracticeList li");
+
+    searchBox.addEventListener("keyup", function () {
+      const searchText = searchBox.value.toLowerCase();
+
+      items.forEach(function (item) {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(searchText)) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
   </script>
 
   <script src="app.js"></script>
