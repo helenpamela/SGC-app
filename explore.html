@@ -211,36 +211,33 @@
 
     if (!input) return;
 
+    let matches = [];
+
     Object.entries(meetings).forEach(([id, meeting]) => {
       const titleMatch = meeting.title.toLowerCase().includes(input);
       const tagMatch = meeting.tags?.some(tag =>
         tag.toLowerCase().includes(input)
       );
-
       if (titleMatch || tagMatch) {
+        matches.push(id);
+
         const li = document.createElement("li");
         li.innerHTML = `
         <a href="meetings.html?id=${id}">
           ${meeting.title}
         </a>
       `;
-
         results.appendChild(li);
       }
     });
+    // 👇 NEW PART (your idea!)
+    if (matches.length === 0) {
+      results.innerHTML = `<li style="color:#8a7fb0;">No results found 💜</li>`;
+    }
 
-    localStorage.setItem("searchResults", JSON.stringify(
-      Object.entries(meetings)
-        .filter(([id, meeting]) => {
-          const input = document.getElementById("searchInput").value.toLowerCase();
+    // Save results for navigation
+    localStorage.setItem("searchResults", JSON.stringify(matches));
 
-          return (
-            meeting.title.toLowerCase().includes(input) ||
-            meeting.tags?.some(tag => tag.toLowerCase().includes(input))
-          );
-        })
-        .map(([id]) => id)
-    ));
   }
 
 </script>
