@@ -512,11 +512,6 @@
       }
     });
 
-    let searchResults = JSON.parse(localStorage.getItem("searchResults") || "[]");
-
-    if (searchResults.length > 1) {
-      document.getElementById("search-nav").style.display = "block";
-    }
 
     function nextResult() {
       let currentIndex = searchResults.indexOf(id);
