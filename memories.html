@@ -94,7 +94,7 @@
       padding: 15px;
       text-align: center;
     }
-    
+
     .modal img {
       max-width: 100%;
       max-height: 70vh;
@@ -145,6 +145,22 @@
     <p class="subtitle">Moments we've cherished together</p>
 
     <div id="gallery" class="gallery"></div>
+    <h2>🌿 2009–2014</h2>
+    <p class="subtitle">Our early days</p>
+    <div id="gallery-early" class="gallery"></div>
+
+    <h2>🌸 2015–2020</h2>
+    <p class="subtitle">Growing together</p>
+    <div id="gallery-middle" class="gallery"></div>
+
+    <h2>✨ 2021–2026</h2>
+    <p class="subtitle">Recent memories</p>
+    <div id="gallery-recent" class="gallery"></div>
+
+    <h2>💜 Undated Memories</h2>
+    <p class="subtitle">Moments that found us, even without a date</p>
+    <div id="gallery-undated" class="gallery"></div>
+
   </div>
 
   <!-- Modal -->
@@ -169,41 +185,53 @@
       .then(r => r.text())
       .then(d => document.getElementById('header-placeholder').innerHTML = d);
 
-    let currentIndex = 0;
 
-    function renderGallery() {
-      const gallery = document.getElementById("gallery");
+    function renderGallerySection(items, containerId) {
+      const gallery = document.getElementById(containerId);
       gallery.innerHTML = "";
 
-      memories.forEach((item, index) => {
+      items.forEach((item, index) => {
         gallery.innerHTML += `
-        <div class="photo-card" onclick="openModal(${index})">
-          <img src="${item.src}">
-          ${item.caption ? `<p>${item.caption}</p>` : ""}
-        </div>
+      <div class="photo-card" onclick="openModal('${containerId}', ${index})">
+        <img src="${item.src}">
+        ${item.caption ? `<p>${item.caption}</p>` : ""}
+      </div>
       `;
       });
     }
 
-    function openModal(index) {
+    function renderAll() {
+      renderGallerySection(memories.early, "gallery-early");
+      renderGallerySection(memories.middle, "gallery-middle");
+      renderGallerySection(memories.recent, "gallery-recent");
+      renderGallerySection(memories.undated, "gallery-undated");
+    }
+
+    let currentGroup = [];
+    let currentIndex = 0;
+
+    function openModal(groupName, index) {
+      currentGroup = memories[groupName.replace("gallery-", "")];
       currentIndex = index;
+
       showPhoto();
       document.getElementById("modal").style.display = "block";
     }
 
+
     function showPhoto() {
-      const item = memories[currentIndex];
+      const item = currentGroup[currentIndex];
       document.getElementById("modalImg").src = item.src;
       document.getElementById("modalCaption").innerText = item.caption || "";
     }
 
     function nextPhoto() {
-      currentIndex = (currentIndex + 1) % memories.length;
+      currentIndex = (currentIndex + 1) % currentGroup.length;
       showPhoto();
     }
 
     function prevPhoto() {
-      currentIndex = (currentIndex - 1 + memories.length) % memories.length;
+      currentIndex = (currentIndex - 1 + currentGroup.length) % currentGroup.length;
       showPhoto();
     }
 
@@ -211,7 +239,7 @@
       document.getElementById("modal").style.display = "none";
     };
 
-    renderGallery();
+    renderAll();
   </script>
 
 </body>
