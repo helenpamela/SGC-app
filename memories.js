@@ -187,7 +187,7 @@ const memories = {
       caption: "Walter and Linda 2021 💗"
     },
     {
-      src: "member-images/2021 linda-and-kenny.jpg",
+      src: "member-images/2021-linda-and-kenny.jpg",
       caption: "Linda and Kenny 2021 😎"
     },
     {
@@ -244,7 +244,7 @@ const memories = {
     },
     {
       src: "member-images/2021-pam-mask-cozy.jpg",
-      caption: "Kathy Cozy 2021 🐶"
+      caption: "Pam Cozy 2021 🐶"
     },
     {
       src: "member-images/2021-trudi-cozy.jpg",
@@ -284,7 +284,7 @@ const memories = {
     },
     {
       src: "member-images/mimosas.jpg",
-      caption: "Mimosas 2022 🍹"
+      caption: "Mimosas 🍹"
     },
     {
       src: "member-images/lunch-with-vicky-2023.jpg",
@@ -336,7 +336,7 @@ const memories = {
     }, 
     {
       src: "member-images/2022-mimosas.jpg",
-      caption: "2022 Mimosas 🍹"
+      caption: "2022 Mimosas on Easy Street 🍹"
     },
     {
       src: "member-images/2022-burning-bowl-bucket.jpg",
