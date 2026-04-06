@@ -128,6 +128,10 @@
 
   <script>
 
+    let lastQuoteIndex = -1;
+    let lastAffirmationIndex = -1;
+    let lastReflectionIndex = -1;
+
     fetch('header.html')
       .then(response => response.text())
       .then(data => {
@@ -143,8 +147,20 @@
         showInspiration();
       });
 
+    /*
     function getRandomItem(array) {
       return array[Math.floor(Math.random() * array.length)];
+    }
+    */
+
+    function getRandomIndex(arrayLength, lastIndex) {
+      let newIndex;
+
+      do {
+        newIndex = Math.floor(Math.random() * arrayLength);
+      } while (newIndex === lastIndex && arrayLength > 1);
+
+      return newIndex;
     }
 
     function showInspiration() {
@@ -156,10 +172,24 @@
       reflectionDiv.classList.remove("show");
 
       setTimeout(() => {
-        const quote = getRandomItem(data.quotes);
-        const affirmationDiv = document.getElementById("affirmation");
-        const affirmation = getRandomItem(data.affirmations || []);
-        const reflection = getRandomItem(data.reflections);
+        // const quote = getRandomItem(data.quotes);
+        // const affirmationDiv = document.getElementById("affirmation");
+        // const affirmation = getRandomItem(data.affirmations || []);
+        // const reflection = getRandomItem(data.reflections);
+
+        const quoteIndex = getRandomIndex(data.quotes.length, lastQuoteIndex);
+        lastQuoteIndex = quoteIndex;
+        const quote = data.quotes[quoteIndex];
+
+        const affirmationIndex = getRandomIndex((data.affirmations || []).length, lastAffirmationIndex);
+        lastAffirmationIndex = affirmationIndex;
+        const affirmation = data.affirmations[affirmationIndex];
+
+        const reflectionIndex = getRandomIndex(data.reflections.length, lastReflectionIndex);
+        lastReflectionIndex = reflectionIndex;
+        const reflection = data.reflections[reflectionIndex];
+
+
 
         quoteDiv.innerHTML = `
           <p>${quote.text}</p>
@@ -206,7 +236,7 @@
         });
       }
     }
- 
+
     /*
     window.addEventListener("load", () => {
       setTimeout(playChime, 300);
