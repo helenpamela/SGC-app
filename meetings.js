@@ -669,7 +669,7 @@ const meetings = {
       items: [
         {
           type: "image",
-          image: "luminary-images/no-luminaries.png"
+          image: "none-images/no-luminaries.png"
         }
       ]
     },
