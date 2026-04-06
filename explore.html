@@ -195,7 +195,11 @@
       gap: 12px;
     }
 
-
+    .highlight {
+      background-color: #e6d9f5;
+      border-radius: 4px;
+      padding: 1px 3px;
+    }
   </style>
 </head>
 
@@ -364,6 +368,13 @@
     { text: "Breathing", category: "Daily Practices", link: "daily-practices.html" }
   ];
 
+  function highlightText(text, searchTerm) {
+    if (!searchTerm) return text;
+
+    const regex = new RegExp(`(${searchTerm})`, "gi");
+    return text.replace(regex, '<span class="highlight">$1</span>');
+  }
+
   const search = document.getElementById("exploreSearch");
   const results = document.getElementById("results");
   const noResults = document.getElementById("noResults");
@@ -379,7 +390,7 @@
 
         li.innerHTML = `
           <a href="${item.link}">
-            ${item.text}            
+            ${highlightText(item.text, value)}            
               <span style="
                  display:block;
                  font-size: 14px;
