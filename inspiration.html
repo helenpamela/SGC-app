@@ -114,7 +114,8 @@
       🏡 Return Home
     </button>
 
-    <button onclick="playChime()" style="opacity:0.5; font-size:12px;">
+    <button onclick="playChime(event)"
+      style="display:block; margin:10px auto; font-size:12px; opacity:0.6; background:none; border:none; cursor:pointer;">
       🔔 Play Chime Again
     </button>
 
@@ -185,27 +186,30 @@
   <audio id="chime" src="sounds/chime.mp3"></audio>
 
   <script>
-    /* 
-    window.addEventListener("load", () => {
-      const chime = document.getElementById("chime");
-  
-      // Small delay makes it feel more intentional ✨
-      setTimeout(() => {
-        chime.play().catch(() => {
-          console.log("Autoplay blocked (normal behavior)");
-        });
-      }, 300);
-    });
-    */
 
     let hasPlayed = false;
 
+    /*
     function playChime() {
       const chime = document.getElementById("chime");
       if (chime && !hasPlayed) {
         chime.volume = 0.3;
         chime.play();
         hasPlayed = true;
+      }
+    }
+    */
+
+    function playChime(event) {
+      const chime = document.getElementById("chime");
+      if (chime) {
+        chime.currentTime = 0;
+        chime.volume = 0.3;
+
+        // This ensures it's tied to the user interaction
+        chime.play().catch(err => {
+          console.log("Still blocked:", err);
+        });
       }
     }
 
