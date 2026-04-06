@@ -650,7 +650,7 @@ const meetings = {
       {
         type: "image",
         label: "This month's affirmation",
-        src: "affirmation-images/202511-affirmation.png"
+        src: "affirmation-images/202511-affirmation.jpg"
       }
     ],
 
