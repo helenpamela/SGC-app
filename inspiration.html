@@ -105,6 +105,11 @@
 
     <h1>Daily Inspiration</h1>
 
+    <div id="ceremony"
+      style="text-align:center; opacity:0; transition: opacity 1s ease; font-style:italic; color:#8a7fb0;">
+      Take a breath… ✨
+    </div>
+
     <div id="quote" class="card fade show"></div>
     <div id="affirmation" class="card"></div>
     <div id="reflection" class="card fade show"></div>
@@ -189,17 +194,6 @@
 
     let hasPlayed = false;
 
-    /*
-    function playChime() {
-      const chime = document.getElementById("chime");
-      if (chime && !hasPlayed) {
-        chime.volume = 0.3;
-        chime.play();
-        hasPlayed = true;
-      }
-    }
-    */
-
     function playChime(event) {
       const chime = document.getElementById("chime");
       if (chime) {
@@ -212,9 +206,30 @@
         });
       }
     }
-
+ 
+    /*
     window.addEventListener("load", () => {
       setTimeout(playChime, 300);
+    });
+    */
+
+    window.addEventListener("load", () => {
+      const ceremony = document.getElementById("ceremony");
+
+      // Step 1: show ceremony message
+      setTimeout(() => {
+        ceremony.style.opacity = 1;
+      }, 200);
+
+      // Step 2: play chime
+      setTimeout(() => {
+        playChime();
+      }, 800);
+
+      // Step 3: show content AFTER a pause
+      setTimeout(() => {
+        showInspiration();
+      }, 1800);
     });
 
     document.addEventListener("click", playChime, { once: true });
