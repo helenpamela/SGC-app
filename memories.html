@@ -150,6 +150,14 @@
       flex-wrap: wrap;
     }
 
+    #thenCaption,
+    #nowCaption {
+      font-size: 14px;
+      color: #6b5c8a;
+      margin-top: 4px;
+      font-style: italic;
+    }
+
     .photo {
       max-width: 250px;
     }
@@ -194,15 +202,16 @@
       <h2>Then & Now 💫</h2>
 
       <div class="then-now-container">
-
         <div class="photo">
           <img id="thenPhoto" src="" alt="Then">
-          <p>Then</p>
+          <p><strong>Then</strong></p>
+          <p id="thenCaption"></p>
         </div>
 
         <div class="photo">
           <img id="nowPhoto" src="" alt="Now">
-          <p>Now</p>
+          <p><strong>Now</strong></p>
+          <p id="nowCaption"></p>
         </div>
       </div>
 
@@ -301,22 +310,7 @@
       showPhoto();
     }
 
-    /*
-    const photoPairs = [
-      {
-        then: "member-images/then1.jpg",
-        now: "member-images/now1.jpg"
-      },
-      {
-        then: "member-images/then2.jpg",
-        now: "member-images/now2.jpg"
-      },
-      {
-        then: "member-images/then3.jpg",
-        now: "member-images/now3.jpg"
-      }
-    ];
-    */
+
 
     function getYear(memory) {
       if (memory.year) return memory.year;
@@ -354,6 +348,9 @@
 
       document.getElementById("thenPhoto").src = thenPick.src;
       document.getElementById("nowPhoto").src = nowPick.src;
+
+      document.getElementById("thenCaption").innerText = thenPick.caption || "";
+      document.getElementById("nowCaption").innerText = nowPick.caption || "";
     }
 
 
