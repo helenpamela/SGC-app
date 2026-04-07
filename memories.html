@@ -401,6 +401,12 @@
       renderGallerySection(filtered, "gallery-year");
     }
 
+    // highlight selected button
+    document.querySelectorAll("#year-buttons button").forEach(btn => {
+      btn.style.background = btn.innerText == year ? "#7b5cff" : "";
+      btn.style.color = btn.innerText == year ? "white" : "";
+    });
+
     // Load a random pair when page opens
     window.onload = shufflePhotos;
 
