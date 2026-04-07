@@ -394,24 +394,32 @@
         `<button onclick="filterByYear(${year})" style="margin:4px;">${year}</button>`
       ).join("");
     }
+
     function filterByYear(year) {
       const all = getAllMemories();
       const filtered = all.filter(m => getYear(m) === year);
 
       renderGallerySection(filtered, "gallery-year");
+
+      // highlight selected button
+      document.querySelectorAll("#year-buttons button").forEach(btn => {
+        btn.style.background = btn.innerText == year ? "#7b5cff" : "";
+        btn.style.color = btn.innerText == year ? "white" : "";
+      });
+
+      document.getElementById("gallery-year").scrollIntoView({
+        behavior: "smooth"
+      });
     }
 
-    // highlight selected button
-    document.querySelectorAll("#year-buttons button").forEach(btn => {
-      btn.style.background = btn.innerText == year ? "#7b5cff" : "";
-      btn.style.color = btn.innerText == year ? "white" : "";
-    });
+
 
     // Load a random pair when page opens
     window.onload = shufflePhotos;
 
     document.querySelector(".close").onclick = () => {
       document.getElementById("modal").style.display = "none";
+
     };
 
     renderAll();
