@@ -321,22 +321,29 @@
     function getYear(memory) {
       if (memory.year) return memory.year;
 
-      const match = memory.image.match(/\d{4}/);
+      const match = memory.src.match(/\d{4}/);
       return match ? parseInt(match[0]) : null;
     }
 
     function shufflePhotos() {
 
-      const thenPhotos = memories.filter(m => {
+      // 👇 Combine all memory groups into one array
+      const allMemories = [
+        ...memories.early,
+        ...memories.middle,
+        ...memories.recent,
+        ...memories.undated
+      ];
+
+      const thenPhotos = allMemories.filter(m => {
         const year = getYear(m);
         return year && year < 2017;
       });
 
-      const nowPhotos = memories.filter(m => {
+      const nowPhotos = allMemories.filter(m => {
         const year = getYear(m);
         return year && year > 2023;
       });
-
       if (thenPhotos.length === 0 || nowPhotos.length === 0) {
         console.warn("Not enough photos for Then & Now");
         return;
@@ -345,9 +352,13 @@
       const thenPick = thenPhotos[Math.floor(Math.random() * thenPhotos.length)];
       const nowPick = nowPhotos[Math.floor(Math.random() * nowPhotos.length)];
 
-      document.getElementById("thenPhoto").src = thenPick.image;
-      document.getElementById("nowPhoto").src = nowPick.image;
+      document.getElementById("thenPhoto").src = thenPick.src;
+      document.getElementById("nowPhoto").src = nowPick.src;
     }
+
+
+
+
 
     // Load a random pair when page opens
     window.onload = shufflePhotos;
