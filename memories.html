@@ -393,6 +393,12 @@
       container.innerHTML = years.map(year =>
         `<button onclick="filterByYear(${year})" style="margin:4px;">${year}</button>`
       ).join("");
+
+      container.innerHTML =
+        `<button onclick="renderAll()">All</button>` +
+        years.map(year =>
+          `<button onclick="filterByYear(${year})">${year}</button>`
+        ).join("");
     }
 
     function filterByYear(year) {
@@ -411,7 +417,6 @@
         behavior: "smooth"
       });
     }
-
 
 
     // Load a random pair when page opens
