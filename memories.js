@@ -48,12 +48,12 @@ const memories = {
       year: 2010
     },
     {
-      src: "member-images/scarves-2013.jpg",
+      src: "member-images/2013-scarves.jpg",
       caption: "Scarves 2013 🧣",
       year: 2013
     },
     {
-      src: "member-images/st-pat-kerchiefs-cropped-2013.jpg",
+      src: "member-images/2013-st-pat-kerchiefs.jpg",
       caption: "St. Patrick's Day 2013 ☘️",
       year: 2013
     },
