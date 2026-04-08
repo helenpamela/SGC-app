@@ -187,6 +187,8 @@
 
     .then-now button:hover {
       background-color: #6848e0;
+
+   
     }
   </style>
 
@@ -395,10 +397,12 @@
       ).join("");
 
       container.innerHTML =
-        `<button onclick="renderAll()">All</button>` +
+        `<button onclick="showAllMemories()" style="margin:4px;">All</button>
+           <button onclick="filterUnknown()" style="margin:4px;">Unknown</button>` +
         years.map(year =>
-          `<button onclick="filterByYear(${year})">${year}</button>`
+          `<button onclick="filterByYear(${year})" style="margin:4px;">${year}</button>`
         ).join("");
+
     }
 
     function filterByYear(year) {
@@ -412,6 +416,38 @@
         btn.style.background = btn.innerText == year ? "#7b5cff" : "";
         btn.style.color = btn.innerText == year ? "white" : "";
       });
+
+      function showAllMemories() {
+        const all = getAllMemories();
+        renderGallerySection(all, "gallery-year");
+
+        // clear highlight
+        document.querySelectorAll("#year-buttons button").forEach(btn => {
+          btn.style.background = "";
+          btn.style.color = "";
+        });
+
+        document.getElementById("gallery-year").scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+
+      function filterUnknown() {
+        const all = getAllMemories();
+        const filtered = all.filter(m => getYear(m) === null);
+
+        renderGallerySection(filtered, "gallery-year");
+
+        // highlight Unknown
+        document.querySelectorAll("#year-buttons button").forEach(btn => {
+          btn.style.background = btn.innerText === "Unknown" ? "#7b5cff" : "";
+          btn.style.color = btn.innerText === "Unknown" ? "white" : "";
+        });
+
+        document.getElementById("gallery-year").scrollIntoView({
+          behavior: "smooth"
+        });
+      }
 
       document.getElementById("gallery-year").scrollIntoView({
         behavior: "smooth"
