@@ -161,6 +161,10 @@ function logout() {
 
   if (app && login) {
     app.style.display = "none";
+
+    // ✨ reset animation state
+    login.classList.remove("fade-out");
+
     login.style.display = "flex";
   } else {
     window.location.href = "index.html";
