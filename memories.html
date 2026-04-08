@@ -396,13 +396,13 @@
         `<button onclick="filterByYear(${year})" style="margin:4px;">${year}</button>`
       ).join("");
 
-      /*
+      
       container.innerHTML = 
-        `<button onclick="filterUnknown()" style="margin:4px;">Unknown</button>` +
+        `<button onclick="filterUndated()" style="margin:4px;">Undated</button>` +
           years.map(year =>
         `<button onclick="filterByYear(${year})" style="margin:4px;">${year}</button>`
         ).join("");
-      */
+      
 
     }
 
@@ -433,17 +433,17 @@
         });
       }
 
-      /*
-      function filterUnknown() {
+      
+      function filterUndated() {
         const all = getAllMemories();
         const filtered = all.filter(m => getYear(m) === null);
 
         renderGallerySection(filtered, "gallery-year");
 
-        // highlight Unknown
+        // highlight Undated
         document.querySelectorAll("#year-buttons button").forEach(btn => {
-          btn.style.background = btn.innerText === "Unknown" ? "#7b5cff" : "";
-          btn.style.color = btn.innerText === "Unknown" ? "white" : "";
+          btn.style.background = btn.innerText === "Undated" ? "#7b5cff" : "";
+          btn.style.color = btn.innerText === "Undated" ? "white" : "";
         });
 
         document.getElementById("gallery-year").scrollIntoView({
