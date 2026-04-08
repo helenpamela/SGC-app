@@ -23,10 +23,13 @@ function showApp() {
   const login = document.getElementById("loginScreen");
   const app = document.getElementById("appContent");
 
-  if (login && app) {
+  login.classList.add("fade-out");
+
+  setTimeout(() => {
     login.style.display = "none";
     app.style.display = "block";
-  }
+    app.classList.add("fade-in");
+  }, 1000);
 
   applyPermissions();
 }
@@ -142,7 +145,7 @@ function searchMeetings() {
     meeting.title.toLowerCase().includes(input) ||
     meeting.topics.some(topic => topic.includes(input))
   );
- filtered.forEach(meeting => {
+  filtered.forEach(meeting => {
     const li = document.createElement("li");
     li.innerHTML = `<a href="${meeting.link}">${meeting.title}</a>`;
     results.appendChild(li);
