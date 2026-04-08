@@ -400,19 +400,9 @@ const memories = {
       year: 2025
     },
     {
-      src: "member-images/mimosas.jpg",
-      caption: "Mimosas 🍹",
-      year: 2022
-    },
-    {
       src: "member-images/2023-lunch-with-vicky.jpg",
       caption: "Lunch with Vicky 2023 🥗",
       year: 2023
-    },
-    {
-      src: "member-images/group-photo.jpg",
-      caption: "Pink Scarves 2022 🧣",
-      year: 2022
     },
     {
       src: "member-images/2022-archetype-game.jpg",
