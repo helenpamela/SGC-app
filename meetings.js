@@ -686,7 +686,7 @@ const meetings = {
         },
         {
           type: "pdf",
-          label: "Definition of Quantum Jumpingl",
+          label: "Definition of Quantum Jumping",
           src: "https://drive.google.com/file/d/1C07SSsLtcGqcxjD2bIoqYTFuFlY5Y7AG/preview"
         },
         {
@@ -708,6 +708,201 @@ const meetings = {
           type: "pdf",
           label: "Quantum Jumping - Two-Glass Method",
           src: "https://drive.google.com/file/d/1SR3zmVLyK3fi73KCC_p9UOL_DHFPEGYB/preview"
+        }
+
+      ]
+    },
+
+    other: [
+      {
+        type: ""
+
+      } 
+    ]
+  },
+
+   "202510": {
+    title: "October 2025",
+    month: "October",
+    year: 2025,
+
+    final_agenda: [
+      {
+        type: "pdf",
+        label: "Agenda",
+        src: "https://drive.google.com/file/d/1QW_luMfgVW7wcy3DDHYcC8UvoJ3uRCBg/preview"
+      }
+    ],
+    teacher_only: {
+      working_agenda: [
+        {
+          type: "pdf",
+          label: "Working Agenda",
+          src: "https://drive.google.com/file/d/1ARAibvVKAdUl2OoFtBSdfPaH9BWD00Kj/preview"
+        }
+      ]
+    },
+    intention: [
+      {
+        type: "",
+        label: "",
+        src:   ""
+      }
+
+    ],
+
+    lovingkindness: [
+      {
+        type: "pdf",
+        label: "Spread Lovingkindness Prayer",
+        src: "https://drive.google.com/file/d/1Kg3yvdinnPVAocKLKSftmrxeulkQGntc/preview"
+      }
+    ],
+
+    invocation: [
+      {
+        type: "pdf",
+        label: "Solfeggio Frequencies",
+        src: "https://drive.google.com/file/d/1wTSWlSQ5kcYMXx2qrRp5ILLrzkj2YIw9/preview"
+      },
+      {
+        type: "pdf",
+        label: "Solfeggio Article",
+        src: "https://drive.google.com/file/d/1D058Dm4J2EGcXlcpXojf0E2TRlVkiCcF/preview"
+      }
+
+    ],
+
+   
+    focus: {
+      title: "",
+      items: [
+        {
+          type: "image",
+          src: "animal-images/202510-sloth.png",
+        },
+        {
+          type: "image",
+          src: "animal-images/202510-sloth-properties.png",
+        },
+        {
+          type: "image",
+          label: "Sloth Items from Linda",
+          src: "monthly-focus-images/202510-sloth-items.jpg"
+        },
+        {
+          type: "image",
+          label: "Sloth Notes from Linda",
+          src: "monthly-focus-images/202510-sloth-notes.jpg"
+        },
+        {
+          type: "pdf",
+          label: "Sloth Quotes",
+          src: "https://drive.google.com/file/d/1ScpVEqdfDLmOMBRYSt_id1dTZ1wQI-t4/preview"
+        },
+        {
+          type: "pdf",
+          label: "Sloth Article",
+          src: "https://drive.google.com/file/d/1tlWM4uPxNTiOP09ac_kHq_wtKbJgguAc/preview"
+        },
+        {
+          type: "pdf",
+          label: "Happy Sloth Day Fun Facts",
+          src: "https://drive.google.com/file/d/1Ltc5BueRzEbc4XhLa-Tj3K1e_rMRgYYa/preview"
+        }
+      ]
+
+    },
+     
+    practice: {
+      title: "Set Intentions",
+      items: [
+        {
+          type: "pdf",
+          label: "Intentions Quotes from Cliff Notes P.1",
+          src: "https://drive.google.com/file/d/1M2AUMEE-j39XuGA1EtyJEvqaRW-BPOM9/preview",
+        },
+        {
+          type: "pdf",
+          label: "Intentions Quotes from Cliff Notes P.2",
+          src: "https://drive.google.com/file/d/1v9qiILgN_Gcl-wfZh2Z1TINoL_Q0XK4a/preview",
+        }
+      ]
+    },
+
+    affirmation: [
+      {
+        type: "image",
+        label: "This month's affirmation",
+        src: "affirmation-images/202510-affirmation.jpg"
+      }
+    ],
+
+    meditation: {
+      title: "",
+      items: [
+        {
+          type: "image",
+          src: "none-images/no-meditation.jpg"
+        }
+      ]
+    },
+
+    luminary: {
+      title: "Jane Goodall & Thomas Edison",
+      items: [
+        {
+          type: "pdf",
+          label: "Jane Goodall's Final Message",
+          src: "https://drive.google.com/file/d/1ZhcDiG_AX3QDuyGBHnEgBBUD7xCMP9ZQ/preview"
+        },
+        {
+          type: "pdf",
+          label: "Thomas Edison Quotes",
+          src: "https://drive.google.com/file/d/159OBctEsw7qDY88MwPQX9AD_plPP0Wo5/preview"
+        },
+        {
+          type: "pdf",
+          label: "Thomas Edison Article",
+          src: "https://drive.google.com/file/d/1UxZpjNpXD5ZLQJs2oPPef6ShOeOFi2f7/preview"
+        }
+      ]
+    },
+
+    tags: ["intention", "sloth", "perseverance", "strength", "Thomas Edison", "Jane Goodall", "solfeggio"],
+
+    topic: {
+      title: "Perseverance",
+      items: [
+        {
+          type: "pdf",
+          label: "Perseverance Quotes",
+          src: "https://drive.google.com/file/d/1WIiNy3AvSu4Z8OKjRIlhlfsKkFB8yY0u/preview"
+        },
+        {
+          type: "pdf",
+          label: "Perseverance Article Why It Matters",
+          src: "https://drive.google.com/file/d/1d5eZFyfBuZxjkaosWiuF2h78PfFnSLIE/preview"
+        },
+        {
+          type: "pdf",
+          label: "Perseverance Article True Meaning",
+          src: "https://drive.google.com/file/d/1m92P81PuroPh6TxCBAng7jUevVv2wcbx/preview"
+        },
+        {
+          type: "pdf",
+          label: "Perseverance Article How to Develop",
+          src: "https://drive.google.com/file/d/1V5g15tT0VK6w8qDbqp1tnnyow2X8cZQ0/preview"
+        },
+        {
+          type: "pdf",
+          label: "Perseverance Article 10 Reasons",
+          src: "https://drive.google.com/file/d/1S6q75jwrnddFI6zOJ5pzUN7LUrBwSPmR/preview"
+        },
+        {
+          type: "pdf",
+          label: "Linda's Notes",
+          src: "https://drive.google.com/file/d/1-caXF9EaiDtTnGXaKfRUMbxG5chhpOAa/preview"
         }
 
       ]

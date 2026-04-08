@@ -307,6 +307,9 @@
     <h2>Spread Lovingkindness</h2>
     <div id="lovingkindness"></div>
 
+    <h2>Invocation</h2>
+    <div id="invocation"></div>
+
     <h2 id="focus-title">Monthly Focus</h2>
     <div id="focus"></div>
 
@@ -406,6 +409,7 @@
       renderItems(data.teacher_only?.working_agenda || [], "working_agenda");
       renderItems(data.intention || [], "intention");
       renderItems(data.lovingkindness || [], "lovingkindness");
+      renderItems(data.invocation || [], "invocation");
       renderItems(data.focus?.items || [], "focus");
       renderItems(data.practice?.items || [], "practice");
       renderItems(data.affirmation || [], "affirmation");
@@ -478,22 +482,6 @@
       modal.style.display = "block";
     }
 
-    /*
-    const modal = document.getElementById("modal");
-    const closeBtn = document.querySelector(".close");
-
-    closeBtn.onclick = function () {
-      modal.style.display = "none";
-      document.getElementById("modalViewer").src = "";
-    };
-
-    modal.onclick = function (event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
-        document.getElementById("modalViewer").src = "";
-      }
-    };
-    */
 
     window.addEventListener("load", () => {
       const modal = document.getElementById("modal");
