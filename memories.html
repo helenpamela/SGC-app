@@ -224,9 +224,7 @@
 
     <h2>🗓️ Browse by Year</h2>
     <div id="year-buttons" style="text-align:center; margin-bottom: 15px;"></div>
-    <div id="gallery-year" class="gallery"></div>
-    <button onclick="filterUndated()">Undated</button>
-
+    <div id="gallery-year" class="gallery"></div> 
 
     <div id="gallery" class="gallery"></div>
     <h2>🌿 2009-2014</h2>
@@ -441,7 +439,7 @@
 
     function filterUndated() {
       const all = getAllMemories();
-      const filtered = all.filter(m => getYear(m) === null);
+      const filtered = all.filter(m => getYear(m) === "undated");
 
       renderGallerySection(filtered, "gallery-year");
 
