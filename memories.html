@@ -396,11 +396,12 @@
       const years = getUniqueYears();
 
       container.innerHTML = years.map(year => {
-        if (year === "undated") {
-          return `<button onclick="filterUndated()" style="margin:4px;">undated</button>`;
-        } else {
-          return `<button onclick="filterByYear(${year})" style="margin:4px;">${year}</button>`;
-        }
+
+      if (year === "undated") {
+        return `<button onclick="filterUndated()" style="margin:4px;">Undated</button>`;   
+      } else {
+        return `<button onclick="filterByYear(${year})" style="margin:4px;">${year}</button>`;
+      }
       }).join("");
     }
 
@@ -443,8 +444,8 @@
 
       // highlight Undated button
       document.querySelectorAll("#year-buttons button").forEach(btn => {
-        btn.style.background = btn.innerText === "Undated" ? "#7b5cff" : "";
-        btn.style.color = btn.innerText === "Undated" ? "white" : "";
+        btn.style.background = btn.innerText.toLowerCase() === "undated" ? "#7b5cff" : "";
+        btn.style.color = btn.innerText.toLowerCase() === "undated" ? "white" : "";
       });
 
       document.getElementById("gallery-year").scrollIntoView({
