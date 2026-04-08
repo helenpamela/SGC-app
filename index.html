@@ -156,8 +156,17 @@
       <h2>Welcome to our sacred circle🌟</h2>
       <p>Enter the magic word to begin:</p>
 
-      <input type="password" id="accessInput" placeholder="Access word" />
-      <button onclick="checkAccess()">Enter</button>
+      window.onload = () => {
+      document.getElementById("password").focus();
+      };
+
+      <form onsubmit="handleLogin(event)">
+        <p style="font-size: 13px; color: #8a7fb0; margin-top: -5px;">
+          Press Enter to continue ⏎
+        </p>
+        <input type="password" id="accessInput" placeholder="Access word" autofocus>
+        <button type="submit">Enter</button>
+      </form>
 
       <p id="errorMsg" style="color:red; display:none;">
         Oops! Try again 😊
@@ -213,6 +222,11 @@
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
       });
+
+    function handleLogin(event) {
+      event.preventDefault(); // prevents page reload
+      checkAccess(); // your existing login function
+    }
 
     window.onload = function () {
       const role = localStorage.getItem("role");
