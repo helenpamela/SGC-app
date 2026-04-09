@@ -89,107 +89,107 @@ const memories = {
       year: 2015
     },
     {
-      src: "2015-christmas-glowing-rings.jpg",
+      src: "member-images/2015-christmas-glowing-rings.jpg",
       caption: "Christmas 2015 - Glowing Rings 🎄",
       year: 2015
     },
     {
-      src: "2015-dancing.jpg",
+      src: "member-images/2015-dancing.jpg",
       caption: "2015 - Dancing 🪇",
       year: 2015
     },
     {
-      src: "2015-dancing2.jpg",
+      src: "member-images/2015-dancing2.jpg",
       caption: "2015 - More Dancing 🪇",
       year: 2015
     },
     {
-      src: "2015-dancing3.jpg",
+      src: "member-images/2015-dancing3.jpg",
       caption: "2015 - Still Dancing 🪇",
       year: 2015
     },
     {
-      src: "2015-elephants.jpg",
+      src: "member-images/2015-elephants.jpg",
       caption: "2015 - Elephants 🐘",
       year: 2015
     },
     {
-      src: "2015-st-patricks-day.jpg",
+      src: "member-images/2015-st-patricks-day.jpg",
       caption: "2015 - St Patrick's Day ☘️",
       year: 2015
     },
     {
-      src: "2015-trudi-birthday.jpg",
+      src: "member-images/2015-trudi-birthday.jpg",
       caption: "2015 - Trudi's Birthday 🎂",
       year: 2015
     },
     {
-      src: "2015-painting-aprons-wine.jpg",
+      src: "member-images/2015-painting-aprons-wine.jpg",
       caption: "2015 Aprons, Wine, Blank Canvas 🎨",
       year: 2015
     },
     {
-      src: "2015-pam-trudi-painting-aprons.jpg",
+      src: "member-images/2015-pam-trudi-painting-aprons.jpg",
       caption: "2015 Ready to Start Creating 🎨",
       year: 2015
     },
     {      
-      src: "2015-kathy-sipping-painting.jpg",
+      src: "member-images/2015-kathy-sipping-painting.jpg",
       caption: "2015 - Kathy Sipping & Creating 🎨",
       year: 2015
     },
     {
-      src: "2015-linda-painting.jpg",
+      src: "member-images/2015-linda-painting.jpg",
       caption: "2015 - Shhh - Artist at Work 🎨",
       year: 2015
     },
     {
-      src: "2015-finished-paintings.jpg",
+      src: "member-images/2015-finished-paintings.jpg",
       caption: "2015 - Works of Art Completed 🎨",
       year: 2015
     },
     {
-      src: "2015-paintings.jpg",
+      src: "member-images/2015-paintings.jpg",
       caption: "2015 - We did it! 🎨",
       year: 2015
     },
     {
-      src: "2015-pam-painting.jpg",
+      src: "member-images/2015-pam-painting.jpg",
       caption: "2015 - Pam's Painting 🎨",
       year: 2015
     },
     {
-      src: "2015-kathy-trudi-hats.jpg",
+      src: "member-images/2015-kathy-trudi-hats.jpg",
       caption: "2015 - Kathy & Trudi in Love Hats 👒",
       year: 2015
     },
     {
-      src: "2015-kathy-trudi-love-hats.jpg",
+      src: "member-images/2015-kathy-trudi-love-hats.jpg",
       caption: "2015 - Kathy & Trudi in Love Hats 👒",
       year: 2015
     },
     {
-      src: "2015-kathy-trudi-love-hats.jpg",
+      src: "member-images/2015-kathy-trudi-love-hats.jpg",
       caption: "2015 - Kathy & Trudi in Love Hats 👒",
       year: 2015
     },
     {
-      src: "2015-linda-trudi-love-hats.jpg",
+      src: "member-images/2015-linda-trudi-love-hats.jpg",
       caption: "2015 - Linda & Trudi in Love Hats 👒",
       year: 2015
     },
     {
-      src: "2015-linda-flowers.jpg",
+      src: "member-images/2015-linda-flowers.jpg",
       caption: "2015 - Linda with Flowers 💐",
       year: 2015
     },
     {
-      src: "2015-linda-pc-lunch.jpg",
+      src: "member-images/2015-linda-pc-lunch.jpg",
       caption: "2015 - Linda & PC at Lunch 🍔",
       year: 2015
     },
     {
-      src: "2015-pc-laughing.jpg",
+      src: "member-images/2015-pc-laughing.jpg",
       caption: "2015 - PC laughing 🍔",
       year: 2015
     },
