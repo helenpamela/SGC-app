@@ -1724,10 +1724,11 @@ const meetings = {
     ],
 
     meditation: {
-      title: "Doreen Virtue - Atlantis 🐬",
+      title: "",
       items: [
         {
-          type: "",
+          type: "text",
+          label: "Doreen Virtue - Atlantis 🐬",
           src: ""
         }
       ]
