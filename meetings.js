@@ -1039,6 +1039,454 @@ const meetings = {
 
       } 
     ]
+  },
+
+  
+   "202508": {
+    title: "August 2025",
+    month: "August",
+    year: 2025,
+
+    final_agenda: [
+      {
+        type: "pdf",
+        label: "Agenda",
+        src: "https://drive.google.com/file/d/1nM3HkIQbCyhOtAHmdS633eCie6umcgQr/preview"
+      }
+    ],
+    teacher_only: {
+      working_agenda: [
+        {
+          type: "pdf",
+          label: "Working Agenda",
+          src: "https://drive.google.com/file/d/16qLx-KCP8mT1QCobi75E5Ude-kgRYKpc/preview"
+        }
+      ]
+    },
+    intention: [
+      {
+        type: "",
+        label: "",
+        src:   ""
+      }
+
+    ],
+
+    lovingkindness: [
+      {
+        type: "pdf",
+        label: "Spread Lovingkindness Prayer",
+        src: "https://drive.google.com/file/d/1Kg3yvdinnPVAocKLKSftmrxeulkQGntc/preview"    
+      }
+    ],
+
+    invocation: [
+      {
+        type: "",
+        label: "",
+        src: ""
+      }
+
+    ],
+
+   
+    focus: {
+      title: "",
+      items: [
+        {
+          type: "",
+          src: "none-images/no-monthly-focus.png"
+        }      
+       
+      ]
+
+    },
+     
+    practice: {
+      title: "Shine Your Light",
+      items: [
+        {
+          type: "pdf",
+          label: "A to Z - Shine Your Light",
+          src: "https://drive.google.com/file/d/1YDBiU4khRDl5uAhaCLOVnqIcNv7Bwu7W/preview"
+        }
+    
+      ]
+    },
+
+    affirmation: [
+      {
+        type: "image",
+        label: "Wholehearted Living Affirmation 1",
+        src: "affirmation-images/202508-wholehearted-affirmation-1.png"
+      },
+      {
+        type: "image",
+        label: "Wholehearted Living Affirmation 2",
+        src: "affirmation-images/202508-wholehearted-affirmation-2.png"
+      },
+      {
+        type: "image",
+        label: "Wholehearted Living Affirmation 3",
+        src: "affirmation-images/202508-wholehearted-affirmation-3.png"
+      },
+      {
+        type: "image",
+        label: "Wholehearted Living Affirmation 4",
+        src: "affirmation-images/202508-wholehearted-affirmation-4.png"
+      },
+      {
+        type: "image",
+        label: "Wholehearted Living Affirmation 5",
+        src: "affirmation-images/202508-wholehearted-affirmation-5.png"
+      },
+      {
+        type: "image",
+        label: "Wholehearted Living Affirmation 6",
+        src: "affirmation-images/202508-wholehearted-affirmation-6.png"
+      },
+      {
+        type: "image",
+        label: "Wholehearted Living Affirmation 7",
+        src: "affirmation-images/202508-wholehearted-affirmation-7.png"
+      },
+      {
+        type: "image",
+        label: "Wholehearted Living Affirmation 8",
+        src: "affirmation-images/202508-wholehearted-affirmation-8.png"
+      },
+      {
+        type: "image",
+        label: "Wholehearted Living Affirmation 9",
+        src: "affirmation-images/202508-wholehearted-affirmation-9.png"
+      },
+      {
+        type: "image",
+        label: "Wholehearted Living Affirmation 10",
+        src: "affirmation-images/202508-wholehearted-affirmation-10.png"
+      },
+      {
+        type: "image",
+        label: "Wholehearted Living Affirmation 11",
+        src: "affirmation-images/202508-wholehearted-affirmation-11.png"
+      }
+
+    ],
+
+    meditation: {
+      title: "Denise Linn - Who You are is Enough",
+      items: [
+        {
+          type: "video",
+          src: "https://youtu.be/sMrb-itIjxY?si=Db28K8WsiyHk5N0w"
+        }
+      ]
+    },
+
+    luminary: {
+      title: "",
+      items: [
+        {
+          type: "image",
+          label: "",
+          src: "none-images/no-luminaries.png"
+        }
+
+      ]
+    },
+
+    tags: ["wholehearted living", "shine your light", "denise linn"],
+
+    topic: {
+      title: "Wholehearted Living",
+      items: [
+        {
+          type: "pdf",
+          label: "Affirmations page",
+          src: "https://drive.google.com/file/d/1OHhDEGlHh2FxnkAuQFR_Fa9gS1btz8h5/preview"
+        },
+        {
+          type: "pdf",
+          label: "Images",
+          src: "https://drive.google.com/file/d/1reEgtCDkwKSda4dXhfWgEV4RFp1YfNVi/preview"
+        },
+        {
+          type: "pdf",
+          label: "A Simple Guide to Wholehearted Living",
+          src: "https://drive.google.com/file/d/1U0K6ebBgG8e1pHAryJ4zp6flLE5crXOg/preview"
+        },
+        {
+          type: "pdf",
+          label: "Quotes from Cliff Notes",
+          src: "https://drive.google.com/file/d/1y7BVc2r1l01aI_rrJ-s0g8hHgigHj8d_/preview"
+        },
+        {
+          type: "pdf",
+          label: "10 Guideposts from Cliff Notes",
+          src: "https://drive.google.com/file/d/138dA7gS1-0vR9emrb8VOeHXEY3Mv_Lbq/preview"
+        }
+       
+
+      ]
+    },
+
+    other: [
+      {
+        type: ""
+
+      } 
+    ]
+  },
+
+   
+   "202507": {
+    title: "July 2025",
+    month: "July",
+    year: 2025,
+
+    final_agenda: [
+      {
+        type: "pdf",
+        label: "Agenda",
+        src: ""
+      }
+    ],
+    teacher_only: {
+      working_agenda: [
+        {
+          type: "",
+          label: "",
+          src: ""
+        }
+      ]
+    },
+    intention: [
+      {
+        type: "",
+        label: "",
+        src:   ""
+      }
+
+    ],
+
+    lovingkindness: [
+      {
+        type: "",
+        label: "",
+        src: ""
+      }
+    ],
+
+    invocation: [
+      {
+        type: "",
+        label: "",
+        src: ""
+      }
+
+    ],
+
+   
+    focus: {
+      title: "",
+      items: [
+        {
+          type: "",
+          src: ""
+        }      
+       
+      ]
+
+    },
+     
+    practice: {
+      title: "",
+      items: [
+        {
+          type: "",
+          label: "",
+          src: ""
+        }
+    
+      ]
+    },
+
+    affirmation: [
+      {
+        type: "",
+        label: "",
+        src: ""
+      }
+    ],
+
+    meditation: {
+      title: "",
+      items: [
+        {
+          type: "",
+          src: ""
+        }
+      ]
+    },
+
+    luminary: {
+      title: "",
+      items: [
+        {
+          type: "",
+          label: "",
+          src: ""
+        }
+
+      ]
+    },
+
+    tags: ["cancelled"],
+
+    topic: {
+      title: "",
+      items: [
+        {
+          type: "",
+          label: "",
+          src: ""
+        }
+       
+
+      ]
+    },
+
+    other: [
+      {
+        type: ""
+
+      } 
+    ]
+  },
+
+   "202506": {
+    title: "June 2025",
+    month: "June",
+    year: 2025,
+
+    final_agenda: [
+      {
+        type: "pdf",
+        label: "Agenda",
+        src: ""
+      }
+    ],
+    teacher_only: {
+      working_agenda: [
+        {
+          type: "",
+          label: "",
+          src: ""
+        }
+      ]
+    },
+    intention: [
+      {
+        type: "",
+        label: "",
+        src:   ""
+      }
+
+    ],
+
+    lovingkindness: [
+      {
+        type: "",
+        label: "",
+        src: ""
+      }
+    ],
+
+    invocation: [
+      {
+        type: "",
+        label: "",
+        src: ""
+      }
+
+    ],
+
+   
+    focus: {
+      title: "",
+      items: [
+        {
+          type: "",
+          src: ""
+        }      
+       
+      ]
+
+    },
+     
+    practice: {
+      title: "",
+      items: [
+        {
+          type: "",
+          label: "",
+          src: ""
+        }
+    
+      ]
+    },
+
+    affirmation: [
+      {
+        type: "",
+        label: "",
+        src: ""
+      }
+    ],
+
+    meditation: {
+      title: "",
+      items: [
+        {
+          type: "",
+          src: ""
+        }
+      ]
+    },
+
+    luminary: {
+      title: "",
+      items: [
+        {
+          type: "",
+          label: "",
+          src: ""
+        }
+
+      ]
+    },
+
+    tags: ["cancelled"],
+
+    topic: {
+      title: "",
+      items: [
+        {
+          type: "",
+          label: "",
+          src: ""
+        }
+       
+
+      ]
+    },
+
+    other: [
+      {
+        type: ""
+
+      } 
+    ]
   }
 
 }
