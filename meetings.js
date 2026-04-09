@@ -1625,8 +1625,171 @@ const meetings = {
 
   
    "202505": {
-    title: "May 2025",
+    title: "May 2025 🐝",
     month: "May",
+    year: 2025,
+
+    final_agenda: [
+      {
+        type: "pdf",
+        label: "Agenda",
+        src: "https://drive.google.com/file/d/1skGzWYfzdFe5pRMim2fQ7nJstal9YNRb/preview"
+      }
+    ],
+    teacher_only: {
+      working_agenda: [
+        {
+          type: "pdf",
+          label: "Working Agenda",
+          src: "https://drive.google.com/file/d/1rZtNeNVwbH-IsKxk9G6i528q-hyB9P7F/preview"
+        }
+      ]
+    },
+    intention: [
+      {
+        type: "",
+        label: "",
+        src:   ""
+      }
+
+    ],
+
+    lovingkindness: [
+      {
+        type: "pdf",
+        label: "Spread Lovingkindness Prayer",
+        src: "https://drive.google.com/file/d/1Kg3yvdinnPVAocKLKSftmrxeulkQGntc/preview"   
+      }
+    ],
+
+    invocation: [
+      {
+        type: "",
+        label: "",
+        src: ""
+      }
+
+    ],
+
+   
+    focus: {
+      title: "",
+      items: [
+        {
+          type: "image",
+          src: "flower-images/202505-yellow-rose.png"
+        }, 
+        {
+          type: "image",
+          src: "flower-images/202505-yellow-rose-properties.png"
+        }, 
+        {
+          type: "pdf",
+          label: "Yellow Roses Meaning",
+          src: "https://drive.google.com/file/d/1IfBxnSF1SCxLSukG5XzB1K_bFCB6zaVU/preview"
+        },
+        {
+          type: "pdf",
+          label: "Meaning of Yellow Roses",
+          src: "https://drive.google.com/file/d/1tIEAF1po-MyHDXKwsXeXO_4yMc124niQ/preview"
+        },
+        {
+          type: "pdf",
+          label: "Floriography Article",
+          src: "https://drive.google.com/file/d/1hxgRKvoFpoT2bWaOg_TRmt3lecN4dyBZ/preview"
+        }
+       
+      ]
+
+    },
+     
+    practice: {
+      title: "Call a Friend ☎️",
+      items: [
+        {
+          type: "",
+          label: "",
+          src: ""
+        }
+    
+      ]
+    },
+
+    affirmation: [
+      {
+        type: "image",
+        label: "This Month's Affirmation",
+        src: "affirmation-images/202505-affirmation.jpg"
+      }
+    ],
+
+    meditation: {
+      title: "Doreen Virtue - Atlantis",
+      items: [
+        {
+          type: "",
+          src: ""
+        }
+      ]
+    },
+
+    luminary: {
+      title: "",
+      items: [
+        {
+          type: "image",
+          label: "",
+          src: "none-images/no-luminaries.png"
+        }
+
+      ]
+    },
+
+    tags: ["rose", "friend", "friendship", ],
+
+    topic: {
+      title: "",
+      items: [
+        {
+          type: "pdf",
+          label: "Friendship Quotes",
+          src: "https://drive.google.com/file/d/1q74492llQrzUHgHOMLA4BDIDiK3cAxYM/preview"
+        },
+        {
+          type: "pdf",
+          label: "Importance of Female Friendships",
+          src: "https://drive.google.com/file/d/1Qu2KznFjf_4INsVXhTQb6-hKt_X7vL-j/preview"
+        },
+        {
+          type: "pdf",
+          label: "Female Friendships & Longevity",
+          src: "https://drive.google.com/file/d/1FCIYP-RUsZXVhV7fvLmcUpcKeKQr10fm/preview"
+        },
+        {
+          type: "image",
+          label: "Friendship Bracelet from Linda",
+          src: "topic-images/202505-friendship-bracelet.jpg"
+        },
+
+
+       
+
+      ]
+    },
+
+    other: [
+      {
+        type: ""
+
+      } 
+    ]
+  },
+
+
+
+  "202504": {
+    title: "April 2025 🌷",
+    month: "April",
     year: 2025,
 
     final_agenda: [
@@ -1748,11 +1911,10 @@ const meetings = {
       } 
     ]
   },
-
    
-   "202504": {
-    title: "April 2025",
-    month: "April",
+   "202503": {
+    title: "March 2025 ☘️",
+    month: "AprilMarch",
     year: 2025,
 
     final_agenda: [
