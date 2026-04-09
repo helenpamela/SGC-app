@@ -425,6 +425,11 @@ const memories = {
       year: 2021
     },
     {
+      src: "member-images/2021-kathy-trudi-italian-wine.jpg",
+      caption: "Kathy & Trudi enjoying Italian Wine 2023 🍷",
+      year: 2023
+    },
+    {
       src: "member-images/2021-kathy-cozy.jpg",
       caption: "Kathy Cozy 2021 😺",
       year: 2021
@@ -608,17 +613,7 @@ const memories = {
       src: "member-images/2023-italian-lunch-with-vicky.jpg",
       caption: "Italian Lunch with Vicky 2023 🍝",
       year: 2023
-    },
-    {
-      src: "member-images/2023-kathy-trudi-italian-wine.jpg",
-      caption: "Kathy & Trudi enjoying Italian Wine 2023 🍷",
-      year: 2023
-    },
-    {
-      src: "member-images/2023-trudis-consolation-italian-lunch.jpg",
-      caption: "Trudi's Consolation Italian Lunch 2023 🍷",
-      year: 2023
-    },
+    },  
     {
       src: "member-images/2023-kitchen-we-look-good!.jpg",
       caption: "We are looking good! 2023 🦋",
