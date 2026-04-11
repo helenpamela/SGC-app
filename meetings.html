@@ -8,6 +8,36 @@
   <link rel="stylesheet" href="header-styles.css">
 
   <style>
+
+    .meeting-banner h1 {
+      position: relative;
+      color: #5c4b7d;
+      font-weight: 600;
+      font-size: 38px;
+      text-shadow:
+        0 2px 6px rgba(255, 255, 255, 0.9),
+        0 0 8px rgba(92, 75, 125, 0.2);
+    }
+
+    .meeting-banner img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+
+    .meeting-banner {
+      background-image: url('inspiration-images/inspiration-header.jpg');
+      /* <-- your image path */
+      background-size: cover;
+      background-position: center;
+
+      padding: 40px 20px;
+      border-radius: 16px;
+      margin-bottom: 25px;
+      text-align: center;
+
+      position: relative;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, sans-serif;
       margin: 0;
@@ -285,7 +315,10 @@
   <div id="header-placeholder"></div>
 
   <div class="container">
-    <h1 id="title"></h1>
+
+    <div class="meeting-banner">
+      <h1 id="title"></h1>
+    </div>
 
     <div id="search-nav" style="display:none; text-align:center; margin-bottom:15px;">
       <button onclick="prevResult()">⬅ Previous Result</button>
