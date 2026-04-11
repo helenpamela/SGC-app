@@ -28,6 +28,36 @@
       color: #5c4b7d;
     }
 
+    .events-banner img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+
+    .events-banner {
+      background-image: url('events-images/calendar.jpg');
+      /* <-- your image path */
+      background-size: cover;
+      background-position: center;
+
+      padding: 40px 20px;
+      border-radius: 16px;
+      margin-bottom: 25px;
+      text-align: center;
+
+      position: relative;
+    }
+
+     /* Soft overlay so text is readable */
+    .events-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.35);
+      /* soft white glow */
+      border-radius: 16px;
+    }
+
+
     body {
       background: linear-gradient(180deg, #f6f3f9, #ffffff);
     }
@@ -149,10 +179,9 @@
   <div id="header-placeholder"></div>
 
   <div class="container">
-
-    <img src="logo/sgc-big-logo.png">
-
-    <h1 id="title"></h1>
+    <div class="explore-banner">
+      <h1>Upcoming Events</h1>
+    </div>
 
     <div id="event" class="card"></div>
 
