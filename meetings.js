@@ -1697,6 +1697,11 @@ const meetings = {
           type: "pdf",
           label: "Floriography Article",
           src: "https://drive.google.com/file/d/1hxgRKvoFpoT2bWaOg_TRmt3lecN4dyBZ/preview"
+        },
+        {
+          type: "image",
+          label: "Yellow Roses from Linda",
+          src: "monthly-focus-images/202505-yellow-roses-from-linda.jpg"
         }
        
       ]
