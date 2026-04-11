@@ -6,6 +6,35 @@
   <link rel="stylesheet" href="header-styles.css">
 
   <style>
+
+    .memories-banner img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+    .memories-banner {
+      background-image: url('memories-images/memories-header.jpg');
+      /* <-- your image path */
+      background-size: cover;
+      background-position: center;
+
+      padding: 40px 20px;
+      border-radius: 16px;
+      margin-bottom: 25px;
+      text-align: center;
+
+      position: relative;
+    }
+
+       /* Soft overlay so text is readable */
+    
+    .memories-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:  rgba(197, 197, 194, 0.4);  
+      border-radius: 16px;
+    }
+    
     body {
       font-family: 'Segoe UI', Tahoma, sans-serif;
       margin: 0;
@@ -199,7 +228,11 @@
   <div id="header-placeholder"></div>
 
   <div class="container">
-    <h1>Shared Memories 💜</h1>
+
+    <div class="memories-banner">
+      <h1 id="title"></h1>
+    </div>
+
     <p class="subtitle">Moments we've cherished together</p>
 
     <section class="then-now">
