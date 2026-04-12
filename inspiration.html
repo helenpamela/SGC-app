@@ -7,44 +7,7 @@
   <link rel="stylesheet" href="header-styles.css">
 
   <style>
-    .inspiration-banner h1 {
-      position: relative;
-      color: #5c4b7d;
-      font-weight: 600;
-      font-size: 38px;
-      text-shadow:
-        0 2px 6px rgba(255, 255, 255, 0.9),
-        0 0 8px rgba(92, 75, 125, 0.2);
-    }
 
-    .inspiration-banner img {
-      width: 100px;
-      margin-bottom: 10px;
-    }
-     .inspiration-banner {
-      background-image: url('inspiration-images/inspiration-header.jpg');
-      /* <-- your image path */
-      background-size: cover;
-      background-position: center;
-
-      padding: 40px 20px;
-      border-radius: 16px;
-      margin-bottom: 25px;
-      text-align: center;
-
-      position: relative;
-    }
-     /* Soft overlay so text is readable */
-     /*
-    .inspiration-banner::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(255, 255, 255, 0.35);
-      border-radius: 16px;
-      
-    }
-    */
 
 
     body {
@@ -141,12 +104,16 @@
 <body>
   <div id="header-placeholder"></div>
 
+  <div class="banner" style="background-image: 
+      linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+      url('inspiration-images/inspiration-header.jpg');">
+
+      <h1 class="banner-title">Daily Inspiration</h1>
+
+    </div>
+
   <div class="container">
 
-     <div class="inspiration-banner">
-      <h1>Daily Inspiration</h1>
-    </div>
-  
 
     <div id="ceremony"
       style="text-align:center; opacity:0; transition: opacity 1s ease; font-style:italic; color:#8a7fb0;">
