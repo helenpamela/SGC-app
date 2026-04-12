@@ -124,6 +124,21 @@
       font-size: 16px;
       margin-bottom: 10px;
     }
+
+     #resourcesList {
+      text-align: left;
+      column-count: 2;
+      column-gap: 20px;
+      padding-left: 20px;
+    }
+
+    #resourcesList li {
+      text-align: left;
+      margin-bottom: 8px;
+    }
+
+
+
   </style>
 </head>
 
@@ -132,10 +147,12 @@
   <div id="header-placeholder"></div>
 
   <div class="container">
+
     <img src="cliff-notes-images/resources.png">
     <h1>Resources</h1>
     <div class="subtitle">What resources would be helpful for me? ✨</div>
-    <ul>
+
+    <ul id="resourcesList">
       <li><a href="#" onclick="openModal(0)">🌷 Sources of Inspiration</a></li>
       <li><a href="#" onclick="openModal(1)">🌸 CD's</a></li>
       <li><a href="#" onclick="openModal(2)">💿 DVD's</a></li>
