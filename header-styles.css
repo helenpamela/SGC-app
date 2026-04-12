@@ -38,10 +38,10 @@
   transition: all 0.2s ease;
   border: 2px solid #a18cd1;
 }
-margin: 0 auto 25px;
+
 .banner {
   max-width: 100%;
-  margin: 0 auto 25px;
+  margin: 15px auto 25px;
   border-radius: 16px;
   padding: 40px 25px;
   text-align: center;
