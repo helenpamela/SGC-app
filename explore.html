@@ -428,7 +428,8 @@
         }
 
         li.innerHTML = `
-      <a href="#" onclick="openModal(${index})">
+
+        <a href="#" onclick="event.preventDefault(); openModal(${index})">
 
         <div style="font-size:13px; color:#7a6c9d;">
           ${matchText}
