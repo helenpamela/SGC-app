@@ -130,7 +130,8 @@
       border-color: #b9a7e6;
       box-shadow: 0 0 5px rgba(180, 150, 255, 0.4);
     }
-     #conceptsList {
+
+    #conceptsList {
       text-align: left;
       column-count: 2;
       column-gap: 20px;
@@ -141,7 +142,6 @@
       text-align: left;
       margin-bottom: 8px;
     }
-
   </style>
 </head>
 
@@ -157,21 +157,7 @@
     <input type="text" id="searchBox" placeholder="What am I looking for..."
       style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ddd;">
 
-    <ul id="conceptsList">
-      <li><a href="#" onclick="openModal(0)">⚡ Energy</a></li>
-      <li><a href="#" onclick="openModal(1)">🧲 Law of Attraction - Like Attracts Like</a></li>
-      <li><a href="#" onclick="openModal(2)">🙏 Abraham's Law of Attraction Synopsis </a></li>
-      <li><a href="#" onclick="openModal(3)">➕ Law of Attraction - Positive vs Negative</a></li>
-      <li><a href="#" onclick="openModal(4)">😠 Abraham's Emotional Guidance Scale</a></li>
-      <li><a href="#" onclick="openModal(5)">😢 Abraham's Emotional Guidance Scale 2</a></li>
-      <li><a href="#" onclick="openModal(6)">🤯 Thoughts Create Reality</a></li>
-      <li><a href="#" onclick="openModal(7)">🤯 Thoughts Create Reality - Mike Dooley</a></li>
-      <li><a href="#" onclick="openModal(8)">🐺 Which Wolf?</a></li>
-      <li><a href="#" onclick="openModal(9)">💧 Dr. Masaru Emoto</a></li>
-      <li><a href="#" onclick="openModal(10)">👀 Be Here Now</a></li>
-      <li><a href="#" onclick="openModal(11)">🌐 Easy World 1</a></li>
-
-    </ul>
+    <ul id="conceptsList"></ul>
 
   </div>
 
@@ -183,23 +169,32 @@
         document.getElementById('header-placeholder').innerHTML = data;
       });
 
-
-    const conceptsDocs = [
-      "https://drive.google.com/file/d/1khjuwlt_pHP-Z0LO8ct_vCkttM2phhQm/preview",   // C1_Energy.pdf
-      "https://drive.google.com/file/d/1My1jhHDnib11qvc7cNPpqfsbyPP_Dx-C/preview",   // C2a_LOA_LikeAttractsLike.pdf,
-      "https://drive.google.com/file/d/18h_FeG3lrz4gsl3n-Y7x0tF248ZJbCHD/preview",   // C2b_LOA_Synopsis.pdf"
-      "https://drive.google.com/file/d/14oZsUFnmmkXp7Y1Cuu5CMP_3dNzBpQKk/preview",   // C2c_LOA_PositiveNegative.pdf
-      "https://drive.google.com/file/d/1OP98JI0yzn_HNCto0vb3ZQIq1HRvC0WS/preview",   // C2d_AbrahamsEmotionalScale1.pdf
-      "https://drive.google.com/file/d/1A6gKYltTnRsIFVn2pz8k_95wB38UCU01/preview",   // C2e_AbrahamsEmotionalScale2.pdf
-      "https://drive.google.com/file/d/1z08rTWIlKw_Z8jouDnDHhQZaA3g6u_nP/preview",   // C3a_ThoughtsCreateReality.pdf
-      "https://drive.google.com/file/d/1ejDr9rzU45mTP_XZZg_xM-hSWIloLqqf/preview",   // C3b_ThoughtsCreateReality_Dooley.pdf
-      "https://drive.google.com/file/d/1zQurhH59MKc-KODTnQdtr3rUtpLwxPRu/preview",   // C3c_WhichWolf.pdf
-      "https://drive.google.com/file/d/1QAJCSx32uFUQgQUJncih4tnnRbZudi9J/preview",   // C3d_DrEmoto.pdf
-      "https://drive.google.com/file/d/1VCuY2aIFarAd9IIaAjxxDA3UcboV_PUj/preview",   // C4_BeHereNow.pdf
-      "https://drive.google.com/file/d/1x_z0TlWf31VNYi166__6tMOxbyMF1DVb/preview",   // C5a_EasyWorldPoster1.pdf
-    ];
-
+    let conceptsData = [];
     let currentIndex = 0;
+
+    fetch('cn-concepts.json')
+      .then(response => response.json())
+      .then(data => {
+        conceptsData = data["items"];
+        buildList();
+      });
+
+    function buildList() {
+      const list = document.getElementById("conceptsList");
+      list.innerHTML = "";
+
+      conceptsData.forEach((item, index) => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+           <a href="#" onclick="openModal(${index})">
+        ${item.label}
+      </a>
+    `;
+
+        list.appendChild(li);
+      });
+    }
 
     function openModal(index) {
       currentIndex = index;
@@ -208,14 +203,30 @@
     }
 
     function showPage() {
-      const file = conceptsDocs[currentIndex];
+      const item = conceptsData[currentIndex];
 
-      document.getElementById("modal-body").innerHTML =
-        `<iframe src="${file}" width="100%" height="600px"></iframe>`;
+      if (item.type === "PDF") {
+        document.getElementById("modal-body").innerHTML =
+          `<iframe src="${item.src1}" width="100%" height="600px"></iframe>`;
+      }
+
+      else if (item.type === "image") {
+        let html = `<img src="${item.src1}" style="max-width:100%; margin-bottom:10px;">`;
+
+        if (item.src2) {
+          html += `<img src="${item.src2}" style="max-width:100%;">`;
+        }
+        document.getElementById("modal-body").innerHTML = html;
+      }
+      else {
+        document.getElementById("modal-body").innerHTML =
+          `<p>Oops! Something went wrong loading this resource.</p>`;
+      }
+
     }
 
     function nextPage() {
-      if (currentIndex < conceptsDocs.length - 1) {
+      if (currentIndex < conceptsData.length - 1) {
         currentIndex++;
         showPage();
       }
