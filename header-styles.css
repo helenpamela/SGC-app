@@ -45,7 +45,9 @@
   text-align: center;
   margin-bottom: 25px;
   min-height: 180px; 
-  
+  background-size: cover;
+  background-position: center;
+
   /* animation */
   opacity: 0;
   transform: translateY(10px);
