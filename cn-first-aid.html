@@ -149,7 +149,6 @@
       text-align: left;
       margin-bottom: 8px;
     }
-    
   </style>
 </head>
 
@@ -165,25 +164,9 @@
     <input type="text" id="searchBox" placeholder="What am I looking for..."
       style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ddd;">
 
+    <div id="menu-item"></div>
 
-    <ul id="firstAidList">
-      <li><a href="#" onclick="openModal(0)">🌬️ Deep Breathing / Ask for Help</a></li>
-      <li><a href="#" onclick="openModal(1)">💛 Rescue Remedy</a></li>
-      <li><a href="#" onclick="openModal(2)">🙏 Go outside in Nature / Silence / Take a nap </a></li>
-      <li><a href="#" onclick="openModal(3)">🤣 Humor / Music / Funny Books & Movies </a></li>
-      <li><a href="#" onclick="openModal(4)">👄 Affirmations </a></li>
-      <li><a href="#" onclick="openModal(5)">💎 Speaking Self-Affirmations with your Crystals </a></li>
-      <li><a href="#" onclick="openModal(6)">👄 My Affirmations </a></li>
-      <li><a href="#" onclick="openModal(7)">📚 Inspirational Books </a></li>
-      <li><a href="#" onclick="openModal(8)">🐪 Rumi Quotes </a></li>
-      <li><a href="#" onclick="openModal(9)">📄 My Inspiration </a></li>
-      <li><a href="#" onclick="openModal(10)">👉🏻 Choose </a></li>
-      <li><a href="#" onclick="openModal(11)">☮️ Desiderata </a></li>
-      <li><a href="#" onclick="openModal(12)">⛪ Do It Anyway </a></li>
-      <li><a href="#" onclick="openModal(13)">⏰ It's Time </a></li>
-      <li><a href="#" onclick="openModal(14)">📢 Quotations </a></li>
-
-    </ul>
+    */
 
   </div>
 
@@ -195,25 +178,39 @@
         document.getElementById('header-placeholder').innerHTML = data;
       });
 
-    const firstAidDocs = [
-      "https://drive.google.com/file/d/1TPXrTxqnTJwfAFf20Fm93SIPK1twjUb8/preview",   // cn-fa-01-breathe-ask.pdf
-      "https://drive.google.com/file/d/1a-PDgg1IBsWcpygvV6MwycGlHyfbzfVj/preview",   // cn-fa-02-rescue-remedy.pdf
-      "https://drive.google.com/file/d/1yDFo9cMoRfcyNCGpgCElyfDaokz-S7za/preview",   // cn-fa-03-nature-nap.pdf
-      "https://drive.google.com/file/d/14seKkPgATMGT5DVoXsYVnx1Dg8Ye8l6T/preview",   // cn-fa-04-humor-music.pdf
-      "https://drive.google.com/file/d/1bYucVTeY5tx6k222ohEJFrT_x4R69Keb/preview",   // cn-fa-05-affirmations.pdf
-      "https://drive.google.com/file/d/1EC6yuz2g8uKGN1gYi5N8gIvPSdHabzvo/preview",   // cn-fa-05a-speaking-affirmations-with-crystals.pdf
-      "https://drive.google.com/file/d/1u6Ov6imb2JrmdxePO7Ke6s8LcFE7IuLQ/preview",   // cn-fa-05b-my-affirmations.pdf
-      "https://drive.google.com/file/d/1oSsx2raRz_vA7LaWWisapG-ORS5DfQz9/preview",   // cn-fa-06a-inspirational-books.pdf
-      "https://drive.google.com/file/d/1rDw-n-BWhcu0VmNTVkXOAUDQtRb7Ur6b/preview",   // cn-fa06b-quotes-rumi.pdf.pdf
-      "https://drive.google.com/file/d/1fawDVrNVDMgllPR2VR3K1pJBVSvSQg5D/preview",   // cn-fa06c-my-inspiration.pdf
-      "https://drive.google.com/file/d/1_dBPPvfVEGZb-nfIBcrIzHm9iYCo9uy0/preview",   // cn-fa06d-choose.pdf
-      "https://drive.google.com/file/d/1HhL3U8InG7SGtBAAKjj-e5UXv90qHtID/preview",   // cn-fa06e-desiderata.pdf
-      "https://drive.google.com/file/d/1oBfE_jYIZs7UsuaXumcX9ytQMbPeGafe/preview",   // cn-fa06f-do-it-anyway.pdf
-      "https://drive.google.com/file/d/1utp9WGJAR3_NcZULCDCJmWt2cSxupEfr/preview",   // cn-fa06g-its-time.pdf
-      "https://drive.google.com/file/d/1i9O4YIxJlyKtWb5LXBg1tSbu-2iRM5UB/preview",   // cn-fa07a-quotations1.pdf  
+    let firstAidData = [];
+    let currentIndex = 0;
 
-    ];
+    fetch('cn-first-aid.json')
+      .then(response => response.json())
+      .then(data => {
+        firstAidData = data["first-aid-data"];
+        buildList();
+      });
 
+    function buildList() {
+      const list = document.getElementById("firstAidList");
+      list.innerHTML = "";
+
+      firstAidData.forEach((item, index) => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+      <a href="#" onclick="openModal(${index})">
+        ${item.label}
+      </a>
+    `;
+
+        list.appendChild(li);
+      });
+    }
+
+    function openModal(index) {
+      currentIndex = index;
+      showPage();
+      document.getElementById("modal").style.display = "block";
+    }
+    /*
     let currentIndex = 0;
 
     function openModal(index) {
@@ -221,16 +218,33 @@
       showPage();
       document.getElementById("modal").style.display = "block";
     }
+    */
+
 
     function showPage() {
-      const file = firstAidDocs[currentIndex];
+      const item = firstAidData[currentIndex];
 
-      document.getElementById("modal-body").innerHTML =
-        `<iframe src="${file}" width="100%" height="600px"></iframe>`;
+      if (item.type === "PDF") {
+        document.getElementById("modal-body").innerHTML =
+          `<iframe src="${item.src1}" width="100%" height="600px"></iframe>`;
+      }
+
+      else if (item.type === "image") {
+        let html = `<img src="${item.src1}" style="max-width:100%; margin-bottom:10px;">`;
+
+        if (item.src2) {
+          html += `<img src="${item.src2}" style="max-width:100%;">`;
+        }
+        document.getElementById("modal-body").innerHTML = html;
+      }
+
+      else {
+        document.getElementById("modal-body").innerHTML =
+          `<p>Oops! Something went wrong loading this resource.</p>`;
+      }
     }
-
     function nextPage() {
-      if (currentIndex < firstAidDocs.length - 1) {
+      if (currentIndex < firstAidData.length - 1) {
         currentIndex++;
         showPage();
       }
@@ -245,6 +259,17 @@
     function closeModal() {
       document.getElementById("modal").style.display = "none";
     }
+
+
+
+    /*
+        function showPage() {
+          const file = firstAidDocs[currentIndex];
+    
+          document.getElementById("modal-body").innerHTML =
+            `<iframe src="${file}" width="100%" height="600px"></iframe>`;
+        }
+            */
 
   </script>
 
@@ -267,6 +292,7 @@
   </script>
 
   <script src="app.js"></script>
+
 
   <div id="modal" class="modal">
     <div class="modal-content">

@@ -1,0 +1,143 @@
+{
+  
+  "title": "First Aid Data",
+
+  "items": [
+      {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa-01-breathe-ask.pdf",
+      "label": "🌬️ Deep Breathing / Ask for Help", 
+      "src1": "https://drive.google.com/file/d/1TPXrTxqnTJwfAFf20Fm93SIPK1twjUb8/preview",
+      "src2": "",
+      "tags": ["breath", "help"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa-02-rescue-remedy.pdf",
+      "label": "💛 Rescue Remedy", 
+      "src1": "https://drive.google.com/file/d/1a-PDgg1IBsWcpygvV6MwycGlHyfbzfVj/preview",
+      "src2": "",
+      "tags": ["flower essences", "rescue remedy", "healing tool"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa-03-nature-nap.pdf",
+      "label": "🙏 Go outside in Nature / Silence / Take a nap", 
+      "src1": "https://drive.google.com/file/d/1yDFo9cMoRfcyNCGpgCElyfDaokz-S7za/preview",
+      "src2": "",
+      "tags": ["nature", "silence", "nap"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa-04-humor-music.pdf",
+      "label": "🤣 Humor / Music / Funny Books & Movies", 
+      "src1": "https://drive.google.com/file/d/14seKkPgATMGT5DVoXsYVnx1Dg8Ye8l6T/preview",
+      "src2": "",
+      "tags": ["nature", "silence", "nap"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa-05-affirmations.pdf",
+      "label": "👄 Affirmations", 
+      "src1": "https://drive.google.com/file/d/1bYucVTeY5tx6k222ohEJFrT_x4R69Keb/preview",
+      "src2": "",
+      "tags": ["affirmation", "raise your vibration", "positive thought"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa-05a-speaking-affirmations-with-crystals.pdf",
+      "label": "💎 Speaking Self-Affirmations with your Crystals", 
+      "src1": "https://drive.google.com/file/d/1EC6yuz2g8uKGN1gYi5N8gIvPSdHabzvo/preview",
+      "src2": "",
+      "tags": ["affirmation", "raise your vibration", "positive thought", "crystal"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa-05b-my-affirmations.pdf",
+      "label": "👄 My Affirmations", 
+      "src1": "https://drive.google.com/file/d/1u6Ov6imb2JrmdxePO7Ke6s8LcFE7IuLQ/preview",
+      "src2": "",
+      "tags": ["affirmation", "raise your vibration", "positive thought", "form"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa-06a-inspirational-books.pdf",
+      "label": "📚 Inspirational Books", 
+      "src1": "https://drive.google.com/file/d/1oSsx2raRz_vA7LaWWisapG-ORS5DfQz9/preview",
+      "src2": "",
+      "tags": ["book", "inspiration", "read"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa06b-quotes-rumi.pdf",
+      "label": "🐪 Rumi Quotes", 
+      "src1": "https://drive.google.com/file/d/1rDw-n-BWhcu0VmNTVkXOAUDQtRb7Ur6b/preview",
+      "src2": "",
+      "tags": ["poetry", "poem", "rumi", "mystic"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa06c-my-inspiration.pdf",
+      "label": "📄 My Inspiration", 
+      "src1": "https://drive.google.com/file/d/1fawDVrNVDMgllPR2VR3K1pJBVSvSQg5D/preview",
+      "src2": "",
+      "tags": ["inspiration", "form"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa06d-choose.pdf",
+      "label": "👉🏻 Choose", 
+      "src1": "https://drive.google.com/file/d/1_dBPPvfVEGZb-nfIBcrIzHm9iYCo9uy0/preview",
+      "src2": "",
+      "tags": ["choice", "choose", "advice"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa06e-desiderata.pdf",
+      "label": "☮️ Desiderata", 
+      "src1": "https://drive.google.com/file/d/1HhL3U8InG7SGtBAAKjj-e5UXv90qHtID/preview",
+      "src2": "",
+      "tags": ["poem", "poetry"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa06f-do-it-anyway.pdf",
+      "label": "⛪ Do It Anyway", 
+      "src1": "https://drive.google.com/file/d/1oBfE_jYIZs7UsuaXumcX9ytQMbPeGafe/preview",
+      "src2": "",
+      "tags": ["mother teresa", "advice", "service"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa06g-its-time.pdf",
+      "label": "⏰ It's Time", 
+      "src1": "https://drive.google.com/file/d/1utp9WGJAR3_NcZULCDCJmWt2cSxupEfr/preview",
+      "src2": "",
+      "tags": ["helen mirren", "advice"]
+     },
+     {   
+      "cn-section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa07a-quotations1.pdf",
+      "label": "📢 Quotations", 
+      "src1": "https://drive.google.com/file/d/1i9O4YIxJlyKtWb5LXBg1tSbu-2iRM5UB/preview",
+      "src2": "",
+      "tags": ["quote", "quotation"]
+     }
+
+   ]
+}
