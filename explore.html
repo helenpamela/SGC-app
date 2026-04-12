@@ -449,5 +449,41 @@
     noResults.style.display = matchCount === 0 ? "block" : "none";
   });
 
+  let currentIndex = 0;
+
+  function openModal(index) {
+    currentIndex = index;
+    showPage();
+    document.getElementById("modal").style.display = "block";
+  }
+
+  function showPage() {
+    const item = allItems[currentIndex];
+
+    if (item.type === "PDF") {
+      document.getElementById("modal-body").innerHTML =
+        `<iframe src="${item.src1}" width="100%" height="600px"></iframe>`;
+    }
+
+    else if (item.type === "image") {
+      let html = `<img src="${item.src1}" style="max-width:100%; margin-bottom:10px;">`;
+
+      if (item.src2) {
+        html += `<img src="${item.src2}" style="max-width:100%;">`;
+      }
+
+      document.getElementById("modal-body").innerHTML = html;
+    }
+
+    else {
+      document.getElementById("modal-body").innerHTML =
+        `<p>Oops! Couldn't load this item.</p>`;
+    }
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+
 
 </script>
