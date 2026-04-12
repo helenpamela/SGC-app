@@ -188,7 +188,7 @@
         const li = document.createElement("li");
 
         li.innerHTML = `
-      <a href="#" onclick="openModal(${index})">
+           <a href="#" onclick="openModal(${index})">
         ${item.label}
       </a>
     `;
@@ -226,14 +226,13 @@
       }
     }
 
-
-
     function nextPage() {
       if (currentIndex < dailyPracticeData.length - 1) {
         currentIndex++;
         showPage();
       }
     }
+
     function prevPage() {
       if (currentIndex > 0) {
         currentIndex--;
@@ -244,7 +243,6 @@
     function closeModal() {
       document.getElementById("modal").style.display = "none";
     }
-
 
   </script>
 
