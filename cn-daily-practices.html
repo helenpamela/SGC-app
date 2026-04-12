@@ -181,7 +181,7 @@
       });
 
     function buildList() {
-      const list = document.getElementById("firstAidList");
+      const list = document.getElementById("dailyPracticesList");
       list.innerHTML = "";
 
       firstAidData.forEach((item, index) => {
@@ -205,7 +205,7 @@
     }
 
     function showPage() {
-      const file = dailyPracticeData[currentIndex];
+      const file = dailyPracticesData[currentIndex];
 
       if (item.type === "PDF") {
         document.getElementById("modal-body").innerHTML =
