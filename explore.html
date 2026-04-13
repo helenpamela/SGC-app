@@ -346,7 +346,7 @@
       }
     });
 
-    // 👇 SAVE RESULTS (this is the key fix)
+    // 👇 SAVE RESULTS
     localStorage.setItem("searchResults", JSON.stringify(matches));
 
     // Optional message
@@ -361,6 +361,8 @@
 </script>
 
 <script>
+  
+  // Search Cliff Notes
 
   let allItems = [];
 
@@ -372,15 +374,21 @@
 
   Promise.all([
     safeFetch('cn-first-aid.json'),
+    safeFetch('cn-daily-practices.json'),
     safeFetch('cn-concepts.json'),
-    safeFetch('cn-daily-practices.json')
+    safeFetch('cn-tools.json'),
+    safeFetch('cn-forms.json'),
+    safeFetch('cn-resources.json')
   ])
-    .then(([firstAid, concepts, practices]) => {
+    .then(([firstAid, practices, concepts, tools, forms, resources]) => {
 
       allItems = [
         ...firstAid.items,
+        ...practices.items,
         ...concepts.items,
-        ...practices.items
+        ...tools.items,
+        ...forms.items,
+        ...resources.items
       ];
 
     });
