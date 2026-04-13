@@ -101,17 +101,29 @@
       cursor: pointer;
     }
 
-    .nav-buttons {
-      margin-top: 10px;
+   .nav-buttons {
+      position: sticky;
+      bottom: 0;
+      background: white;
+      padding: 12px 0;
+      border-top: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
     }
 
-    .nav-buttons button {
+     .nav-buttons button {
       padding: 10px 16px;
       margin: 5px;
       border-radius: 8px;
       border: none;
       background: #e6d9f5;
       cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .nav-buttons button:hover {
+      background: #d6c6f0;
+      transform: translateY(-1px);
     }
 
     img {
