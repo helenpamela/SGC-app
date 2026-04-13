@@ -2,6 +2,7 @@
   "month": "April",
   "title": "Birthdays & Cliff Notes Review",
   "lastUpdated": "April 13,2026",
+  
   "quote": {
     "text": "You are not a drop in the ocean.  You are the entire ocean, in a drop.",
     "author": "Rumi"
@@ -32,30 +33,14 @@
   },
   "topics": [
     {
-      "label": "No handouts - read Cliff Notes pages",
-      "link": ""
-    },
-    {
-      "label": "",
-      "link": ""
-    },
-    {
-      "label": "",
-      "link": ""
-    },
-    {
-      "label": "",
-      "link": ""
+      "text": "No handouts - read Cliff Notes pages"    
     }
+  
   ],
   "other": [
     {
-      "label": "🎂 Trudi's and Pam's birthday (Trudi ill 🥺)",
-      "link": ""
-    },
-    {
-      "label": "",
-      "link": ""
+     
     }
+
   ]
 }
