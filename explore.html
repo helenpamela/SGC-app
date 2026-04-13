@@ -270,7 +270,7 @@
       background: #d6c6f0;
     }
 
-   }
+    }
   </style>
 </head>
 
@@ -585,14 +585,30 @@
     document.getElementById("modal-body").scrollTop = 0;
   }
 
-  function nextItem() {
-    currentIndex = (currentIndex + 1) % allItems.length;
-    showPage();
+  function nextResult() {
+    let list = (searchResults && searchResults.length > 1)
+      ? searchResults
+      : Object.keys(meetings).sort();
+
+    let currentIndex = list.findIndex(x => String(x) === String(id));
+
+    if (currentIndex === -1) currentIndex = 0;
+
+    let nextId = list[(currentIndex + 1) % list.length];
+    window.location.href = `meetings.html?id=${nextId}`;
   }
 
-  function prevItem() {
-    currentIndex = (currentIndex - 1 + allItems.length) % allItems.length;
-    showPage();
+  function prevResult() {
+    let list = (searchResults && searchResults.length > 1)
+      ? searchResults
+      : Object.keys(meetings).sort();
+
+    let currentIndex = list.findIndex(x => String(x) === String(id));
+
+    if (currentIndex === -1) currentIndex = 0;
+
+    let prevId = list[(currentIndex - 1 + list.length) % list.length];
+    window.location.href = `meetings.html?id=${prevId}`;
   }
 
   document.getElementById("modal").addEventListener("click", function (e) {
