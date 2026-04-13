@@ -23,6 +23,9 @@ function showApp() {
   const login = document.getElementById("loginScreen");
   const app = document.getElementById("appContent");
 
+  // 👇 SAFETY CHECK (this fixes EVERYTHING)
+  if (!login || !app) return;
+
   login.classList.add("fade-out");
 
   setTimeout(() => {
@@ -54,12 +57,6 @@ if (currentPage === "index.html" || currentPage === "") {
 if (currentPage === "cliff-notes.html") {
   if (cliffBtn) cliffBtn.style.display = "none";
 }
-/*
-// ALL OTHER PAGES → control Cliff Notes visibility
-if (!cliffPages.includes(currentPage)) {
-  if (cliffBtn) cliffBtn.style.display = "none";
-}
-  */
 
 
 window.addEventListener("load", () => {
@@ -94,24 +91,6 @@ window.addEventListener("load", () => {
     populateYears();
   }
 });
-
-const meetingsList = [
-  {
-    title: "March 2026",
-    link: "meeting-2026-03.html",
-    topics: ["gratitude", "new beginnings", "intentions"]
-  },
-  {
-    title: "February 2026",
-    link: "meeting-2026-01.html",
-    topics: ["love", "relationships", "connection"]
-  },
-  {
-    title: "March 2026",
-    link: "meeting-2026-01.html",
-    topics: ["growth", "change", "courage"]
-  }
-];
 
 
 function populateYears() {
