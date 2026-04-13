@@ -194,10 +194,8 @@
       grid-template-columns: repeat(2, 300px);
       gap: 16px;
       justify-content: center;
-      margin: 0 auto;
-      /* 👈 helps */
-      max-width: 650px;
-      /* 👈 centers visually under input */
+      margin: 0 auto;   /* 👈 helps */
+      max-width: 650px;  /* 👈 centers visually under input */
     }
 
     .highlight {
@@ -270,7 +268,7 @@
       background: #d6c6f0;
     }
 
-    }
+
   </style>
 </head>
 
@@ -449,6 +447,7 @@
   }
 
   Promise.all([
+    safeFetch('cn-sacred-pages.json'),
     safeFetch('cn-first-aid.json'),
     safeFetch('cn-daily-practices.json'),
     safeFetch('cn-concepts.json'),
@@ -456,9 +455,10 @@
     safeFetch('cn-forms.json'),
     safeFetch('cn-resources.json')
   ])
-    .then(([firstAid, practices, concepts, tools, forms, resources]) => {
+    .then(([sacredPages, firstAid, practices, concepts, tools, forms, resources]) => {
 
       allItems = [
+        ...sacredPages.items,
         ...firstAid.items,
         ...practices.items,
         ...concepts.items,
@@ -468,7 +468,6 @@
       ];
 
     });
-
 
   function highlightText(text, searchTerm) {
     if (!searchTerm) return text;
