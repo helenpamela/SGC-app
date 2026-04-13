@@ -472,6 +472,9 @@
   }
 
   function showPage() {
+    console.log("Index:", currentIndex);
+    console.log("Item:", allItems[currentIndex]);
+
     const item = allItems[currentIndex];
 
     if (item.type === "PDF") {
