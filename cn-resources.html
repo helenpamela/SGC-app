@@ -101,7 +101,13 @@
     }
 
     .nav-buttons {
-      margin-top: 10px;
+      position: sticky;
+      bottom: 0;
+      background: white;
+      padding: 12px 0;
+      border-top: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
     }
 
     .nav-buttons button {
@@ -111,8 +117,13 @@
       border: none;
       background: #e6d9f5;
       cursor: pointer;
+      transition: all 0.2s ease;
     }
 
+    .nav-buttons button:hover {
+      background: #d6c6f0;
+      transform: translateY(-1px);
+    }
 
     img {
       width: 120px;
@@ -125,7 +136,7 @@
       margin-bottom: 10px;
     }
 
-     #resourcesList {
+    #resourcesList {
       text-align: left;
       column-count: 2;
       column-gap: 20px;
@@ -136,9 +147,6 @@
       text-align: left;
       margin-bottom: 8px;
     }
-
-
-
   </style>
 </head>
 
@@ -152,18 +160,7 @@
     <h1>Resources</h1>
     <div class="subtitle">What resources would be helpful for me? ✨</div>
 
-    <ul id="resourcesList">
-      <li><a href="#" onclick="openModal(0)">🌷 Sources of Inspiration</a></li>
-      <li><a href="#" onclick="openModal(1)">🌸 CD's</a></li>
-      <li><a href="#" onclick="openModal(2)">💿 DVD's</a></li>
-      <li><a href="#" onclick="openModal(3)">📀 Crystals</a></li>
-      <li><a href="#" onclick="openModal(4)">🌻 Flowers and Plants</a></li>
-      <li><a href="#" onclick="openModal(5)">😇 Archangels</a></li>
-      <li><a href="#" onclick="openModal(6)">🪽 Ascended Masters</a></li>
-      <li><a href="#" onclick="openModal(7)">⚡ Chakras</a></li>
-      <li><a href="#" onclick="openModal(8)">🐎 Totem Animals</a></li>
-
-    </ul>
+    <ul id="resourcesList"></ul>
 
   </div>
 
@@ -176,19 +173,32 @@
       });
 
 
-    const resourcesDocs = [
-      "https://drive.google.com/file/d/1skp2xVHi7pJj_s7dkwm5uwSavMeF3ztj/preview",   // R1_SourcesOfInspiration.pdf
-      "https://drive.google.com/file/d/1D0h22iHd9mETgBj18w0TcxErTBFNcD_u/preview",   // R2_CDs.pdf
-      "https://drive.google.com/file/d/1LBMGdj5gZBM1aghWqazOrjz605thvFYC/preview",   // R3_DVDs.pdf
-      "https://drive.google.com/file/d/14NS8fT4BWEY9dPR_uMcDaAWkhUCsOcBd/preview",   // R4_Crystals.pdf
-      "https://drive.google.com/file/d/1sCX9eJ8a1-7FtViV_0ahzOCy0VHekghr/preview",   // R5_FlowersAndPlants.pdf
-      "https://drive.google.com/file/d/1JyuF69rE5AUeTFB8FFvGGtTxTuvDexMF/preview",   // R6_Archangels.pdf
-      "https://drive.google.com/file/d/1vMpz9fwxZ_tZPbt9dF9xSo-hm5oE-PTj/preview",   // R7_AscendedMasters.pdf
-      "https://drive.google.com/file/d/1R0_UkkkgjOM-6XxvhZV3ne2XYp7RBeW3/preview",   // R8_Chakras.pdf
-      "https://drive.google.com/file/d/1Q42iG559aXL-pVfyk0p-uuknc_HkRsu2/preview"    // R9_TotemAnimals.pdf
-    ];
-
+    let resourcesData = [];
     let currentIndex = 0;
+
+    fetch('cn-resources.json')
+      .then(response => response.json())
+      .then(data => {
+        resourcesData = data["items"];
+        buildList();
+      });
+
+    function buildList() {
+      const list = document.getElementById("resourcesList");
+      list.innerHTML = "";
+
+      resourcesData.forEach((item, index) => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+           <a href="#" onclick="openModal(${index})">
+        ${item.label}
+      </a>
+    `;
+
+        list.appendChild(li);
+      });
+    }
 
     function openModal(index) {
       currentIndex = index;
@@ -197,14 +207,30 @@
     }
 
     function showPage() {
-      const file = resourcesDocs[currentIndex];
+      const item = resourcesData[currentIndex];
 
-      document.getElementById("modal-body").innerHTML =
-        `<iframe src="${file}" width="100%" height="600px"></iframe>`;
+      if (item.type === "PDF") {
+        document.getElementById("modal-body").innerHTML =
+          `<iframe src="${item.src1}" width="100%" height="600px"></iframe>`;
+      }
+
+      else if (item.type === "image") {
+        let html = `<img src="${item.src1}" style="max-width:100%; margin-bottom:10px;">`;
+
+        if (item.src2) {
+          html += `<img src="${item.src2}" style="max-width:100%;">`;
+        }
+        document.getElementById("modal-body").innerHTML = html;
+      }
+      else {
+        document.getElementById("modal-body").innerHTML =
+          `<p>Oops! Something went wrong loading this resource.</p>`;
+      }
+
     }
 
     function nextPage() {
-      if (currentIndex < resourcesDocs.length - 1) {
+      if (currentIndex < resourcesData.length - 1) {
         currentIndex++;
         showPage();
       }
@@ -219,7 +245,7 @@
     function closeModal() {
       document.getElementById("modal").style.display = "none";
     }
-    
+
 
   </script>
 
@@ -240,7 +266,7 @@
     </div>
   </div>
 
- 
+
 
 </body>
 
