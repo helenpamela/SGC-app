@@ -176,7 +176,7 @@
     let resourcesData = [];
     let currentIndex = 0;
 
-    fetch('cn-resources.json')
+    fetch('cn-resource-sections.json')
       .then(response => response.json())
       .then(data => {
         resourcesData = data["items"];

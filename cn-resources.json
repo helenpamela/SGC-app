@@ -1,19 +1,7 @@
 {
   "title": "Resources Data",
   "items": [
-    {
-      "section": "Resources",
-      "type": "PDF",
-      "file-name": "R1_SourcesOfInspiration.pdf",
-      "label": "🌷 Sources of Inspiration",
-      "src1": "https://drive.google.com/file/d/1skp2xVHi7pJj_s7dkwm5uwSavMeF3ztj/preview",
-      "src2": "",
-      "tags": [
-        "resources",
-        "sources of inspiration",
-        "luminaries"
-      ]
-    },
+ 
     {
       "section": "Resources-Luminaries",
       "type": "image",
@@ -85,19 +73,7 @@
         "vicente"
       ]
     },
-    {
-      "section": "Resources",
-      "type": "PDF",
-      "file-name": "R2_CDs.pdf",
-      "label": "🌸 CD's",
-      "src1": "https://drive.google.com/file/d/1D0h22iHd9mETgBj18w0TcxErTBFNcD_u/preview",
-      "src2": "",
-      "tags": [
-        "resources",
-        "cd",
-        "music"
-      ]
-    },
+    
     {
       "section": "Resources-CDs",
       "type": "image",
@@ -163,18 +139,7 @@
         "shine your light"
       ]
     },
-    {
-      "section": "Resources",
-      "type": "PDF",
-      "file-name": "R3_DVDs.pdf",
-      "label": "💿 DVD's",
-      "src1": "https://drive.google.com/file/d/1LBMGdj5gZBM1aghWqazOrjz605thvFYC/preview",
-      "src2": "",
-      "tags": [
-        "resources",
-        "dvd"
-      ]
-    },
+    
     {
       "section": "Resources-DVDs",
       "type": "image",
@@ -317,18 +282,7 @@
         "grounding"
       ]
     },
-    {
-      "section": "Resources",
-      "type": "PDF",
-      "file-name": "R5_FlowersAndPlants.pdf",
-      "label": "🌻 Flowers and Plants",
-      "src1": "https://drive.google.com/file/d/1sCX9eJ8a1-7FtViV_0ahzOCy0VHekghr/preview",
-      "src2": "",
-      "tags": [
-        "resources",
-        "flower"
-      ]
-    },
+    
     {
       "section": "Resources-Flowers",
       "type": "image",
@@ -398,18 +352,7 @@
         "relaxation"
       ]
     },
-    {
-      "section": "Resources",
-      "type": "image",
-      "file-name": "R6_Archangels.pdf",
-      "label": "😇 Archangels",
-      "src1": "https://drive.google.com/file/d/1JyuF69rE5AUeTFB8FFvGGtTxTuvDexMF/preview",
-      "src2": "",
-      "tags": [
-        "resources",
-        "archangels"
-      ]
-    },
+    
     {
       "section": "Resources-Archangels",
       "type": "image",
@@ -479,18 +422,7 @@
         "guard"
       ]
     },
-    {
-      "section": "Resources",
-      "type": "PDF",
-      "file-name": "R7_AscendedMasters.pdf",
-      "label": "🪽 Ascended Masters",
-      "src1": "https://drive.google.com/file/d/1vMpz9fwxZ_tZPbt9dF9xSo-hm5oE-PTj/preview",
-      "src2": "",
-      "tags": [
-        "resources",
-        "ascended master"
-      ]
-    },
+   
     {
       "section": "Resources-Ascended Masters",
       "type": "image",
@@ -575,19 +507,6 @@
         "middle way",
         "moderation",
         "meditation"      
-      ]
-    },
-
-    {
-      "section": "Resources",
-      "type": "PDF",
-      "file-name": "R8_Chakras.pdf",
-      "label": "⚡ Chakras",
-      "src1": "https://drive.google.com/file/d/1R0_UkkkgjOM-6XxvhZV3ne2XYp7RBeW3/preview",
-      "src2": "",
-      "tags": [
-        "resources",
-        "chakra"
       ]
     },
 
@@ -681,18 +600,6 @@
     },
 
     {
-      "section": "Resources",
-      "type": "PDF",
-      "file-name": "R9_TotemAnimals.pdf",
-      "label": "🐎 Totem Animals",
-      "src1": "https://drive.google.com/file/d/1Q42iG559aXL-pVfyk0p-uuknc_HkRsu2/preview",
-      "src2": "",
-      "tags": [
-        "resources",
-        "totem animals"
-      ]
-    },
-    {
       "section": "Resources-Totem Animals",
       "type": "image",
       "file-name": "",
@@ -713,8 +620,7 @@
       "src2": "",
       "tags": [
         "swiftness", "strength", "courage", "power", "balance", "dignity with grace", 
-        "wisdom", "keen sight", "rising above"
-             
+        "wisdom", "keen sight", "rising above"             
       ]
     },
 
@@ -727,8 +633,7 @@
       "src2": "",
       "tags": [
         "good luck", "good fortune", "power", "feminine strength", "royalty", 
-        "kindness", "gentle respect", "loyalty", "wise", "good memory", "patience"
-             
+        "kindness", "gentle respect", "loyalty", "wise", "good memory", "patience"             
       ]
     },
     {
@@ -740,11 +645,9 @@
       "src2": "",
       "tags": [
         "good luck", "good fortune", "power", "feminine strength", "royalty", 
-        "kindness", "gentle respect", "loyalty", "wise", "good memory", "patience"
-             
+        "kindness", "gentle respect", "loyalty", "wise", "good memory", "patience"             
       ]
     }
-
 
   ]
 }
