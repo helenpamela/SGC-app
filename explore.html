@@ -194,6 +194,8 @@
       grid-template-columns: repeat(2, 300px);
       gap: 16px;
       justify-content: center;
+      margin: 0 auto;        /* 👈 helps */
+      max-width: 650px;      /* 👈 centers visually under input */
     }
 
     .highlight {
@@ -250,7 +252,7 @@
 
     <hr style="margin: 30px 0;">
 
-    <h2>Search Cliff Notes ✨</h2>
+    <h2 id="cliff-notes-title">Search Cliff Notes ✨</h2>
 
     <input type="text" id="exploreSearch" placeholder="✨ What are you looking for?"
       style="width: 100%; padding: 12px; margin-bottom: 15px;">
@@ -460,7 +462,10 @@
       }
     });
 
-    results.scrollIntoView({ behavior: "smooth" });
+    // results.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("cliff-notes-title").scrollIntoView({
+      behavior: "smooth"
+    });
     noResults.style.display = matchCount === 0 ? "block" : "none";
   });
 
