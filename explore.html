@@ -481,15 +481,17 @@
 
     else if (item.type === "image") {
       let html = `<img src="${item.src1}" style="max-width:100%; margin-bottom:10px;">`;
-
+      console.log("Showing src1 image:", item);
       if (item.src2) {
         html += `<img src="${item.src2}" style="max-width:100%;">`;
+          console.log("Showing src2 item:", item);
       }
 
       document.getElementById("modal-body").innerHTML = html;
     }
 
     else {
+      console.log("Showing pdf item:", item);
       document.getElementById("modal-body").innerHTML =
         `<p>Oops! Couldn't load this item.</p>`;
     }
