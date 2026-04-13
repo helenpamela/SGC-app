@@ -1,6 +1,140 @@
 
 
 const meetings = {
+ 
+  "202604": {
+    title: "April 2026",
+    month: "April",
+    year: 2026,
+
+    final_agenda: [
+      {
+        type: "pdf",
+        label: "Agenda",
+        src: "https://drive.google.com/file/d/1YrxpFu5rTtQmLhuzDOg4_w00o51PjUtj/preview"
+      }
+    ],
+
+    teacher_only: {
+      working_agenda: [
+        {
+          type: "pdf",
+          label: "Working Agenda -- Teacher Only",
+          src: "https://drive.google.com/file/d/1a0-7h1Y35X_d9NAMRTHvDSEQ6VqVtx62/preview"
+        }
+      ]
+    },
+
+    announcements: [
+      {
+        type: "text",
+        label: "New SGC App 🪷",
+        src: ""
+      }, 
+    ],
+
+    intention: [
+      {
+        type: "",
+      }
+
+    ],
+
+    lovingkindness: [
+      {
+        type: "pdf",
+        label: "Spread Lovingkindness Prayer",
+        src: "https://drive.google.com/file/d/1Kg3yvdinnPVAocKLKSftmrxeulkQGntc/preview"
+      }
+    ],
+
+    focus: {
+      title: "",
+
+      items: [
+        {
+          type: "image",
+          src: "none-images/no-monthly-focus.png"
+        }
+      ],
+    },
+
+    practice: {
+      title: "",
+      items: [
+        {
+          type: "image",
+          src: "none-images/no-daily-practice.png"
+        },
+
+      ],
+    },
+
+    affirmation: [
+      {
+        type: "image",
+        label: "This month's affirmation",
+        src: "affirmation-images/202604-affirmation.png"
+      }
+    ],
+
+    luminary: {
+      title: "",
+      items: [
+        {
+          type: "image",
+          src: "none-images/no-luminaries.png"
+        }
+      ]
+    },
+
+    meditation: {
+      title: "",
+      items: [
+        {
+          type: "video",
+          src: "https://www.youtube.com/embed/Mwa5jZ0UCow?si=b9oKayLdrrb0KtrE"
+        }
+      ]
+    },
+
+    tags: ["cliff notes"],
+
+    topic: {
+      title: "🎂 Birthdays & Cliff Notes Review",
+      items: [
+        {
+          type: "",
+          label: "",
+          src: ""
+        },
+    
+        {
+          type: "",
+          label: "",
+          src: ""
+        },
+   
+
+      ]
+    },
+
+    other: [
+      {
+        type: "",
+        label: "",
+        src: ""
+      },
+      {
+        type: "",
+        label: "",
+        src: ""
+      }
+
+    ]
+  },
+
+ 
   "202603": {
     title: "March 2026",
     month: "March",
