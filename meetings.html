@@ -10,12 +10,12 @@
   <style>
     .meeting-banner h1 {
       position: relative;
-      color: #5c4b7d;
+      color: #f2f0f4;
       font-weight: 600;
       font-size: 38px;
-      text-shadow:
+      /* text-shadow:
         0 2px 6px rgba(255, 255, 255, 0.9),
-        0 0 8px rgba(92, 75, 125, 0.2);
+        0 0 8px rgba(92, 75, 125, 0.2); */
     }
 
     .meeting-banner img {
@@ -24,16 +24,10 @@
     }
 
     .meeting-banner {
-      background-image: url('meeting-images/meetings-header.jpg');
-      /* <-- your image path */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('meeting-images/meetings-header.jpg');
       background-size: cover;
       background-position: center;
-
-      padding: 40px 20px;
-      border-radius: 16px;
-      margin-bottom: 25px;
-      text-align: center;
-
       position: relative;
     }
 
@@ -407,9 +401,9 @@
       searchResults = JSON.parse(localStorage.getItem("searchResults") || "[]");
 
       console.log("Search results:", searchResults);
-     
+
       document.getElementById("search-nav").style.display = "block";
-      
+
       // Delay permissions slightly so DOM is fully ready
       setTimeout(() => {
         applyPermissions();
