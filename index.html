@@ -184,6 +184,33 @@
       opacity: 1;
       transition: opacity 0.6s ease;
     }
+
+    .update-banner {
+      background: linear-gradient(90deg, #f3ecfb, #e6d9f5);
+      color: #5c4b7d;
+      text-align: center;
+      padding: 10px;
+      font-size: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(180, 150, 255, 0.25);
+      animation: softGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes softGlow {
+      0% {
+        box-shadow: 0 0 8px rgba(180, 150, 255, 0.2);
+      }
+
+      50% {
+        box-shadow: 0 0 16px rgba(180, 150, 255, 0.4);
+      }
+
+      100% {
+        box-shadow: 0 0 8px rgba(180, 150, 255, 0.2);
+      }
+    }
+
   </style>
 </head>
 
@@ -222,6 +249,10 @@
       <h2 id="greeting"></h2>
       <div class="subtitle">Choose your path for today ✨</div>
 
+      <div id="update-banner" class="update-banner" style="display:none;">
+        ✨ Updating the app… if something looks a little off, it will be back to normal shortly 💜
+      </div>
+
       <a href="inspiration.html">
         <button class="button">🌿 Daily Inspiration</button>
       </a>
@@ -244,6 +275,11 @@
 
     </div>
   </div>
+
+  <script>
+    // Uncomment this if app is down and we want to display message at top of screen
+     document.getElementById("update-banner").style.display = "block";
+  </script>
 
   <script>
 
