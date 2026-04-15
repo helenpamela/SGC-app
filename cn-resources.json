@@ -432,8 +432,8 @@
       "type": "image",
       "file-name": "",
       "label": "Kwan Yin",
-      "src1": "resources-images/kwan-yin.png",
-      "src2": "",
+      "src1": "ascended-master-images/201402-kwan-yin.png",
+      "src2": "ascended-master-images/201402-kwan-yin-properties.png",
       "tags": [
         "resources",
         "ascended master",
@@ -454,8 +454,8 @@
       "type": "image",
       "file-name": "",
       "label": "Mother Mary",
-      "src1": "resources-images/mother-mary.png",
-      "src2": "",
+      "src1": "ascended-master-images/201704-mother-mary.png",
+      "src2": "ascended-master-images/201704-mother-mary-properties.png",
       "tags": [
         "resources",
         "ascended master",
@@ -474,8 +474,8 @@
       "type": "image",
       "file-name": "",
       "label": "Jesus",
-      "src1": "resources-images/jesus.png",
-      "src2": "",
+      "src1": "ascended-master-images/201505-jesus.png",
+      "src2": "ascended-master-images/201505-jesus.png-properties",
       "tags": [
         "love",
         "forgiveness",
@@ -489,8 +489,8 @@
       "type": "image",
       "file-name": "",
       "label": "Pele",
-      "src1": "resources-images/pele.png",
-      "src2": "",
+      "src1": "ascended-master-images/201807-pele.png",
+      "src2": "ascended-master-images/201807-pele-properties.png",
       "tags": [
         "volcano",
         "purification",
@@ -503,8 +503,23 @@
       "section": "Resources-Ascended Masters",
       "type": "image",
       "file-name": "",
+      "label": "Pasithea",
+      "src1": "ascended-master-images/202211-pasithea.png",
+      "src2": "ascended-master-images/202211-pasithea-properties.png",
+      "tags": [
+        "rest",
+        "relaxation",
+        "meditation",
+        "graces"      
+      ]
+    },
+
+    {
+      "section": "Resources-Ascended Masters",
+      "type": "image",
+      "file-name": "",
       "label": "Buddha",
-      "src1": "resources-images/buddha.png",
+      "src1": "ascended-master-images/buddha.png",
       "src2": "",
       "tags": [
         "end to suffering",
