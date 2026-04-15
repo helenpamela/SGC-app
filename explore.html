@@ -38,7 +38,8 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(255, 255, 255, 0.35);   /* soft white glow */
+      background: rgba(255, 255, 255, 0.35);
+      /* soft white glow */
       border-radius: 16px;
     }
 
@@ -127,7 +128,7 @@
       color: #5c4b7d;
     }
 
-    img {
+    .container img {
       width: 120px;
       margin-bottom: 10px;
     }
@@ -193,8 +194,10 @@
       grid-template-columns: repeat(2, 300px);
       gap: 16px;
       justify-content: center;
-      margin: 0 auto;   /* 👈 helps */
-      max-width: 650px;  /* 👈 centers visually under input */
+      margin: 0 auto;
+      /* 👈 helps */
+      max-width: 650px;
+      /* 👈 centers visually under input */
     }
 
     .highlight {
@@ -266,8 +269,6 @@
     .modal-content button:hover {
       background: #d6c6f0;
     }
-
-
   </style>
 </head>
 
@@ -617,6 +618,16 @@
 
   function closeModal() {
     document.getElementById("modal").classList.remove("show");
+  }
+
+  function nextItem() {
+    currentIndex = (currentIndex + 1) % allItems.length;
+    showPage();
+  }
+
+  function prevItem() {
+    currentIndex = (currentIndex - 1 + allItems.length) % allItems.length;
+    showPage();
   }
 
 
