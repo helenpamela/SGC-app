@@ -617,16 +617,15 @@
              
       ]
     },
-
     {
       "section": "Resources-Totem Animals",
       "type": "image",
       "file-name": "",
       "label": "Dove",
-      "src1": "resources-images/dove.png",
-      "src2": "",
+      "src1": "animal-images/201505-dove.png",
+      "src2": "animal-images/201505-dove-properties.png",
       "tags": [
-        "releasing emotions", "forgive", "peace", "release", "rebirth", "lifted up"
+        "releasing emotions", "forgive", "peace", "release", "rebirth", "lifted up", "animal"
              
       ]
     },
@@ -635,24 +634,73 @@
       "type": "image",
       "file-name": "",
       "label": "Bald Eagle",
-      "src1": "resources-images/bald-eagle.jpg",
-      "src2": "",
+      "src1": "animal-images/201507-bald-eagle.png",
+      "src2": "animal-images/201507-bald-eagle-properties.png",
       "tags": [
         "swiftness", "strength", "courage", "power", "balance", "dignity with grace", 
-        "wisdom", "keen sight", "rising above"             
+        "wisdom", "keen sight", "rising above", "animal"         
       ]
     },
-
     {
       "section": "Resources-Totem Animals",
       "type": "image",
       "file-name": "",
       "label": "Elephant",
-      "src1": "resources-images/elephant.jpg",
-      "src2": "",
+      "src1": "animal-images/201509-elephant.png",
+      "src2": "animal-images/201509-elephant-properties.png",
       "tags": [
         "good luck", "good fortune", "power", "feminine strength", "royalty", 
-        "kindness", "gentle respect", "loyalty", "wise", "good memory", "patience"             
+        "kindness", "gentle respect", "loyalty", "wise", "good memory", "patience", "animal"          
+      ]
+    },   
+    {
+      "section": "Resources-Totem Animals",
+      "type": "image",
+      "file-name": "",
+      "label": "Reindeer",
+      "src1": "animal-images/201512-reindeer.png",
+      "src2": "animal-images/201512-reindeer-properties.png",
+      "tags": [
+         "animal", "gentleness", "adventure", "innocence", 
+         "opportunity", "safe travels", "magic and bells",
+         "shamanic visionry"       
+      ]
+    },
+    {
+      "section": "Resources-Totem Animals",
+      "type": "image",
+      "file-name": "",
+      "label": "Dragonfly",
+      "src1": "animal-images/201707-dragonfly.png",
+      "src2": "animal-images/201707-dragonfly-properties.png",
+      "tags": [
+         "animal", "change", "transformation", "adaptability",
+         "joy", "lightness of being", "emotions"        
+      ]
+    },
+    {
+      "section": "Resources-Totem Animals",
+      "type": "image",
+      "file-name": "",
+      "label": "Ram",
+      "src1": "animal-images/201801-ram.png",
+      "src2": "animal-images/201801-ram-properties.png",
+      "tags": [
+         "animal", "new beginnings", "conquest", "action",
+         "preparation", "determination", "leadership", "aries",
+         "spiral horns are symbol of eternity"      
+      ]
+    },
+    {
+      "section": "Resources-Totem Animals",
+      "type": "image",
+      "file-name": "",
+      "label": "Moose",
+      "src1": "animal-images/201809-moose.png",
+      "src2": "animal-images/201809-moose-properties.png",
+      "tags": [
+         "animal", "self-expression", "protection", "adaptability",
+         "endurance", "insight", "depth perception"           
       ]
     },
     {
@@ -660,13 +708,14 @@
       "type": "image",
       "file-name": "",
       "label": "Reindeer",
-      "src1": "resources-images/elephant.jpg",
-      "src2": "",
+      "src1": "animal-images/201811-dragon.png",
+      "src2": "animal-images/201811-dragon-properties.png",
       "tags": [
-        "good luck", "good fortune", "power", "feminine strength", "royalty", 
-        "kindness", "gentle respect", "loyalty", "wise", "good memory", "patience"             
+         "animal", "power", "strength", "good luck", "most ancient",
+         "imposing", "authority", "rise and see things clearly"           
       ]
     }
+    
 
   ]
 }
