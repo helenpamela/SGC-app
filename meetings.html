@@ -416,7 +416,7 @@
       setTitle("meditation-title", "Meditation", data.meditation?.title);
       setTitle("luminary-title", "Luminary", data.luminary?.title);
 
-      console.log("get data.title next (should be February 2025):", data.title);
+      //console.log("get data.title next:", data.title);
       // Titles, setup, special sections
       document.getElementById("title").innerHTML = data.title;
 
@@ -450,7 +450,7 @@
     function setTitle(id, main, sub) {
       const el = document.getElementById(id);
 
-      console.log("in setTitle function, id:", id);
+      // console.log("in setTitle function, id:", id);
 
       if (!el) return;
 
@@ -462,17 +462,20 @@
     }
     ;
     function renderItems(items, containerId) {
-      console.log("In renderItems containerId:", containerId);
+      // console.log("In renderItems containerId:", containerId);
 
       const div = document.getElementById(containerId);
       div.innerHTML = "";
 
-      console.log("In renderItems function, items length:", items.length);
+      // console.log("In renderItems function, items length:", items.length);
 
       if (!items || items.length === 0) return;
 
       items.forEach(item => {
-        console.log("Item type:", item.type); // ✅ moved inside loop
+        if (!item.type) {
+          console.warn("Missing type in item:", item);
+        }
+        // console.log("Item type:", item.type); // ✅ moved inside loop
 
         let content = "";
 
