@@ -2396,7 +2396,7 @@ const meetings = {
         {
           type: "pdf",
           label: "Year of the Snake",
-          src: "https://drive.google.com/file/d/1qYbukTOlf18qaV9geWgq7VpDVje9RWIN/view?usp=drive_link"
+          src: "https://drive.google.com/file/d/1qYbukTOlf18qaV9geWgq7VpDVje9RWIN/preview"
         }
            
       ]
