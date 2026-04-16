@@ -403,10 +403,16 @@
       document.getElementById("title").innerHTML =
         `${data.title}<br><span style="font-size: 0.6em; color: #888;"></span>`;
 
-      console.log("setTitle next:", data.focus?.title);
+      console.log("setTitle for MonthlyFocus next:", data.focus?.title);
       setTitle("focus-title", "Monthly Focus", data.focus?.title);
+
+      console.log("setTitle for DailyPractice next:", data.practice?.title);
       setTitle("practice-title", "Daily Practice", data.practice?.title);
+
+      console.log("setTitle for Topic next:", data.topic?.title);
       setTitle("topic-title", "Topic", data.topic?.title);
+
+      console.log("setTitle for Meditation next:", data.meditation?.title);
       setTitle("meditation-title", "Meditation", data.meditation?.title);
       setTitle("luminary-title", "Luminary", data.luminary?.title);
 
@@ -442,7 +448,7 @@
     function setTitle(id, main, sub) {
       const el = document.getElementById(id);
 
-      console.log("in setTitle function");
+      console.log("in setTitle function, id:", id);
 
       if (!el) return;
 
@@ -456,7 +462,9 @@
     function renderItems(items, containerId) {
       const div = document.getElementById(containerId);
       div.innerHTML = "";
+
       console.log("In renderItems function item type:", item.type);
+
       if (!items || items.length === 0) return;
 
       items.forEach(item => {
