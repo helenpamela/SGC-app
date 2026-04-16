@@ -2106,7 +2106,7 @@ const meetings = {
 
     ],
 
-    our_vision: [
+    vision: [
       {
         type: "image",
         label: "Sunflower - symbol of Ukraine",
@@ -2169,9 +2169,7 @@ const meetings = {
           type: "pdf",
           label: "Clear Quartz article from HappySoul",
           src: "https://drive.google.com/file/d/1uCuAG9TcLaWZBxxeqp2b28OJUXDGXPP3/preview"
-        }
-
-       
+        }      
       ]
 
     },
