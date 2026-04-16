@@ -2110,7 +2110,7 @@ const meetings = {
       {
         type: "image",
         label: "Sunflower - symbol of Ukraine",
-        src:   "our-values-images/202503/sunflowers.jpg"
+        src:   "our-vision-images/202503-sunflowers.jpg"
       },
       {
         type: "pdf",
