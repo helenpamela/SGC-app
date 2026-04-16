@@ -2337,7 +2337,6 @@ const meetings = {
    
     ],
 
-
     intention: [
       {
         type: "",
@@ -2352,9 +2351,7 @@ const meetings = {
         type: "",
         label: "",
         src:   ""
-      },
-   
-      
+      },       
 
     ],
 

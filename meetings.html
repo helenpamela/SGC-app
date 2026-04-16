@@ -403,25 +403,26 @@
       document.getElementById("title").innerHTML =
         `${data.title}<br><span style="font-size: 0.6em; color: #888;"></span>`;
 
-      console.log("setTitle for MonthlyFocus next:", data.focus?.title);
+      // console.log("setTitle for MonthlyFocus next:", data.focus?.title);
       setTitle("focus-title", "Monthly Focus", data.focus?.title);
 
-      console.log("setTitle for DailyPractice next:", data.practice?.title);
+      // console.log("setTitle for DailyPractice next:", data.practice?.title);
       setTitle("practice-title", "Daily Practice", data.practice?.title);
 
-      console.log("setTitle for Topic next:", data.topic?.title);
+      // console.log("setTitle for Topic next:", data.topic?.title);
       setTitle("topic-title", "Topic", data.topic?.title);
 
-      console.log("setTitle for Meditation next:", data.meditation?.title);
+      // console.log("setTitle for Meditation next:", data.meditation?.title);
       setTitle("meditation-title", "Meditation", data.meditation?.title);
       setTitle("luminary-title", "Luminary", data.luminary?.title);
 
-
+      console.log("get data.title next (should be February 2025):", data.title);
       // Titles, setup, special sections
       document.getElementById("title").innerHTML = data.title;
        
       // Now render each section using your helper ✨
       renderItems(data.final_agenda || [], "final_agenda");
+
       console.log("renderItems working agenda next:");
       renderItems(data.teacher_only?.working_agenda || [], "working_agenda");
       renderItems(data.announcements || [], "announcements");
@@ -429,7 +430,8 @@
       renderItems(data.vision || [], "vision");
       renderItems(data.lovingkindness || [], "lovingkindness");
       renderItems(data.invocation || [], "invocation");
-      console.log("renderItems monthly focus next:");
+
+      // console.log("renderItems monthly focus next:");
       renderItems(data.focus?.items || [], "focus");
       renderItems(data.practice?.items || [], "practice");
       renderItems(data.affirmation || [], "affirmation");
