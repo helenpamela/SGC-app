@@ -2185,8 +2185,6 @@ const meetings = {
         {
           type: "pdf",
           label: "Book Summary - Let Them",
-          type: "image",
-          label: "Let Them card",
           src: "https://drive.google.com/file/d/1J1Kpd2x6Uf5O5jlXHxf2pUnm46w2BiV-/preview"
         }
       ]
