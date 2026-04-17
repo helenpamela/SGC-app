@@ -142,15 +142,6 @@
      {   
       "section": "First Aid",
       "type": "PDF",
-      "file-name": "cn-fa07a-quotations1.pdf",
-      "label": "📢 Quotations", 
-      "src1": "https://drive.google.com/file/d/1i9O4YIxJlyKtWb5LXBg1tSbu-2iRM5UB/preview",
-      "src2": "",
-      "tags": ["quote", "quotation"]
-     },
-     {   
-      "section": "First Aid",
-      "type": "PDF",
       "file-name": "cn-fa07b-inspiration-williamson.pdf",
       "label": "📘 Marianne Williamson", 
       "src1": "https://drive.google.com/file/d/1RqMQtnkFFN1iT6_t_v5jqJ2orckSQBk-/preview",
@@ -207,7 +198,7 @@
       "type": "PDF",
       "file-name": "cn-fa07f-my-favorite-quotes.pdf",
       "label": "📢 My Favorite Quotes", 
-      "src1": "",
+      "src1": "https://drive.google.com/file/d/1lHH_tnvbM1uPcDFAAP86g0mAzblZr_9I/preview",
       "src2": "",
       "tags": ["favorite", "quotes", "form"]
      },
@@ -255,15 +246,178 @@
       "src1": "https://drive.google.com/file/d/1DxhgCiW3H_ToVrUxnYGqutCJPxqi6GhO/preview",
       "src2": "",
       "tags": ["centering", "calm", "breathe"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa10b-centering2.pdf",
+      "label": "🪷 Quotations", 
+      "src1": "https://drive.google.com/file/d/1XNsx11CJ2qyFJr6l9xVAKuRBNGDpGvDK/preview",
+      "src2": "",
+      "tags": ["centering", "calm", "senses"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa11a-emotional-first-aid-kit.pdf",
+      "label": "🚑 Emotional First Aid Kit", 
+      "src1": "https://drive.google.com/file/d/1ir6eTnRrudky27lgLs7mLoTsMOZivwva/preview",
+      "src2": "",
+      "tags": ["emotions", "first aid", "crystal","essential oil", "flower remedy"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa11b-emotional-first-aid-kit.pdf",
+      "label": "🚑 Emotional First Aid Kit", 
+      "src1": "https://drive.google.com/file/d/1eFLfMUoVkrSwjLSb54RLWU_QtLZ6HL3T/preview",
+      "src2": "",
+      "tags": ["emotions", "first aid", "crystal","essential oil", "flower remedy"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa11c-what-to-do-when-angry.pdf",
+      "label": "😡 What To Do When You're Angry", 
+      "src1": "https://drive.google.com/file/d/1LjkA6yTiQVKTIPBV1xPYsb6dH1dBrYcI/preview",
+      "src2": "",
+      "tags": ["angry"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa11d-i-am-calm.pdf",
+      "label": "🪷 I am Calm", 
+      "src1": "https://drive.google.com/file/d/1mYluZhDOx6jkysbaGfjiZWYmOg2oPFH-/preview",
+      "src2": "",
+      "tags": ["calm"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa11e-calm-your-emotions.pdf",
+      "label": "🌡️ Calm Your Emotions Thermometer", 
+      "src1": "https://drive.google.com/file/d/1aJEIy-FBeFT-ESg5wraavBUUaTecuk2r/preview",
+      "src2": "",
+      "tags": ["calm", "emotions", "thermometer"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa11f-how-to-transmute-fear.pdf",
+      "label": "😨 How to Transmute Fear", 
+      "src1": "https://drive.google.com/file/d/1SLh9bTghSIbKE4q0HdcLDXu-_QMk0e8E/preview",
+      "src2": "",
+      "tags": ["fear", "emotions", "transmute"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa12a-gratitude.pdf",
+      "label": "🙏🏻 Gratitude", 
+      "src1": "https://drive.google.com/file/d/1eTlaJCPfJqrGwVFpiqPklT35TuKzjMgp/preview",
+      "src2": "",
+      "tags": ["gratitude"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa12b-gratitude2.pdf",
+      "label": "🙏🏻 Bathing in Love and Gratitude", 
+      "src1": "https://drive.google.com/file/d/1FZV0Gy6yJhtfKxHPMwIdz6Z_4JXNIkiO/preview",
+      "src2": "",
+      "tags": ["gratitude", "love"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa12c-gratitude-journal.pdf",
+      "label": "🙏🏻 Gratitude Journal", 
+      "src1": "https://drive.google.com/file/d/1Xy11xEIzFQxXI1lhzUi6gwDT4aoHE7RM/preview",
+      "src2": "",
+      "tags": ["gratitude", "journal"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa13a-hooponopono_Picture.pdf",
+      "label": "🌴 Ho'oponopono", 
+      "src1": "https://drive.google.com/file/d/1yajwgEhAxvQNVgywU9DOLI4T3rKlPRRB/preview",
+      "src2": "",
+      "tags": ["sorry", "forgive", "thank you", "ho'oponopono"]
+     },
+    {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa13b-hooponopono-description.pdf",
+      "label": "🌴 Ho'oponopono", 
+      "src1": "https://drive.google.com/file/d/1bGEUCTxhZIjQucn5lUT9GDxNmpsuIyi4/preview",
+      "src2": "",
+      "tags": ["sorry", "forgive", "thank you", "ho'oponopono", "Joe Vitale"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa14-prayer.pdf",
+      "label": "🙏🏻 Prayer", 
+      "src1": "https://drive.google.com/file/d/1hgtGXf9PfYWEMXib0jATGNWqn2zdh8YZ/preview",
+      "src2": "",
+      "tags": ["prayer"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa15-horrible-event.pdf",
+      "label": "😱 When a Horrible Event Happens", 
+      "src1": "https://drive.google.com/file/d/1A6jM1BnkC6I1IqAi-i4Xlmg_WwQm2mTq/preview",
+      "src2": "",
+      "tags": ["horrible", "trauma", "patricia cota-robles"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa16-self-compassion-break.pdf",
+      "label": "🩷 Self-Compassion Break", 
+      "src1": "https://drive.google.com/file/d/1a_0UuEOX0D37x4eJ5JwleNSUzeoKSxes/preview",
+      "src2": "",
+      "tags": ["self-compassion", "suffering", "kind" ]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa17-self-care.pdf",
+      "label": "🩷 Self-Care", 
+      "src1": "https://drive.google.com/file/d/1rVCsTX0rUpTic47U1K724w9YKZS3ur8V/preview",
+      "src2": "",
+      "tags": ["self-care" ]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa19-be-gentle-with-yourself.pdf",
+      "label": "🩷 Be Gentle with Yourself", 
+      "src1": "https://drive.google.com/file/d/1ojmo9ouMTGBtdnxBQMXfG2vdfulB9lbx/preview",
+      "src2": "",
+      "tags": ["gentle" ]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa21-get-on-your-bird.pdf",
+      "label": "🦅 Get on Your Bird", 
+      "src1": "https://drive.google.com/file/d/1jcpC5O5TUN_7MQGSVUoxFji4UJN6B8l4/preview",
+      "src2": "",
+      "tags": ["bird", "colette baron-reid" ]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa21-get-on-your-bird.pdf",
+      "label": "🦅 Get on Your Bird", 
+      "src1": "https://drive.google.com/file/d/1jcpC5O5TUN_7MQGSVUoxFji4UJN6B8l4/preview",
+      "src2": "",
+      "tags": ["bird", "colette baron-reid" ]
      }
-
-
-
-
-     
-
-
-
 
    ]
 }
