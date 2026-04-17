@@ -101,7 +101,109 @@
       "src1": "https://drive.google.com/file/d/1weYGA1WYzKYrua579YfGBjIKf_37ddbZ/preview",
       "src2": "",
       "tags": ["daily practice", "meditation"]
+     },
+     {   
+      "section": "Daily Practices",
+      "type": "PDF",
+      "file-name": "cn-dp06-silence.pdf",
+      "label": "🙊 Silence", 
+      "src1": "https://drive.google.com/file/d/1Qo9Hv_QwRc9MwtScEMhfcgop6ltxt72g/preview",
+      "src2": "",
+      "tags": ["daily practice", "silence"]
+     },
+     {   
+      "section": "Daily Practices",
+      "type": "PDF",
+      "file-name": "cn-dp07a-chanting-mantras-prayers.pdf",
+      "label": "📿 Chanting - Mantras - Prayers", 
+      "src1": "https://drive.google.com/file/d/12ZhudhJJ4GgKLLxc9Lxn5X64pDTh1nFn/preview",
+      "src2": "",
+      "tags": ["daily practice", "chanting", "mantra", "prayer"]
+     },
+     {   
+      "section": "Daily Practices",
+      "type": "PDF",
+      "file-name": "cn-dp07a1-chanting.pdf",
+      "label": "📿 Chanting", 
+      "src1": "https://drive.google.com/file/d/1tzlMvUrqNxBLf2fulICE26yANxiuvh_U/preview",
+      "src2": "",
+      "tags": ["daily practice", "chanting"]
+     },
+     {   
+      "section": "Daily Practices",
+      "type": "PDF",
+      "file-name": "DP07b_SevenMasters.pdf",
+      "label": "7️⃣ Seven Masters - One Path", 
+      "src1": "https://drive.google.com/file/d/1MJLa_aMkgvbbtNEX2JCmiLnBoQzGhIIv/preview",
+      "src2": "",
+      "tags": ["daily practice", "meditation", "acceptance", "open heart", "connected"]
+     },
+     {   
+      "section": "Daily Practices",
+      "type": "PDF",
+      "file-name": "DP08a_ForgivenessQuotes.pdf",
+      "label": "🙏🏻 Forgiveness quotes", 
+      "src1": "https://drive.google.com/file/d/1MfngypYzycqAIJFb2XWqQpUsPCXTHXIx/preview",
+      "src2": "",
+      "tags": ["daily practice", "meditation", "acceptance", "open heart", "connected"]
+     },
+     {   
+      "section": "Daily Practices",
+      "type": "PDF",
+      "file-name": "DP08bc_ForgivenessJampolsky.pdf",
+      "label": "🙏🏻 Forgiveness by Jerry Jampolsky", 
+      "src1": "https://drive.google.com/file/d/1vcjLVY4ar5nzY5Fho2fk1moFrZOMyTF4/preview",
+      "src2": "",
+      "tags": ["daily practice", "forgiveness", "a course in miracles", "jerry jampolsky"]
+     },
+     {   
+      "section": "Daily Practices",
+      "type": "PDF",
+      "file-name": "DP08d_Hooponopono.pdf", 
+      "label": "🌺 Ho'oponopono", 
+      "src1": "https://drive.google.com/file/d/1G7AYQzGJ-CHNlEQ0fqwODdH7f2cpXzjJ/preview",
+      "src2": "",
+      "tags": ["daily practice", "forgive", "love", "thank you", "sorry"]
+     },
+     {   
+      "section": "Daily Practices",
+      "type": "PDF",
+      "file-name": "DP09_WhyAffirmationsWork.pdf", 
+      "label": "🗣️ Why Affirmations Work", 
+      "src1": "https://drive.google.com/file/d/1SEYZii_QOQGnWsKYHGrnDzWPEsZtFxUV/preview",
+      "src2": "",
+      "tags": ["daily practice", "affirmation" ]
+     },
+     {   
+      "section": "Daily Practices",
+      "type": "PDF",
+      "file-name": "DP09a_7DaysOfHappinessAffirmations.pdf", 
+      "label": "🗣️ Why Affirmations Work", 
+      "src1": "https://drive.google.com/file/d/1mXYlMDibSgeIXTV_xMlTwKh2bZ5pLZdO/preview",
+      "src2": "",
+      "tags": ["daily practice", "affirmation", "happiness" ]
+     },
+     {   
+      "section": "Daily Practices",
+      "type": "PDF",
+      "file-name": "DP09b_Affirmations.pdf", 
+      "label": "🐓 My Morning Affirmations", 
+      "src1": "https://drive.google.com/file/d/1lLvL6O4fRM6DPHKvojAwmDgIsN-XIDov/preview",
+      "src2": "",
+      "tags": ["daily practice", "affirmation", "morning" ]
+     },
+     {   
+      "section": "Daily Practices",
+      "type": "PDF",
+      "file-name": "DP09c_Affirmations2.pdf", 
+      "label": "👄 Affirmation Quotes", 
+      "src1": "https://drive.google.com/file/d/14KrnLXK6LmFjQSqpoXpqqiblAlEYdOZP/preview",
+      "src2": "",
+      "tags": ["daily practice", "affirmation", "quote", "quotation" ]
      }
+
+
+
     
 
    ]
