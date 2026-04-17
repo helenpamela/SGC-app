@@ -129,6 +129,7 @@
       "src2": "",
       "tags": ["helen mirren", "advice"]
      },
+     
      {   
       "section": "First Aid",
       "type": "PDF",
@@ -137,7 +138,132 @@
       "src1": "https://drive.google.com/file/d/1i9O4YIxJlyKtWb5LXBg1tSbu-2iRM5UB/preview",
       "src2": "",
       "tags": ["quote", "quotation"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa07a-quotations1.pdf",
+      "label": "📢 Quotations", 
+      "src1": "https://drive.google.com/file/d/1i9O4YIxJlyKtWb5LXBg1tSbu-2iRM5UB/preview",
+      "src2": "",
+      "tags": ["quote", "quotation"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa07b-inspiration-williamson.pdf",
+      "label": "📘 Marianne Williamson", 
+      "src1": "https://drive.google.com/file/d/1RqMQtnkFFN1iT6_t_v5jqJ2orckSQBk-/preview",
+      "src2": "",
+      "tags": ["ACIM", "A Course in Miracles"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa07d-quotes2.pdf",
+      "label": "📢 Quotations2", 
+      "src1": "https://drive.google.com/file/d/17zDqZELN5UHkN5Kc02QisHWkIrc7DSX-/preview",
+      "src2": "",
+      "tags": ["quote", "quotation"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa07e1-quotes3.pdf",
+      "label": "📢 Quotations3", 
+      "src1": "https://drive.google.com/file/d/1djP0jDJMzB91N44d8aU_4KKuOArdxEco/preview",
+      "src2": "",
+      "tags": ["quote", "quotation"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa07e2-quotes-lao-tzu.pdf",
+      "label": "📢 Quotations Lao Tzu", 
+      "src1": "https://drive.google.com/file/d/1taBaJzXWhWfcaobzPv3uGtGRqt-T1Av4/preview",
+      "src2": "",
+      "tags": ["quote", "quotation", "lao tzu"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa07e3-quotes-lao-tzu.pdf",
+      "label": "📢 Quotations2 Lao Tzu", 
+      "src1": "https://drive.google.com/file/d/1PBr6zxk0jzs6liarn4zJ6sfYgtGaNEEz/preview",
+      "src2": "",
+      "tags": ["quote", "quotation", "lao tzu"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa07e4-not-the-critic-who-counts-quote.pdf",
+      "label": "⭐It's Not the Critic Who Counts", 
+      "src1": "https://drive.google.com/file/d/1QezKqXdW7j3ZlLCO0nb208t96Z07HaYn/preview",
+      "src2": "",
+      "tags": ["Brene Brown", "Daring Greatly", "in the arena"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa07f-my-favorite-quotes.pdf",
+      "label": "📢 My Favorite Quotes", 
+      "src1": "",
+      "src2": "",
+      "tags": ["favorite", "quotes", "form"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa08a-eft.pdf",
+      "label": "☝🏻EFT", 
+      "src1": "https://drive.google.com/file/d/1Hqw6q8DrPIT4R5YDTPeZZs_L_J5-ZCRl/preview",
+      "src2": "",
+      "tags": ["eft", "tapping"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa08b-eft-unlovable.pdf",
+      "label": "☝🏻EFT", 
+      "src1": "https://drive.google.com/file/d/1-09ubwFBD7j3kvhGq6K16e77KcOXioUz/preview",
+      "src2": "",
+      "tags": ["eft", "tapping", "unlovable"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa09-meditation.pdf",
+      "label": "🧘🏻Meditation", 
+      "src1": "https://drive.google.com/file/d/11p4k1doOhC8f8xlUvwPmJnBMN7fURVYf/preview",
+      "src2": "",
+      "tags": ["meditation"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa09a-chanting-om.pdf",
+      "label": "🕉️ Chanting OM", 
+      "src1": "https://drive.google.com/file/d/1dijuifAFptU3Vs_DKESmA2srMMMEV-SX/preview",
+      "src2": "",
+      "tags": ["chanting", "om"]
+     },
+     {   
+      "section": "First Aid",
+      "type": "PDF",
+      "file-name": "cn-fa10a-centering.pdf",
+      "label": "🪷 Centering", 
+      "src1": "https://drive.google.com/file/d/1DxhgCiW3H_ToVrUxnYGqutCJPxqi6GhO/preview",
+      "src2": "",
+      "tags": ["centering", "calm", "breathe"]
      }
+
+
+
+
+     
+
+
+
 
    ]
 }
