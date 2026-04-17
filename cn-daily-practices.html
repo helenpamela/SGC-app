@@ -196,15 +196,21 @@
       const list = document.getElementById("dailyPracticesList");
       list.innerHTML = "";
 
-      dailyPracticesData.forEach((item, index) => {
+      firstAidData.forEach((item, index) => {
         const li = document.createElement("li");
 
-        li.innerHTML = `
-           <a href="#" onclick="openModal(${index})">
-        ${item.label}
-      </a>
-    `;
+        // 👇 store searchable text (label + tags)
+        const searchableText = (
+          item.label + " " + (item.tags || []).join(" ")
+        ).toLowerCase();
 
+        li.setAttribute("data-search", searchableText);
+
+        li.innerHTML = `
+          <a href="#" onclick="openModal(${index})">
+            ${item.label}
+          </a>
+       `;
         list.appendChild(li);
       });
     }
