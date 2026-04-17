@@ -2469,7 +2469,188 @@ const meetings = {
 
       } 
     ]
+  },
+
+  "202501": {
+    title: "January 2025 🎇",
+    month: "January",
+    year: 2025,
+
+    final_agenda: [
+      {
+        type: "pdf",
+        label: "Agenda",
+        src: "https://drive.google.com/file/d/1DNhQ2HjzeADn5_8z2qudRu0RT3WlFyxf/preview"
+      }
+    ],
+    teacher_only: {
+      working_agenda: [
+        {
+          type: "pdf",
+          label: "Working Agenda",
+          src: "https://drive.google.com/file/d/154wJmzJsKNmVzmzsP4aaydZFyvnOACf2/preview"
+        }
+      ]
+    },
+    announcements: [
+      {
+        type:  "pdf",
+        label: "Diana Cooper's Visualization for 2025",
+        src:   "https://drive.google.com/file/d/1ISbRDsP_LPlZgGPKfB-d1JSp2vBr5fSX/preview"
+      },
+      {
+        type:  "text",
+        label: "Announcements.txt",
+        src:   "https://drive.google.com/file/d/1I_bftbjM_4fOPy1x4679tvJ-XwnqGN-_/preview"
+      },
+      {
+        type:  "pdf",
+        label: "Daniel Scranton Email",
+        src:   "https://drive.google.com/file/d/1qnlLY0tvR5mSeEppEY_vzZejBSvmBsGy/view?usp=drive_link"
+      }
+   
+    ],
+
+    intention: [
+      {
+        type: "pdf",
+        label: "Declaration of Intention form",
+        src:   "https://drive.google.com/file/d/1N6MlttAs4-3_TY2poQt7spd36-lc5qkg/preview"
+      }
+
+    ],
+
+    vision: [
+      {
+        type: "",
+        label: "",
+        src:   ""
+      },       
+
+    ],
+
+    lovingkindness: [
+      {
+        type: "pdf",
+        label: "Spread Lovingkindness Prayer",
+        src: "https://drive.google.com/file/d/1Kg3yvdinnPVAocKLKSftmrxeulkQGntc/preview" 
+      }
+    ],
+
+    invocation: [
+      {
+        type: "",
+        label: "",
+        src: ""
+      }
+  
+    ],
+   
+    focus: {
+      title: "Archangel Muriel",
+      items: [
+        {
+          type: "image",
+          src:  "archangel-images/202501-muriel.png"
+        },
+        {
+          type: "image",
+          src:  "archangel-images/202501-muriel-properties.png"
+        },
+        {
+          type:  "pdf",
+          label: "Archangel Muriel",
+          src:   "https://drive.google.com/file/d/14t0fEcg9qpfkp3qqvgxeD6CaURh_-iwC/preview"
+        }
+           
+      ]
+
+    },
+     
+    practice: {
+      title: "OM & Just Like Me",
+      items: [
+        {
+          type:  "image",
+          label: "OM Card",
+          src:   "daily-practices-202501_OM Card.jpg"
+        },
+        {
+          type:  "pdf",
+          label: "Just Like Me Practice",
+          src:   "https://drive.google.com/file/d/1IFzy_P0VN11Js1W_qVLlGgb-1bS-ydZo/preview"
+        },
+        {
+          type:  "pdf",
+          label: "Just Like Me Meditation",
+          src:   "https://drive.google.com/file/d/1rNKVmpxZnPCAjHOJfGsi22g0aqTfkKjq/preview"
+        }
+      ]
+    },
+
+    affirmation: [
+      {
+        type:  "image",
+        label: "This Month's Affirmation",
+        src:   "affirmation-images/202501-affirmation.jpg"
+      }
+    ],
+
+    meditation: {
+      title: "",
+      items: [
+        {
+          type: "video",
+          label: "Denise Linn, Past-Life Regression",
+          src:   "https://www.youtube.com/embed/gsXCnW609OE?si=iOtwwwyRuoNk5XHu"
+        }
+      ]
+    },
+
+    luminary: {
+      title: "Patricia Cota-Robles",
+      items: [
+        {
+          type: "pdf",
+          label: "Violet Flame",
+          src: "https://drive.google.com/file/d/1-eSmc6TlQuYZcV6sTLsy4jhxi2paTjVY/preview"
+        }
+
+      ]
+    },
+
+    tags: ["releasing the past", "set intentions", "om", "just like me", 
+      "burning bowl ceremony", "christmas"],
+
+    topic: {
+      title: "Burning Bowl Ceremony & Christmas 🎄",
+      items: [
+        {
+          type: "text",
+          label: "Topic.txt",
+          src: "https://drive.google.com/file/d/1rbhR20Kk0CHsQ3QgQTdivl0mTO4eaXQ8/preview"
+        },
+        {
+          type: "pdf",
+          label: "Release form",
+          src: "https://drive.google.com/file/d/19ClELhWF_q7hWg-pcnfLiqaFh9avU5uQ/preview"
+        }
+
+
+
+        
+  
+      ]
+    },
+
+    other: [
+      {
+        type: ""
+
+      } 
+    ]
   }
+ 
  
 
 }
