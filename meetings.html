@@ -10,10 +10,11 @@
   <style>
     .meeting-banner h1 {
       position: relative;
-      color: #5c4b7d; /* ← your signature color */
+      color: #5c4b7d;
+      /* ← your signature color */
       font-weight: 600;
       font-size: 38px;
-      text-shadow: 0 1px 3px rgba(255,255,255,0.6);
+      text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6);
     }
 
     .meeting-banner img {
@@ -383,7 +384,14 @@
       render();
 
       // 👇 ADD THIS RIGHT HERE
-      searchResults = JSON.parse(localStorage.getItem("searchResults") || "[]");
+      // searchResults = JSON.parse(localStorage.getItem("searchResults") || "[]");
+      const isSearchMode = localStorage.getItem("isSearchMode") === "true";
+
+      if (isSearchMode) {
+        searchResults = JSON.parse(localStorage.getItem("searchResults") || "[]");
+      } else {
+        searchResults = [];
+      }
 
       console.log("Search results:", searchResults);
 
@@ -459,12 +467,12 @@
     }
     ;
     function renderItems(items, containerId) {
-       console.log("In renderItems containerId:", containerId);
+      console.log("In renderItems containerId:", containerId);
 
       const div = document.getElementById(containerId);
       div.innerHTML = "";
 
-       console.log("In renderItems function, items length:", items.length);
+      console.log("In renderItems function, items length:", items.length);
 
       if (!items || items.length === 0) return;
 
@@ -472,7 +480,7 @@
         if (!item.type) {
           console.warn("Missing type in item:", item);
         }
-         console.log("Item type:", item.type); // ✅ moved inside loop
+        console.log("Item type:", item.type); // ✅ moved inside loop
 
         let content = "";
 
@@ -484,7 +492,7 @@
         }
 
         if (item.type === "pdf") {
-          console.log ("this is a pdf");
+          console.log("this is a pdf");
           content = `
         <button class="button" onclick="loadDoc('${item.src}')">
           📄 ${item.label || "Open"}
@@ -539,14 +547,9 @@
     });
 
     function getMeetingList() {
-      // If valid search results exist, use them
-      /*
       if (searchResults && searchResults.length > 1) {
         return searchResults;
       }
-      */
-
-      // Otherwise use all meetings (calendar order)
       return Object.keys(meetings);
     }
 

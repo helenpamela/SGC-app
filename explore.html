@@ -440,6 +440,7 @@
 
     if (!input) {
       localStorage.removeItem("searchResults"); // 👈 clear old results
+      localStorage.removeItem("isSearchMode");
       return;
     }
 
@@ -475,6 +476,7 @@
 
     // 👇 SAVE RESULTS
     localStorage.setItem("searchResults", JSON.stringify(matches));
+    localStorage.setItem("isSearchMode", "true");
 
     // Optional message
     if (matches.length === 0) {
