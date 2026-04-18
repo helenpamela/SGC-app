@@ -274,7 +274,8 @@
       const items = document.querySelectorAll("#dailyPracticesList li");
 
       items.forEach(function (item) {
-        const text = item.textContent.toLowerCase();
+        // const text = item.textContent.toLowerCase();
+        const text = item.getAttribute("data-search");
         item.style.display = text.includes(searchText) ? "" : "none";
       });
     });
