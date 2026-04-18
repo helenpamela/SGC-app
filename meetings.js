@@ -1501,12 +1501,12 @@ const meetings = {
     },
      
     practice: {
-      title: "Shine Your Light",
+      title: "",
       items: [
         {
-          type: "pdf",
-          label: "A to Z - Shine Your Light",
-          src: "https://drive.google.com/file/d/1YDBiU4khRDl5uAhaCLOVnqIcNv7Bwu7W/preview"
+          type: "image",
+          label: "",
+          src: "none-images/no-daily-practice.png"
         }
     
       ]
@@ -1515,68 +1515,18 @@ const meetings = {
     affirmation: [
       {
         type: "image",
-        label: "Wholehearted Living Affirmation 1",
-        src: "affirmation-images/202508-wholehearted-affirmation-1.png"
+        label: "This Month's Affirmation",
+        src: "affirmation-images/202508-affirmation.jpg"
       },
-      {
-        type: "image",
-        label: "Wholehearted Living Affirmation 2",
-        src: "affirmation-images/202508-wholehearted-affirmation-2.png"
-      },
-      {
-        type: "image",
-        label: "Wholehearted Living Affirmation 3",
-        src: "affirmation-images/202508-wholehearted-affirmation-3.png"
-      },
-      {
-        type: "image",
-        label: "Wholehearted Living Affirmation 4",
-        src: "affirmation-images/202508-wholehearted-affirmation-4.png"
-      },
-      {
-        type: "image",
-        label: "Wholehearted Living Affirmation 5",
-        src: "affirmation-images/202508-wholehearted-affirmation-5.png"
-      },
-      {
-        type: "image",
-        label: "Wholehearted Living Affirmation 6",
-        src: "affirmation-images/202508-wholehearted-affirmation-6.png"
-      },
-      {
-        type: "image",
-        label: "Wholehearted Living Affirmation 7",
-        src: "affirmation-images/202508-wholehearted-affirmation-7.png"
-      },
-      {
-        type: "image",
-        label: "Wholehearted Living Affirmation 8",
-        src: "affirmation-images/202508-wholehearted-affirmation-8.png"
-      },
-      {
-        type: "image",
-        label: "Wholehearted Living Affirmation 9",
-        src: "affirmation-images/202508-wholehearted-affirmation-9.png"
-      },
-      {
-        type: "image",
-        label: "Wholehearted Living Affirmation 10",
-        src: "affirmation-images/202508-wholehearted-affirmation-10.png"
-      },
-      {
-        type: "image",
-        label: "Wholehearted Living Affirmation 11",
-        src: "affirmation-images/202508-wholehearted-affirmation-11.png"
-      }
-
+        
     ],
 
     meditation: {
-      title: "Denise Linn - Who You are is Enough",
+      title: "",
       items: [
         {
-          type: "video",
-          src: "https://www.youtube.com/embed/sMrb-itIjxY?si=IR1tvWwbuVBcphBL" 
+          type: "image",
+          src: "none-images/no-meditation.jpg" 
         }
       ]
     },
@@ -1593,36 +1543,22 @@ const meetings = {
       ]
     },
 
-    tags: ["wholehearted living", "shine your light", "denise linn"],
+    tags: [],
 
     topic: {
-      title: "Wholehearted Living",
+      title: "",
       items: [
         {
-          type: "pdf",
-          label: "Affirmations page",
-          src: "https://drive.google.com/file/d/1OHhDEGlHh2FxnkAuQFR_Fa9gS1btz8h5/preview"
+          type: "image",
+          label: "",
+          src: "none-images/no-topic.jpg"
         },
         {
-          type: "pdf",
-          label: "10 Guideposts",
-          src: "https://drive.google.com/file/d/1reEgtCDkwKSda4dXhfWgEV4RFp1YfNVi/preview"
+          type: "",
+          label: "",
+          src: ""
         },
-        {
-          type: "pdf",
-          label: "A Simple Guide to Wholehearted Living",
-          src: "https://drive.google.com/file/d/1U0K6ebBgG8e1pHAryJ4zp6flLE5crXOg/preview"
-        },
-        {
-          type: "pdf",
-          label: "Quotes from Cliff Notes",
-          src: "https://drive.google.com/file/d/1y7BVc2r1l01aI_rrJ-s0g8hHgigHj8d_/preview"
-        },
-        {
-          type: "pdf",
-          label: "10 Guideposts from Cliff Notes",
-          src: "https://drive.google.com/file/d/138dA7gS1-0vR9emrb8VOeHXEY3Mv_Lbq/preview"
-        }
+         
        
 
       ]
@@ -1630,7 +1566,9 @@ const meetings = {
 
     other: [
       {
-        type: ""
+        type: "image",
+        label: "3D-printer Dragon from Linda",
+        src: "other-images/202408-dragon-from-3D-printer.jpg"
 
       } 
     ]
@@ -3785,7 +3723,7 @@ const meetings = {
       ]
     },
 
-    tags: ["cancelled"],
+    tags: [""],
 
     topic: {
       title: "",
