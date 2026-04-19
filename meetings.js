@@ -1961,7 +1961,7 @@ const meetings = {
   },
   
    "202505": {
-    title: "May 2025 🐝",
+    title: "May 2025",
     month: "May",
     year: 2025,
 
@@ -2128,7 +2128,7 @@ const meetings = {
   },
 
   "202504": {
-    title: "April 2025 🌷",
+    title: "April 2025",
     month: "April",
     year: 2025,
 
@@ -2253,7 +2253,7 @@ const meetings = {
   },
   
   "202503": {
-    title: "March 2025 ☘️",
+    title: "March 2025",
     month: "March",
     year: 2025,
 
@@ -2513,7 +2513,7 @@ const meetings = {
   },
 
   "202502": {
-    title: "February 2025 🩷",
+    title: "February 2025",
     month: "February",
     year: 2025,
 
@@ -2677,7 +2677,7 @@ const meetings = {
   },
 
   "202501": {
-    title: "January 2025 🎇",
+    title: "January 2025",
     month: "January",
     year: 2025,
 
@@ -2857,7 +2857,7 @@ const meetings = {
   },
  
   "202412": {
-    title: "December 2024 ✈️",
+    title: "December 2024",
     month: "December",
     year: 2024,
 
@@ -3032,7 +3032,7 @@ const meetings = {
   },
 
   "202411": {
-    title: "November 2024 😢",
+    title: "November 2024",
     month: "November",
     year: 2024,
 
@@ -3207,7 +3207,7 @@ const meetings = {
   },
 
   "202410": {
-    title: "October 2024 🎃",
+    title: "October 2024",
     month: "October",
     year: 2024,
 
@@ -3378,7 +3378,7 @@ const meetings = {
   },
 
   "202409": {
-    title: "September 2024 🏈",
+    title: "September 2024",
     month: "September",
     year: 2024,
 
@@ -3578,7 +3578,7 @@ const meetings = {
   },
 
   "202408": {
-    title: "August 2024 🎂",
+    title: "August 2024",
     month: "August",
     year: 2024,
 
@@ -3749,10 +3749,9 @@ const meetings = {
       } 
     ]
   },
-
   
   "202407": {
-    title: "July 2024 🎇",
+    title: "July 2024",
     month: "July",
     year: 2024,
 
